@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FIMCO — Feeding Industries Manufacturing Co. | OEM Tier 1/2 Automotive Supplier</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Cairo:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+:root{
+  --primary:#d9232d;
+  --primary-dark:#a81820;
+  --secondary:#0d1b2a;
+  --accent:#0092b0;
+  --gold:#c97f1f;
+  --bg:#f4f6f9;
+  --bg-alt:#eaeef4;
+  --card:#ffffff;
+  --card-hover:#fbfcfe;
+  --border:#dbe1ea;
+  --heading:#0d1b2a;
+  --text:#1c2534;
+  --muted:#56637a;
+  --muted-2:#8493a8;
+  --radius:14px;
+  --radius-sm:8px;
+  --transition:all .25s ease;
+  --max:1600px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  line-height:1.65;
+  overflow-x:hidden;
+  background-image:radial-gradient(ellipse 900px 500px at 85% -5%, rgba(217,35,45,.07), transparent 60%),
+                    radial-gradient(ellipse 700px 500px at 5% 15%, rgba(0,146,176,.06), transparent 60%),
+                    linear-gradient(rgba(13,27,42,.035) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(13,27,42,.035) 1px, transparent 1px);
+  background-size:auto,auto,56px 56px,56px 56px;
+  background-position:0 0,0 0,-1px -1px,-1px -1px;
+}
+/* technical cut-corner panel, used across card-like surfaces */
+.card,.stat-card,.cert-cell,.family-cell,.contact-item,.award-cell{
+  clip-path:polygon(16px 0,100% 0,100% 100%,0 100%,0 16px);
+  border-radius:0;
+}
+.spec-tag{
+  position:absolute;top:14px;right:16px;font-family:'JetBrains Mono';font-size:10px;letter-spacing:.06em;
+  color:var(--muted-2);
+}
+.card,.stat-card,.cert-cell,.award-cell{position:relative}
+h1,h2,h3,h4,.disp{font-family:'Oswald',sans-serif;letter-spacing:.01em}
+.mono{font-family:'JetBrains Mono',monospace}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+::selection{background:var(--primary);color:#fff}
+
+/* ===== NAV ===== */
+nav{
+  position:fixed;top:0;left:0;width:100%;z-index:1000;
+  background:rgba(244,246,249,.85);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  transition:var(--transition);
+}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{
+  width:42px;height:42px;border-radius:50%;flex:none;
+  background:radial-gradient(circle at 32% 28%, var(--primary), var(--primary-dark) 70%);
+  border:2px solid var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Oswald';font-weight:700;font-style:italic;font-size:19px;color:#fff;
+  box-shadow:0 0 0 4px rgba(0,180,216,.08);
+}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-name{font-family:'Oswald';font-weight:700;font-size:20px;letter-spacing:.04em;color:var(--heading)}
+.brand-tag{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.nav-links{display:flex;align-items:center;list-style:none;gap:4px}
+.nav-links a{
+  color:var(--muted);font-weight:500;font-size:14px;padding:9px 14px;border-radius:8px;transition:var(--transition);
+  white-space:nowrap;
+}
+.nav-links a{position:relative}
+.nav-links a::after{content:"";position:absolute;left:14px;right:14px;bottom:5px;height:2px;background:var(--primary);border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform .28s cubic-bezier(.4,0,.2,1)}
+.nav-links a:hover{color:var(--heading);background:rgba(13,27,42,.05)}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-links a.active{color:var(--primary)}
+.nav-links a.nav-cta{background:var(--primary);color:#fff;padding:9px 20px;margin-left:6px}
+.nav-links a.nav-cta::after{display:none}
+.nav-links a.nav-cta:hover{background:var(--primary-dark)}
+.lang-btn{border:1px solid var(--border);background:var(--card);color:var(--heading);font-family:'JetBrains Mono';font-size:12px;font-weight:600;letter-spacing:.04em;padding:8px 14px;border-radius:8px;cursor:pointer;transition:var(--transition);margin-left:4px}
+.lang-btn:hover{border-color:var(--accent);color:var(--accent)}
+.nav-toggle{display:none;background:none;border:1px solid var(--border);color:var(--heading);width:40px;height:40px;border-radius:8px;font-size:16px;cursor:pointer}
+
+@media(max-width:1080px){
+  .nav-links{position:fixed;top:70px;left:0;right:0;background:rgba(244,246,249,.98);flex-direction:column;
+    align-items:stretch;padding:10px 20px 20px;border-bottom:1px solid var(--border);
+    max-height:0;overflow:hidden;transition:max-height .3s ease}
+  .nav-links.open{max-height:520px}
+  .nav-links a{padding:13px 10px;border-bottom:1px solid var(--border)}
+  .nav-links a.nav-cta{margin-left:0;text-align:center;margin-top:6px;border-bottom:none}
+  .nav-toggle{display:block}
+}
+
+main{padding-top:76px}
+section{padding:96px 5%;border-bottom:1px solid var(--border);position:relative;max-width:var(--max);margin:0 auto}
+section.flush{border-bottom:none}
+.section-title{margin-bottom:44px;max-width:680px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono';font-size:12px;
+  letter-spacing:.16em;color:var(--accent);text-transform:uppercase;margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--accent)}
+.section-title h2{font-size:clamp(28px,3.6vw,42px);font-weight:600;color:var(--heading);line-height:1.1}
+.section-title h2 span{color:var(--primary)}
+.section-title p{color:var(--muted);font-size:16px;margin-top:14px}
+
+/* ===== reveal ===== */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== BUTTONS ===== */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:14.5px;
+  padding:13px 26px;border-radius:9px;cursor:pointer;transition:var(--transition);border:1px solid transparent;
+}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:0 6px 20px rgba(217,35,45,.22);position:relative;overflow:hidden}
+.btn-primary::after{content:"";position:absolute;top:0;left:-60%;width:35%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-20deg)}
+.btn-primary:hover::after{animation:btn-shine .85s ease}
+@keyframes btn-shine{from{left:-60%}to{left:130%}}
+.btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--border);color:var(--heading);background:rgba(13,27,42,.02)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.btn{transition:var(--transition),transform .2s ease}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:96vh;padding:150px 5% 80px;display:flex;flex-direction:column;justify-content:center;position:relative;
+  background:
+    radial-gradient(ellipse 900px 500px at 80% -10%, rgba(217,35,45,.14), transparent 60%),
+    repeating-linear-gradient(115deg, rgba(0,180,216,.04) 0 2px, transparent 2px 90px);
+}
+.hero-inner{max-width:var(--max);margin:0 auto;width:100%;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+@media(max-width:980px){.hero-inner{grid-template-columns:1fr}}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;background:rgba(217,35,45,.09);color:var(--primary-dark);
+  border:1px solid var(--primary);padding:7px 18px;border-radius:30px;font-size:12.5px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;margin-bottom:26px;
+}
+.hero h1{font-size:clamp(32px,4.6vw,54px);font-weight:700;line-height:1.08;margin-bottom:22px}
+.hero h1 span{display:block;color:var(--primary)}
+.hero p{font-size:17.5px;color:var(--muted);max-width:560px;margin-bottom:36px}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:0}
+@media(max-width:980px){.hero-cta{margin-bottom:56px}}
+
+/* technical blueprint diagram */
+.blueprint{position:relative;border:1px solid var(--border);background:var(--card);padding:26px 24px 20px}
+.blueprint::before,.blueprint::after,.blueprint .bp-br,.blueprint .bp-bl{content:"";position:absolute;width:22px;height:22px;border-color:var(--accent);border-style:solid;border-width:0}
+.blueprint::before{top:-1px;left:-1px;border-top-width:2px;border-left-width:2px}
+.blueprint::after{top:-1px;right:-1px;border-top-width:2px;border-right-width:2px}
+.blueprint .bp-bl{bottom:-1px;left:-1px;border-bottom-width:2px;border-left-width:2px}
+.blueprint .bp-br{bottom:-1px;right:-1px;border-bottom-width:2px;border-right-width:2px}
+.blueprint-svg{width:100%;height:auto;display:block}
+.blueprint-svg .body-line{fill:none;stroke:var(--muted);stroke-width:1.6}
+.blueprint-svg .wheel{fill:var(--bg);stroke:var(--muted);stroke-width:1.6}
+.blueprint-svg .dim{stroke:var(--accent);stroke-width:1;opacity:.6}
+.blueprint-svg .pin{fill:var(--primary)}
+.blueprint-svg .pin-ring{fill:none;stroke:var(--primary);stroke-width:1.4;opacity:.5}
+.blueprint-svg text{font-family:'JetBrains Mono',monospace;fill:var(--muted);font-size:8.5px;letter-spacing:.04em}
+.blueprint-svg .label-num{fill:var(--primary);font-weight:700;font-size:9px}
+.blueprint-cap{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:14px;border-top:1px solid var(--border)}
+.blueprint-cap span{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.blueprint-cap span.fig{color:var(--accent)}
+
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;width:100%;max-width:var(--max);margin:64px auto 0}
+@media(max-width:800px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+.stat-card{
+  background:var(--card);border:1px solid var(--border);padding:26px 20px;
+  text-align:center;transition:var(--transition);
+}
+.stat-card:hover{border-color:var(--accent);transform:translateY(-4px)}
+.stat-card i{font-size:22px;color:var(--accent);margin-bottom:12px}
+.stat-card h3{font-size:26px;font-weight:700;color:var(--heading);margin-bottom:4px}
+.stat-card span{font-size:12.5px;color:var(--muted)}
+
+/* ===== GRIDS / CARDS ===== */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:900px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
+@media(max-width:900px) and (min-width:601px){.grid-4{grid-template-columns:repeat(2,1fr)}}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;transition:var(--transition);box-shadow:0 1px 3px rgba(13,27,42,.04)}
+.card:hover{border-color:var(--accent);background:var(--card-hover);box-shadow:0 8px 24px rgba(13,27,42,.08)}
+.card h3{font-size:17px;font-weight:600;color:var(--heading);margin-bottom:12px;display:flex;align-items:center;gap:10px;font-family:'Inter'}
+.card h3 i{color:var(--primary);font-size:16px}
+.card ul{list-style:none}
+.card ul li{padding:8px 0;border-bottom:1px solid rgba(13,27,42,.07);color:var(--muted);display:flex;gap:10px;font-size:14px}
+.card ul li:last-child{border-bottom:none}
+.card ul li i{color:var(--accent);font-size:11px;margin-top:5px;flex:none}
+.block-title{font-family:'JetBrains Mono';font-size:12px;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;margin-bottom:16px}
+
+/* ===== CHIPS / PILLS ===== */
+.chip-row{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1px solid var(--border);padding:8px 16px;border-radius:20px;font-size:13.5px;color:var(--muted);background:var(--card)}
+.chip.on{border-color:var(--primary);color:var(--primary-dark);background:rgba(217,35,45,.07)}
+.pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
+.pill{border:1px solid var(--border);border-radius:20px;padding:9px 18px 9px 10px;display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--text);background:var(--card)}
+.pill .num{width:22px;height:22px;border-radius:50%;background:var(--secondary);color:var(--accent);font-family:'JetBrains Mono';font-size:10.5px;display:flex;align-items:center;justify-content:center;flex:none}
+
+/* ===== TIMELINE ===== */
+.timeline{position:relative;max-width:760px}
+.timeline::before{content:"";position:absolute;top:0;bottom:0;left:9px;width:2px;background:var(--border)}
+.tl-item{position:relative;padding:0 0 30px 40px}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;top:5px;left:0;width:20px;height:20px;border-radius:50%;background:var(--bg);border:2px solid var(--primary);display:flex;align-items:center;justify-content:center}
+.tl-dot::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--primary)}
+.tl-year{font-family:'Oswald';font-size:22px;color:var(--primary);font-weight:600;margin-bottom:6px}
+.tl-item p{font-size:14px;color:var(--muted)}
+.tl-item p + p{margin-top:4px}
+
+/* ===== FACILITY ===== */
+.space-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:center}
+@media(max-width:900px){.space-wrap{grid-template-columns:1fr}}
+.donut{width:220px;height:220px;border-radius:50%;position:relative;margin:0 auto;
+  background:conic-gradient(var(--accent) 0deg 204deg, var(--primary) 204deg 360deg);
+  box-shadow:0 0 40px rgba(0,180,216,.12);
+}
+.donut-center{position:absolute;inset:24px;border-radius:50%;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.donut-center b{font-family:'Oswald';font-size:24px;color:var(--heading)}
+.donut-center span{font-size:10.5px;color:var(--muted);font-family:'JetBrains Mono'}
+.legend{display:flex;flex-direction:column;gap:8px;margin-top:22px;font-size:13px;color:var(--muted)}
+.legend i.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:middle}
+.layout-schema{border:1px solid var(--border);background:var(--card);padding:26px;border-radius:var(--radius)}
+.layout-boxes{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:14px}
+.lbox{border:1px dashed var(--muted-2);color:var(--muted);font-size:11.5px;padding:12px 8px;text-align:center;border-radius:8px;background:var(--bg-alt)}
+.lbox.solid{border-style:solid;border-color:var(--border)}
+.expand-note{background:linear-gradient(90deg,rgba(201,127,31,.10),transparent);border-left:3px solid var(--gold);padding:13px 16px;font-size:13px;color:#8a5814;border-radius:0 8px 8px 0}
+
+/* ===== TABLE ===== */
+.table-responsive{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;background:var(--card)}
+th,td{padding:15px 18px;text-align:left;border-bottom:1px solid var(--border);font-size:14px}
+th{background:var(--secondary);color:var(--accent);font-weight:600;font-family:'JetBrains Mono';font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
+td:first-child{color:var(--heading);font-family:'Oswald';font-weight:500;letter-spacing:.02em}
+td{color:var(--muted)}
+tr:hover td{background:rgba(13,27,42,.03)}
+
+/* ===== EQUIPMENT TABS ===== */
+.tabs{display:flex;gap:6px;margin-bottom:34px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.tab-btn{background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);font-weight:600;font-size:13.5px;padding:13px 18px;cursor:pointer;transition:var(--transition)}
+.tab-btn:hover{color:#fff}
+.tab-btn.active{color:var(--primary);border-color:var(--primary)}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.press-cols{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+@media(max-width:700px){.press-cols{grid-template-columns:1fr}}
+.press-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--border);padding-bottom:10px;margin-bottom:18px}
+.press-head b{font-family:'Oswald';font-size:18px;color:var(--heading)}
+.press-head span{font-family:'JetBrains Mono';font-size:11.5px;color:var(--accent)}
+.bar-row{display:flex;align-items:center;gap:14px;margin-bottom:11px}
+.bar-row .lab{width:58px;font-family:'JetBrains Mono';font-size:12px;color:var(--muted);flex:none}
+.bar-track{flex:1;height:8px;background:var(--bg-alt);border-radius:6px;overflow:hidden}
+.bar-fill{height:100%;background:linear-gradient(90deg,var(--secondary),var(--accent));border-radius:6px}
+
+/* ===== FLOW ===== */
+.flow{display:flex;flex-wrap:wrap;border:1px solid var(--border);overflow:visible;margin-bottom:44px}
+.flow-step{flex:1;min-width:140px;padding:18px 12px;border-right:1px solid var(--border);background:var(--card);text-align:center;font-size:12.5px;color:var(--muted);position:relative}
+.flow-step:last-child{border-right:none}
+.flow-step:not(:last-child)::after{
+  content:"\f105";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;right:-10px;top:50%;
+  transform:translateY(-50%);width:19px;height:19px;background:var(--bg);color:var(--primary);
+  display:flex;align-items:center;justify-content:center;font-size:10px;border:1px solid var(--border);
+  border-radius:50%;z-index:2;
+}
+.flow-step b{display:block;color:var(--accent);font-family:'Oswald';font-size:13.5px;margin-bottom:4px;text-transform:uppercase}
+
+/* ===== FAMILY GRID ===== */
+.family-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:52px}
+@media(max-width:900px){.family-grid{grid-template-columns:repeat(2,1fr)}}
+.family-cell{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px;transition:var(--transition)}
+.family-cell:hover{border-color:var(--primary)}
+.family-cell i.ico{font-size:19px;color:var(--primary);margin-bottom:12px;display:block}
+.family-cell h4{font-size:14px;color:var(--heading);margin-bottom:10px;font-family:'Oswald';text-transform:uppercase}
+.family-cell ul{padding-left:16px;color:var(--muted);font-size:12.5px}
+.family-cell li{margin-bottom:5px}
+
+/* ===== PAINT STAGES ===== */
+.stage-list{counter-reset:stage}
+.stage{display:flex;gap:22px;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--border)}
+.stage:last-child{border-bottom:none}
+.stage-num{counter-increment:stage;font-family:'Oswald';font-size:26px;color:var(--primary);width:48px;flex:none;opacity:.55}
+.stage-num::before{content:counter(stage,decimal-leading-zero)}
+.stage-body b{display:block;font-size:16px;color:var(--heading);font-weight:600;margin-bottom:3px}
+.stage-body span{font-size:13.5px;color:var(--muted)}
+
+/* ===== CUSTOMERS / LOGOS ===== */
+.trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:56px}
+@media(max-width:900px){.trust-strip{grid-template-columns:repeat(2,1fr)}}
+.trust-cell{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);
+  padding:22px 20px;display:flex;align-items:center;gap:14px;transition:var(--transition);
+}
+.trust-cell:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 10px 24px rgba(13,27,42,.08)}
+.trust-cell i{font-size:20px;color:var(--primary);flex:none}
+.trust-cell b{display:block;font-family:'Oswald';font-size:19px;color:var(--heading);line-height:1.15}
+.trust-cell span{font-size:12px;color:var(--muted)}
+
+.cust-group{margin-bottom:44px}
+.cust-group-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:16px;flex-wrap:wrap}
+.cust-group-head .block-title{margin-bottom:0}
+.cust-count{font-family:'JetBrains Mono';font-size:11.5px;color:var(--muted-2);letter-spacing:.06em}
+
+.logo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px}
+.logo-card{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);
+  padding:22px 14px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:12px;text-align:center;transition:var(--transition);
+}
+.logo-card:hover{border-color:var(--accent);box-shadow:0 10px 24px rgba(13,27,42,.09);transform:translateY(-4px)}
+.logo-card .logo-img-wrap{height:44px;width:100%;display:flex;align-items:center;justify-content:center}
+.logo-card img{max-height:40px;max-width:100%;object-fit:contain;filter:grayscale(1) opacity(.65);transition:filter .3s ease}
+.logo-card:hover img{filter:grayscale(0) opacity(1)}
+.logo-card .fallback-text{display:none;font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:.02em;color:var(--muted)}
+.logo-card:hover .fallback-text{color:var(--primary-dark)}
+.logo-card .logo-name{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.05em;color:var(--muted-2);text-transform:uppercase}
+
+.cust-cta{
+  margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  background:linear-gradient(120deg, rgba(217,35,45,.06), rgba(0,146,176,.05));
+  border:1px solid var(--border);border-radius:var(--radius);padding:32px 36px;
+}
+.cust-cta h3{font-family:'Oswald';font-size:22px;color:var(--heading);margin-bottom:6px}
+.cust-cta p{color:var(--muted);font-size:14px;max-width:480px}
+@media(max-width:700px){.cust-cta{flex-direction:column;align-items:flex-start;text-align:left}}
+
+/* ===== CERTIFICATES ===== */
+.cert-cell{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px 20px;text-align:center;transition:var(--transition)}
+.cert-cell:hover{border-color:var(--accent)}
+.cert-cell i{font-size:30px;color:var(--primary);margin-bottom:14px}
+.cert-cell b{display:block;font-size:14.5px;color:var(--heading);margin-bottom:5px;font-family:'Oswald'}
+.cert-cell span{font-size:11.5px;color:var(--muted);font-family:'JetBrains Mono'}
+.award-strip{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px}
+.award-cell{flex:1;min-width:200px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px}
+.award-cell .yr{font-family:'Oswald';font-size:20px;color:var(--gold);margin-bottom:6px}
+.award-cell p{font-size:13px;color:var(--muted)}
+
+/* ===== CONTACT ===== */
+.contact-box{
+  background:linear-gradient(135deg, var(--card) 0%, var(--secondary) 100%);
+  border:1px solid var(--border);border-radius:20px;padding:56px 40px;text-align:center;
+}
+.contact-box h2{font-size:clamp(28px,4vw,42px);color:#fff;margin-bottom:12px}
+.contact-box h2 span{color:var(--primary)}
+.contact-box > p{color:var(--muted);max-width:560px;margin:0 auto 36px}
+.contact-grid3{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:36px;text-align:left}
+@media(max-width:900px){.contact-grid3{grid-template-columns:repeat(2,1fr)}}
+.contact-item{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.contact-item i{font-size:18px;color:var(--accent);margin-bottom:10px;display:block}
+.contact-item h4{font-size:13px;color:var(--heading);margin-bottom:5px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.04em}
+.contact-item p{font-size:13px;color:var(--muted)}
+
+footer{padding:30px 5%;text-align:center;font-size:12.5px;color:var(--muted-2);font-family:'JetBrains Mono';border-top:1px solid var(--border)}
+
+/* ===== GALLERY ===== */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:900px){.gallery-grid{grid-template-columns:1fr}}
+@media(max-width:900px) and (min-width:601px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+.gallery-item{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;cursor:zoom-in;transition:var(--transition);box-shadow:0 1px 3px rgba(13,27,42,.04)}
+.gallery-item:hover{border-color:var(--accent);box-shadow:0 10px 28px rgba(13,27,42,.1);transform:translateY(-4px)}
+.gallery-item .thumb{position:relative;overflow:hidden;background:var(--secondary)}
+.gallery-item .thumb img{width:100%;height:230px;object-fit:cover;display:block;transition:transform .5s ease}
+.gallery-item:hover .thumb img{transform:scale(1.06)}
+.gallery-item .thumb .zoom-hint{position:absolute;top:12px;right:12px;width:32px;height:32px;border-radius:50%;background:rgba(13,27,42,.55);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;backdrop-filter:blur(3px)}
+.gallery-item figcaption{padding:15px 17px}
+.gallery-item figcaption b{display:block;font-size:14.5px;color:var(--heading);font-family:'Oswald';margin-bottom:3px;letter-spacing:.01em}
+.gallery-item figcaption span{font-size:12px;color:var(--muted)}
+
+.lightbox{position:fixed;inset:0;background:rgba(9,16,26,.94);display:none;align-items:center;justify-content:center;flex-direction:column;z-index:2000;padding:50px 5%;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(1200px,90vw);max-height:76vh;border-radius:6px;box-shadow:0 30px 70px rgba(0,0,0,.55);cursor:default}
+.lightbox-cap{color:#fff;margin-top:18px;font-size:14px;text-align:center;max-width:720px}
+.lightbox-cap b{display:block;font-family:'Oswald';font-size:16px;margin-bottom:4px}
+.lightbox-cap span{color:var(--muted-2);font-size:12.5px}
+.lightbox-close{position:absolute;top:26px;right:34px;color:#fff;font-size:30px;cursor:pointer;line-height:1;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.25);border-radius:50%;transition:var(--transition)}
+.lightbox-close:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ===== THEME CUSTOMIZER ===== */
+.theme-fab{
+  position:fixed;bottom:26px;right:26px;z-index:1500;width:52px;height:52px;border-radius:50%;
+  background:var(--primary);color:#fff;border:none;font-size:19px;cursor:pointer;
+  box-shadow:0 8px 24px rgba(217,35,45,.35);transition:var(--transition);
+  display:flex;align-items:center;justify-content:center;
+}
+.theme-fab:hover{transform:rotate(25deg) scale(1.06)}
+.theme-panel{
+  position:fixed;bottom:90px;right:26px;z-index:1500;width:250px;background:var(--card);
+  border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:0 20px 50px rgba(13,27,42,.18);
+  opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .25s ease,transform .25s ease,visibility .25s;
+}
+.theme-panel.open{opacity:1;visibility:visible;transform:none}
+.theme-panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.theme-panel-head b{font-size:13.5px;color:var(--heading);display:flex;align-items:center;gap:7px;font-family:'Oswald'}
+.theme-close{background:none;border:none;font-size:18px;color:var(--muted);cursor:pointer;line-height:1}
+.theme-close:hover{color:var(--primary)}
+.theme-presets{display:flex;gap:9px;margin-bottom:16px;flex-wrap:wrap}
+.preset-swatch{
+  width:32px;height:32px;border-radius:50%;border:2px solid var(--border);cursor:pointer;
+  background:linear-gradient(135deg,var(--c1) 50%,var(--c2) 50%);transition:var(--transition);
+}
+.preset-swatch:hover{transform:scale(1.14);border-color:var(--heading)}
+.theme-custom{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.theme-custom label{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--muted);font-family:'JetBrains Mono'}
+.theme-custom input[type=color]{width:38px;height:26px;border:1px solid var(--border);border-radius:6px;cursor:pointer;background:none;padding:0}
+.theme-reset{width:100%;background:none;border:1px solid var(--border);color:var(--muted);padding:9px;border-radius:8px;font-size:12.5px;cursor:pointer;transition:var(--transition);display:flex;align-items:center;justify-content:center;gap:6px}
+.theme-reset:hover{border-color:var(--primary);color:var(--primary-dark)}
+@media(max-width:600px){.theme-panel{right:14px;left:14px;width:auto;bottom:86px}.theme-fab{right:16px;bottom:16px}}
+
+/* ===== ARABIC / RTL MODE ===== */
+html[dir="rtl"] body{font-family:'Cairo',sans-serif}
+html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] h4,html[dir="rtl"] .disp{font-family:'Cairo',sans-serif;letter-spacing:0}
+html[dir="rtl"] .mono{font-family:'Cairo',sans-serif}
+html[dir="rtl"] .eyebrow::before{margin-left:10px;margin-right:0}
+html[dir="rtl"] .card h3 i,html[dir="rtl"] .card ul li i,html[dir="rtl"] .cert-cell i{margin-left:2px}
+html[dir="rtl"] .nav-links a::after{left:auto;right:14px}
+html[dir="rtl"] .timeline::before{left:auto;right:9px}
+html[dir="rtl"] .tl-item{padding:0 40px 30px 0}
+html[dir="rtl"] .tl-dot{left:auto;right:0}
+html[dir="rtl"] .stage-num{margin-left:0}
+html[dir="rtl"] .theme-fab{right:auto;left:26px}
+html[dir="rtl"] .theme-panel{right:auto;left:26px}
+html[dir="rtl"] .lightbox-close{right:auto;left:34px}
+@media(max-width:600px){html[dir="rtl"] .theme-fab{left:16px}html[dir="rtl"] .theme-panel{left:14px;right:14px}}
+</style>
+</head>
+<body>
+<nav>
+<div class="nav-inner">
+<a class="brand" href="#hero">
+<div class="brand-mark"><span class="i18n" data-ar="f">f</span></div>
+<div class="brand-text"><span class="brand-name"><span class="i18n" data-ar="فيمكو">FIMCO</span></span><span class="brand-tag"><span class="i18n" data-ar="تأسست عام 1987">Est. 1987</span></span></div>
+</a>
+<button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button>
+<ul class="nav-links" id="navLinks">
+<li><a href="#overview"><span class="i18n" data-ar="نظرة عامة">Overview</span></a></li>
+<li><a href="#capabilities"><span class="i18n" data-ar="القدرات">Capabilities</span></a></li>
+<li><a href="#products"><span class="i18n" data-ar="المنتجات">Products</span></a></li>
+<li><a href="#facility"><span class="i18n" data-ar="المنشأة">Facility</span></a></li>
+<li><a href="#equipment"><span class="i18n" data-ar="المعدات">Equipment</span></a></li>
+<li><a href="#gallery"><span class="i18n" data-ar="معرض الصور">Gallery</span></a></li>
+<li><a href="#certificates"><span class="i18n" data-ar="الجودة">Quality</span></a></li>
+<li><a class="nav-cta" href="#contact"><span class="i18n" data-ar="تواصل معنا">Contact</span></a></li>
+<li><button class="lang-btn" id="langToggle" onclick="toggleLang()">عربي</button></li>
+</ul>
+</div>
+</nav>
+<button aria-label="Customize theme colors" class="theme-fab" id="themeFab" onclick="toggleThemePanel()"><i class="fas fa-palette"></i></button>
+<div class="theme-panel" id="themePanel">
+<div class="theme-panel-head">
+<b><i class="fas fa-sliders"></i> <span class="i18n" data-ar="ألوان التصميم">Theme Colors</span></b>
+<button class="theme-close" onclick="toggleThemePanel()"><span class="i18n" data-ar="×">×</span></button>
+</div>
+<div class="theme-presets">
+<button class="preset-swatch" onclick="applyPreset('#d9232d','#0092b0','#0d1b2a')" style="--c1:#d9232d;--c2:#0092b0" title="Racing Red"></button>
+<button class="preset-swatch" onclick="applyPreset('#14528c','#d9232d','#0b1c2e')" style="--c1:#14528c;--c2:#d9232d" title="Steel Blue"></button>
+<button class="preset-swatch" onclick="applyPreset('#c97f1f','#0d1b2a','#241a0c')" style="--c1:#c97f1f;--c2:#0d1b2a" title="Graphite Gold"></button>
+<button class="preset-swatch" onclick="applyPreset('#0e7c53','#0d1b2a','#0b241a')" style="--c1:#0e7c53;--c2:#0d1b2a" title="Emerald Industrial"></button>
+<button class="preset-swatch" onclick="applyPreset('#1b2a4a','#c97f1f','#0c1626')" style="--c1:#1b2a4a;--c2:#c97f1f" title="Midnight Navy"></button>
+</div>
+<div class="theme-custom">
+<label><span class="i18n" data-ar="اللون الأساسي">Primary</span> <input id="colorPrimary" oninput="applyPreset(this.value, document.getElementById('colorAccent').value)" type="color" value="#d9232d"/></label>
+<label><span class="i18n" data-ar="اللون الثانوي">Accent</span> <input id="colorAccent" oninput="applyPreset(document.getElementById('colorPrimary').value, this.value)" type="color" value="#0092b0"/></label>
+</div>
+<button class="theme-reset" onclick="applyPreset('#d9232d','#0092b0','#0d1b2a')"><i class="fas fa-rotate-left"></i> <span class="i18n" data-ar="إعادة للوضع الافتراضي">Reset to default</span></button>
+</div>
+<main>
+<!-- HERO -->
+<header class="hero" id="hero">
+<div class="hero-inner">
+<div>
+<div class="hero-badge"><i class="fas fa-industry"></i> <span class="i18n" data-ar="نظرة عامة على مورد الفئة الأولى / الثانية للمصنّعين الأصليين — 2026">OEM Tier 1 / Tier 2 Supplier Overview — 2026</span></div>
+<h1><span class="i18n" data-ar="فيمكو — قدرات">FIMCO — Automotive</span><span><span class="i18n" data-ar="التصنيع في صناعة السيارات">Manufacturing Capabilities</span></span></h1>
+<p><span class="i18n" data-ar="شركة الصناعات التغذوية للتصنيع — مورد من الفئة الأولى / الثانية للمصنّعين الأصليين متخصص في تشكيل المعادن ودهان البلاستيك، ومقرها مدينة 6 أكتوبر بمصر، في إنتاج مستمر منذ عام 1987.">Feeding Industries Manufacturing Co. — an OEM Tier 1 / Tier 2 metal forming and plastic painting supplier based in 6th of October City, Egypt, in continuous production since 1987.</span></p>
+<div class="hero-cta">
+<a class="btn btn-primary" href="#capabilities"><i class="fas fa-gears"></i> <span class="i18n" data-ar="عرض القدرات">View Capabilities</span></a>
+<a class="btn btn-ghost" href="#contact"><i class="fas fa-handshake"></i> <span class="i18n" data-ar="تواصل معنا">Get In Touch</span></a>
+</div>
+</div>
+<div class="blueprint">
+<span class="bp-br"></span><span class="bp-bl"></span>
+<svg class="blueprint-svg" viewbox="0 0 520 280" xmlns="http://www.w3.org/2000/svg">
+<path class="body-line" d="M40,190 L40,168 C40,150 54,134 76,130 L145,108 C168,88 198,78 228,78 L318,78 C348,78 375,89 395,110 L438,132 C458,138 472,152 476,168 L476,190 Z"></path>
+<line class="body-line" x1="150" x2="150" y1="130" y2="190"></line>
+<line class="body-line" x1="255" x2="255" y1="82" y2="190"></line>
+<line class="body-line" x1="360" x2="360" y1="130" y2="190"></line>
+<path class="body-line" d="M155,132 L225,110 L250,110 L250,132 Z"></path>
+<path class="body-line" d="M260,110 L315,110 L355,132 L260,132 Z"></path>
+<circle class="wheel" cx="128" cy="192" r="26"></circle>
+<circle class="wheel" cx="388" cy="192" r="26"></circle>
+<circle class="wheel" cx="128" cy="192" fill="var(--muted)" r="8"></circle>
+<circle class="wheel" cx="388" cy="192" fill="var(--muted)" r="8"></circle>
+<line class="dim" x1="20" x2="496" y1="230" y2="230"></line>
+<line class="dim" x1="20" x2="20" y1="223" y2="237"></line>
+<line class="dim" x1="496" x2="496" y1="223" y2="237"></line>
+<circle class="pin" cx="90" cy="150" r="3"></circle><circle class="pin-ring" cx="90" cy="150" r="7"></circle>
+<text class="label-num" x="82" y="255">01</text><text x="82" y="266">STAMPING</text>
+<circle class="pin" cx="255" cy="95" r="3"></circle><circle class="pin-ring" cx="255" cy="95" r="7"></circle>
+<text class="label-num" x="230" y="30">02</text><text x="220" y="41">WELDING &amp; ASSEMBLY</text>
+<circle class="pin" cx="420" cy="120" r="3"></circle><circle class="pin-ring" cx="420" cy="120" r="7"></circle>
+<text class="label-num" x="415" y="255">03</text><text x="415" y="266">PAINTING</text>
+</svg>
+<div class="blueprint-cap">
+<span class="fig"><span class="i18n" data-ar="الشكل 01">Fig. 01</span></span>
+<span><span class="i18n" data-ar="مخطط توضيحي لهيكل السيارة — نطاق تشكيل المعادن ودهان البلاستيك">Illustrative body outline — metal forming + plastic painting scope</span></span>
+</div>
+</div>
+</div>
+<div class="stats-grid">
+<div class="stat-card"><i class="fas fa-calendar-alt"></i><h3>1987</h3><span><span class="i18n" data-ar="سنة التأسيس">Year founded</span></span></div>
+<div class="stat-card"><i class="fas fa-ruler-combined"></i><h3><span class="i18n" data-ar="12,000 m²">12,000 m²</span></h3><span><span class="i18n" data-ar="إجمالي مساحة المنشأة">Total facility area</span></span></div>
+<div class="stat-card"><i class="fas fa-weight-hanging"></i><h3><span class="i18n" data-ar="1,000 T">1,000 T</span></h3><span><span class="i18n" data-ar="أقصى طاقة كبس">Max pressing capacity</span></span></div>
+<div class="stat-card"><i class="fas fa-certificate"></i><h3>5</h3><span><span class="i18n" data-ar="شهادات الجودة">Quality certifications</span></span></div>
+</div>
+</header>
+<!-- OVERVIEW + TIMELINE -->
+<section id="overview">
+<div class="section-title reveal">
+<div class="eyebrow"><span class="i18n" data-ar="لمحة عن الشركة">Company Snapshot</span></div>
+<h2><span class="i18n" data-ar="أربعة عقود على">Four decades on the</span> <span><span class="i18n" data-ar="أرض المصنع">factory floor</span></span></h2>
+<p><span class="i18n" data-ar="شركة تصنيع بناها مؤسسها ونمت مع سلسلة التوريد المصرية لصناعة السيارات — من ورشة واحدة لتشكيل الصاج إلى مورّد معتمد متعدد المصانع للمصنّعين الأصليين.">A founder-built manufacturer that grew alongside Egypt's automotive supply chain — from a single sheet-metal workshop into a certified, multi-plant OEM feeder.</span></p>
+</div>
+<div class="grid-2">
+<div class="reveal">
+<div class="card" style="margin-bottom:24px">
+<h3><i class="fas fa-building"></i> <span class="i18n" data-ar="نظرة عامة على الشركة">Company Overview</span></h3>
+<ul>
+<li><i class="fas fa-location-dot"></i> <span><strong><span class="i18n" data-ar="الموقع:">Location:</span></strong> <span class="i18n" data-ar="مدينة 6 أكتوبر، المنطقة الصناعية الرابعة، مصر">6th of October City, 4th Industrial Zone, Egypt</span></span></li>
+<li><i class="fas fa-ruler-combined"></i> <span><strong><span class="i18n" data-ar="المساحة الإجمالية:">Total area:</span></strong> <span class="i18n" data-ar="12,000 م² (المستغل منها 6,800 م²)">12,000 m² (6,800 m² utilized)</span></span></li>
+<li><i class="fas fa-users"></i> <span><strong><span class="i18n" data-ar="العمليات الأساسية:">Core processes:</span></strong> <span class="i18n" data-ar="الكبس، اللحام، التجميع، دهان البلاستيك (بعد الحقن)">Stamping, Welding, Assembling, Plastic Painting (post-injection)</span></span></li>
+</ul>
+</div>
+<div class="block-title"><span class="i18n" data-ar="الشهادات">Certifications</span></div>
+<div class="chip-row">
+<span class="chip"><span class="i18n" data-ar="IATF 16949">IATF 16949</span></span>
+<span class="chip"><span class="i18n" data-ar="ISO 9001">ISO 9001</span></span>
+<span class="chip"><span class="i18n" data-ar="ISO 14001">ISO 14001</span></span>
+<span class="chip"><span class="i18n" data-ar="ISO 45001">ISO 45001</span></span>
+<span class="chip"><span class="i18n" data-ar="BIQS">BIQS</span></span>
+</div>
+</div>
+<div class="reveal">
+<div class="block-title"><span class="i18n" data-ar="أبرز المحطات">Milestones</span></div>
+<div class="timeline">
+<div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1987</div>
+<p><span class="i18n" data-ar="تأسست كجزء من مجموعة MB، متخصصة في تشكيل الصاج المعدني.">Founded as part of MB Group, specializing in sheet metal forming.</span></p>
+<p><span class="i18n" data-ar="كانت تقع مبدئيًا على طريق مصر الزراعي (القاهرة–الإسكندرية).">Initially located on the Cairo–Alexandria Agricultural Road.</span></p>
+</div>
+<div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1998</div>
+<p><span class="i18n" data-ar="انتقلت إلى مدينة 6 أكتوبر بالقرب من مصنّعي السيارات.">Relocated to 6th of October City, close to car manufacturers.</span></p>
+<p><span class="i18n" data-ar="أضافت قطاعًا جديدًا: دهان القطع البلاستيكية الخارجية.">Introduced a new sector: painting exterior plastic parts.</span></p>
+</div>
+<div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2020</div>
+<p><span class="i18n" data-ar="توسعت في الطاقة الإنتاجية لتلبية الطلب المتزايد في السوق.">Expanded production capacity to meet rising market demand.</span></p>
+<p><span class="i18n" data-ar="طبّقت تقنيات تصنيع متقدمة لرفع الكفاءة.">Implemented advanced manufacturing technologies for higher efficiency.</span></p>
+</div>
+<div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2025</div>
+<p><span class="i18n" data-ar="التركيز على التوسع العالمي ونمو الصادرات.">Focus on global expansion and export growth.</span></p>
+<p><span class="i18n" data-ar="التنويع في قطاعات متعددة ضمن صناعة تغذية السيارات.">Diversification into multiple sectors within the automotive feeding industry.</span></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CAPABILITIES -->
+<section id="capabilities">
+<div class="section-title reveal">
+<div class="eyebrow"><span class="i18n" data-ar="القدرات الأساسية">Core Capabilities</span></div>
+<h2><span class="i18n" data-ar="القدرة">Process</span> <span><span class="i18n" data-ar="الإنتاجية">capability</span></span> <span class="i18n" data-ar="في لمحة">at a glance</span></h2>
+</div>
+<div class="grid-4 reveal">
+<div class="card"><span class="spec-tag"><span class="i18n" data-ar="PR-01">PR-01</span></span><h3><i class="fas fa-compress"></i> <span class="i18n" data-ar="الكبس">Stamping</span></h3><p style="color:var(--muted);font-size:14px"><span class="i18n" data-ar="طاقة كبس تصل إلى 1,000 طن.">Up to 1,000 tons pressing capacity.</span></p></div>
+<div class="card"><span class="spec-tag"><span class="i18n" data-ar="PR-02">PR-02</span></span><h3><i class="fas fa-fire"></i> <span class="i18n" data-ar="اللحام">Welding</span></h3><p style="color:var(--muted);font-size:14px"><span class="i18n" data-ar="لحام نقطي / CO₂ / ليزر / أرجون.">Spot / CO₂ / Laser / Argon welding.</span></p></div>
+<div class="card"><span class="spec-tag"><span class="i18n" data-ar="PR-03">PR-03</span></span><h3><i class="fas fa-tools"></i> <span class="i18n" data-ar="تصنيع القوالب">Tooling</span></h3><p style="color:var(--muted);font-size:14px"><span class="i18n" data-ar="تصميم وتصنيع القوالب داخليًا، مع الاستعانة بموردين أوروبيين وآسيويين.">In-house die design &amp; manufacturing, with outsourcing to European and Asian suppliers.</span></p></div>
+<div class="card"><span class="spec-tag"><span class="i18n" data-ar="PR-04">PR-04</span></span><h3><i class="fas fa-paint-roller"></i> <span class="i18n" data-ar="الدهان">Painting</span></h3><p style="color:var(--muted);font-size:14px"><span class="i18n" data-ar="طلاء القطع البلاستيكية بعد الحقن.">Plastic parts coating after injection.</span></p></div>
+</div>
+</section>
+<!-- PRODUCTS -->
+<section id="products">
+<div class="section-title reveal">
+<div class="eyebrow"><span class="i18n" data-ar="محفظة المنتجات">Product Portfolio</span></div>
+<h2><span class="i18n" data-ar="خط إنتاج واحد،">One line,</span> <span><span class="i18n" data-ar="خمس عائلات منتجات">five product families</span></span></h2>
+<p><span class="i18n" data-ar="من عناصر الهيكل الإنشائية إلى الكسوة الخارجية المدهونة، تغطي فيمكو سلسلة القيمة من المعدن إلى البلاستيك لهيكل السيارة الكامل.">From structural chassis members to painted exterior trim, FIMCO covers the metal-to-plastic value chain for a finished vehicle body.</span></p>
+</div>
+<div class="pill-row reveal">
+<div class="pill"><span class="num">01</span> <span class="i18n" data-ar="قطع الهيكل">Body Parts</span></div>
+<div class="pill"><span class="num">02</span> <span class="i18n" data-ar="المكونات الإنشائية">Structural Components</span></div>
+<div class="pill"><span class="num">03</span> <span class="i18n" data-ar="الكوالب والدعامات">Brackets &amp; Supports</span></div>
+<div class="pill"><span class="num">04</span> <span class="i18n" data-ar="الدروع الحرارية">Heat Shields</span></div>
+<div class="pill"><span class="num">05</span> <span class="i18n" data-ar="القطع البلاستيكية الخارجية">Plastic Exterior Parts</span></div>
+</div>
+<div class="block-title reveal"><i class="fas fa-car-side"></i> <span class="i18n" data-ar="مصنع تشكيل المعادن — عائلات المنتجات">Metal Forming Plant — Product Families</span></div>
+<div class="flow reveal">
+<div class="flow-step"><b><span class="i18n" data-ar="الكبس">Pressing</span></b><span class="i18n" data-ar="قسم">Section</span></div>
+<div class="flow-step"><b><span class="i18n" data-ar="اللحام">Welding</span></b><span class="i18n" data-ar="قسم">Section</span></div>
+<div class="flow-step"><b><span class="i18n" data-ar="القوالب والأسطمبات">Die &amp; Mold</span></b><span class="i18n" data-ar="قسم">Section</span></div>
+<div class="flow-step"><b><span class="i18n" data-ar="الفحص وضبط الجودة">Inspection &amp; QC</span></b><span class="i18n" data-ar="قسم">Section</span></div>
+<div class="flow-step"><b><span class="i18n" data-ar="التجميع والاختبار">Assembling &amp; Testing</span></b><span class="i18n" data-ar="قسم">Section</span></div>
+<div class="flow-step"><b><span class="i18n" data-ar="هيكل الميكروباص">Microbus Chassis</span></b><span class="i18n" data-ar="خط التجميع">Assembly Line</span></div>
+<div class="flow-step"><b><span class="i18n" data-ar="هيكل الدراجة النارية">Motorcycle Chassis</span></b><span class="i18n" data-ar="خط التجميع">Assembly Line</span></div>
+</div>
+<div class="family-grid reveal">
+<div class="family-cell"><i class="fas fa-layer-group ico"></i><h4><span class="i18n" data-ar="المكونات الإنشائية">Structural Components</span></h4>
+<ul><li><span class="i18n" data-ar="تجميع هيكل الميكروباص">Microbus chassis assembly</span></li><li><span class="i18n" data-ar="تجميع هيكل الدراجة النارية">Motorcycle chassis assembly</span></li><li><span class="i18n" data-ar="عارضة معدنية عرضية للوحة القيادة">Dashboard metal cross beam</span></li><li><span class="i18n" data-ar="العارضة العرضية ووسم ZB">Cross member &amp; ZB tagger</span></li></ul>
+</div>
+<div class="family-cell"><i class="fas fa-car-side ico"></i><h4><span class="i18n" data-ar="قطع الهيكل الخارجي">Exterior Body Parts</span></h4>
+<ul><li><span class="i18n" data-ar="الرفارف، الأغطية، الأبواب، الأسقف، الصناديق">Fenders, hoods, doors, roofs, trunks</span></li><li><span class="i18n" data-ar="الأرضيات الأمامية والخلفية">Rear and front floors</span></li></ul>
+</div>
+<div class="family-cell"><i class="fas fa-shield-halved ico"></i><h4><span class="i18n" data-ar="الحماية والدروع">Protection &amp; Shields</span></h4>
+<ul><li><span class="i18n" data-ar="درع حماية الشكمان">Shield protective muffler</span></li><li><span class="i18n" data-ar="درع الحماية الحرارية">Heat protective shield</span></li><li><span class="i18n" data-ar="واقي المحرك">Engine protector</span></li><li><span class="i18n" data-ar="عوارض الصدم المعدنية للمصد">Bumper metal impact beams</span></li></ul>
+</div>
+<div class="family-cell"><i class="fas fa-gears ico"></i><h4><span class="i18n" data-ar="الفرامل ونظام التعليق">Braking &amp; Suspension</span></h4>
+<ul><li><span class="i18n" data-ar="دعامة معدنية لبطانة فرامل الأقراص">Disc brake lining metal support</span></li><li><span class="i18n" data-ar="كوالب دعم النابض وممتص الصدمات">Spring &amp; shock absorber supporting brackets</span></li></ul>
+</div>
+<div class="family-cell"><i class="fas fa-gas-pump ico"></i><h4><span class="i18n" data-ar="نظام الوقود والتبريد">Fuel &amp; Cooling System</span></h4>
+<ul><li><span class="i18n" data-ar="أغطية خزان الوقود والرادياتير">Fuel tank and radiator covers</span></li></ul>
+</div>
+<div class="family-cell"><i class="fas fa-snowflake ico"></i><h4><span class="i18n" data-ar="قطع التكييف">Air Conditioning Parts</span></h4>
+<ul><li><span class="i18n" data-ar="لوحة طرفية لملف التكييف">AC hairpin end plate</span></li><li><span class="i18n" data-ar="اللوحة الجانبية اليمنى للتكييف">AC right side panel</span></li></ul>
+</div>
+<div class="family-cell"><i class="fas fa-sliders ico"></i><h4><span class="i18n" data-ar="التحكم والدعم">Control &amp; Support</span></h4>
+<ul><li><span class="i18n" data-ar="دواسات البنزين والدبرياج والفرامل">Accelerator, clutch &amp; brake pedals</span></li><li><span class="i18n" data-ar="ذراع دعم غطاء المحرك">Hood support rod</span></li></ul>
+</div>
+</div>
+<div class="block-title reveal"><i class="fas fa-spray-can"></i> <span class="i18n" data-ar="مصنع دهان البلاستيك — المنتجات">Plastic Painting Plant — Products</span></div>
+<div class="grid-2 reveal">
+<div class="card">
+<h3><i class="fas fa-car"></i> <span class="i18n" data-ar="القطع البلاستيكية للسيارات">Automotive Plastic Parts</span></h3>
+<div class="chip-row">
+<span class="chip"><span class="i18n" data-ar="المصدات الأمامية والخلفية">Rear &amp; front bumpers</span></span><span class="chip"><span class="i18n" data-ar="طقم كسوة الأبواب">Door molding set</span></span>
+<span class="chip"><span class="i18n" data-ar="المرايا الجانبية">Side mirrors</span></span><span class="chip"><span class="i18n" data-ar="طقم مقابض الأبواب">Door handle set</span></span>
+<span class="chip"><span class="i18n" data-ar="غطاء خزان الوقود">Fuel tank cover</span></span><span class="chip"><span class="i18n" data-ar="مقبض الصندوق">Trunk handle</span></span>
+<span class="chip"><span class="i18n" data-ar="شبك الرادياتير الأمامي">Front radiator grill</span></span><span class="chip"><span class="i18n" data-ar="طقم كسوة العتبة الجانبية">Rocker panel set</span></span>
+</div>
+</div>
+<div class="card">
+<h3><i class="fas fa-blender"></i> <span class="i18n" data-ar="القطع البلاستيكية للأجهزة المنزلية">Household Appliance Plastic Parts</span></h3>
+<div class="chip-row">
+<span class="chip"><span class="i18n" data-ar="مقابض وأزرار البوتاجاز والثلاجة">Cooker &amp; fridge handles/knobs</span></span>
+<span class="chip"><span class="i18n" data-ar="قطع الغسالات">Washing machine parts</span></span>
+<span class="chip"><span class="i18n" data-ar="قطع المكانس الكهربائية">Vacuum cleaner parts</span></span>
+</div>
+</div>
+</div>
+</section>
+<!-- FACILITY -->
+<section id="facility">
+<div class="section-title reveal">
+<div class="eyebrow"><span class="i18n" data-ar="المنشأة والمخطط">Facility &amp; Layout</span></div>
+<h2><span class="i18n" data-ar="12,000 م² —">12,000 m² —</span> <span><span class="i18n" data-ar="مساحة للتوسع">room to grow</span></span></h2>
+<p><span class="i18n" data-ar="أكثر بقليل من نصف الموقع مُنشأ حاليًا؛ والباقي مخصص للمخازن والتوسع في خطوط الإنتاج.">Just over half of the site is currently built out; the remainder is reserved for warehousing and production-line expansion.</span></p>
+</div>
+<div class="space-wrap reveal">
+<div>
+<div class="donut">
+<div class="donut-center"><b><span class="i18n" data-ar="6,800 م²">6,800 m²</span></b><span><span class="i18n" data-ar="المستغل من إجمالي 12,000 م²">UTILIZED OF 12,000 m²</span></span></div>
+</div>
+<div class="legend">
+<span><i class="dot" style="background:var(--accent)"></i><span class="i18n" data-ar="مستغل — مصنع المعادن، المكاتب، مصنع الدهان، المخازن">Utilized — Metal Factory, Office, Paint Factory, Storage</span></span>
+<span><i class="dot" style="background:var(--primary)"></i><span class="i18n" data-ar="غير مستغل — احتياطي توسع 5,200 م²">Not utilized — 5,200 m² expansion reserve</span></span>
+</div>
+</div>
+<div class="layout-schema">
+<h4 class="block-title" style="margin-bottom:16px"><span class="i18n" data-ar="المخطط الحالي للموقع">Current Site Layout</span></h4>
+<div class="layout-boxes">
+<div class="lbox solid"><span class="i18n" data-ar="المدخل الرئيسي">Main Entrance</span></div>
+<div class="lbox solid"><span class="i18n" data-ar="موقف السيارات وبوابة الأمن">Parking &amp; Security Control</span></div>
+<div class="lbox solid"><span class="i18n" data-ar="مبنى الإدارة">Admin Building</span></div>
+<div class="lbox"><span class="i18n" data-ar="مصنع الدهان">Paint Plant</span></div>
+<div class="lbox"><span class="i18n" data-ar="المبنى الفني">Technical Building</span></div>
+<div class="lbox"><span class="i18n" data-ar="مصنع تشكيل المعادن 1">Metal Forming Plant 1</span></div>
+<div class="lbox"><span class="i18n" data-ar="مخزن المواد الخام والمنتج النهائي">Raw Material &amp; Final Product Warehouse</span></div>
+<div class="lbox"><span class="i18n" data-ar="تشكيل المعادن وقطع الهيكل — التوسعة، مصنع 2">Metal Forming &amp; Body Parts — Extension Plant 2</span></div>
+<div class="lbox solid"><span class="i18n" data-ar="منطقة التوسع">Expanding Area</span></div>
+</div>
+<div class="expand-note"><i class="fas fa-diagram-project"></i> <span class="i18n" data-ar="أعمال إنشاء جارية لعام 2026: المصنع A (تشكيل معادن 1) والمصنع B (تشكيل معادن 2، ويشمل لحام تجميع الهيكل ومعمل اللحام) على جانبي خط دهان إلكتروستاتيكي جديد بمساحة 342 م²، والمصنع C (دهان البلاستيك)، ومخزن للمرحلة الأولى، ومبنى إداري موسّع.">2026 build-out in progress: Plant A (Metal Forming 1) and Plant B (Metal Forming 2, incl. Chassis ASM welding &amp; weld lab) flanking a new 342 m² electrostatic painting line, Plant C (Plastic Painting), a 1st-stage warehouse and an expanded admin building.</span></div>
+</div>
+</div>
+</section>
+<!-- EQUIPMENT -->
+<section id="equipment">
+<div class="section-title reveal">
+<div class="eyebrow"><span class="i18n" data-ar="المعدات والآلات">Equipment &amp; Machinery</span></div>
+<h2><span class="i18n" data-ar="أرض">The</span> <span><span class="i18n" data-ar="الماكينات">machine floor</span></span></h2>
+</div>
+<div class="block-title reveal"><i class="fas fa-weight-hanging"></i> <span class="i18n" data-ar="ماكينات الكبس">Press Machines</span></div>
+<div class="card reveal" style="margin-bottom:52px">
+<div class="press-cols">
+<div>
+<div class="press-head"><b><span class="i18n" data-ar="المكبس الهيدروليكي">Hydraulic Press</span></b><span><span class="i18n" data-ar="60 – 1,000 TON">60 – 1,000 TON</span></span></div>
+<div class="bar-row"><span class="lab"><span class="i18n" data-ar="1000 T">1000 T</span></span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div></div>
+<div class="bar-row"><span class="lab"><span class="i18n" data-ar="400 T">400 T</span></span><div class="bar-track"><div class="bar-fill" style="width:40%"></div></div></div>
+<div class="bar-row"><span class="lab"><span class="i18n" data-ar="250 T">250 T</span></span><div class="bar-track"><div class="bar-fill" style="width:25%"></div></div></div>
+<div class="bar-row"><span class="lab"><span class="i18n" data-ar="60 T">60 T</span></span><div class="bar-track"><div class="bar-fill" style="width:6%"></div></div></div>
+</div>
+<div>
+<div class="press-head"><b><span class="i18n" data-ar="المكبس اللامركزي">Eccentric Press</span></b><span><span class="i18n" data-ar="40 – 500 TON">40 – 500 TON</span></span></div>
+<div class="bar-row"><span class="lab"><span class="i18n" data-ar="500 T">500 T</span></span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div></div>
+<div class="bar-row"><span class="lab"><span class="i18n" data-ar="250 T">250 T</span></span><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div></div>
+<div class="bar-row"><span class="lab"><span class="i18n" data-ar="160 T">160 T</span></span><div class="bar-track"><div class="bar-fill" style="width:32%"></div></div></div>
+<div class="bar-row"><span class="lab"><span class="i18n" data-ar="100 T">100 T</span></span><div class="bar-track"><div class="bar-fill" style="width:20%"></div></div></div>
+<div class="bar-row"><span class="lab"><span class="i18n" data-ar="63 T">63 T</span></span><div class="bar-track"><div class="bar-fill" style="width:13%"></div></div></div>
+<div class="bar-row"><span class="lab"><span class="i18n" data-ar="50 T">50 T</span></span><div class="bar-track"><div class="bar-fill" style="width:10%"></div></div></div>
+<div class="bar-row"><span class="lab"><span class="i18n" data-ar="40 T">40 T</span></span><div class="bar-track"><div class="bar-fill" style="width:8%"></div></div></div>
+</div>
+</div>
+</div>
+<div class="block-title reveal"><i class="fas fa-bolt"></i> <span class="i18n" data-ar="اللحام والتشغيل الآلي والقطع">Welding, Machining &amp; Cutting</span></div>
+<div class="grid-3 reveal" style="margin-bottom:52px">
+<div class="card"><h3><i class="fas fa-bolt"></i> <span class="i18n" data-ar="ماكينات اللحام">Welding Machines</span></h3><ul><li><i class="fas fa-check"></i><span class="i18n" data-ar="لحام CO₂">CO₂ welding</span></li><li><i class="fas fa-check"></i><span class="i18n" data-ar="لحام نقطي ثابت">Fixed spot welding</span></li><li><i class="fas fa-check"></i><span class="i18n" data-ar="لحام نقطي متحرك">Movable spot welding</span></li><li><i class="fas fa-check"></i><span class="i18n" data-ar="لحام ليزر">Laser welding</span></li><li><i class="fas fa-check"></i><span class="i18n" data-ar="لحام أرجون">Argon welding</span></li></ul></div>
+<div class="card"><h3><i class="fas fa-microchip"></i> <span class="i18n" data-ar="التشغيل الآلي والقطع">Machining &amp; Cutting</span></h3><ul><li><i class="fas fa-check"></i><span class="i18n" data-ar="ماكينة قطع ليزر CNC">CNC laser cut machine</span></li><li><i class="fas fa-check"></i><span class="i18n" data-ar="ماكينة خراطة">Lathe machine</span></li><li><i class="fas fa-check"></i><span class="i18n" data-ar="ماكينة تفريز">Milling machine</span></li><li><i class="fas fa-check"></i><span class="i18n" data-ar="ماكينة تشكيل">Shaping machine</span></li><li><i class="fas fa-check"></i><span class="i18n" data-ar="ماكينة قطع بالسلك CNC">CNC wire cut machine</span></li><li><i class="fas fa-check"></i><span class="i18n" data-ar="مقص صاج">Sheet metal shear</span></li></ul></div>
+<div class="card"><h3><i class="fas fa-warehouse"></i> <span class="i18n" data-ar="المرافق">Facilities</span></h3><ul><li><i class="fas fa-check"></i><span class="i18n" data-ar="منطقة كبس مخصصة">Dedicated press area</span></li><li><i class="fas fa-check"></i><span class="i18n" data-ar="مخزن القوالب">Die store area</span></li><li><i class="fas fa-check"></i><span class="i18n" data-ar="غرفة ماكينات CNC">CNC machine room</span></li></ul></div>
+</div>
+<div class="block-title reveal"><i class="fas fa-wind"></i> <span class="i18n" data-ar="الثني والحفر والتشطيب">Bending, Drilling &amp; Finishing</span></div>
+<div class="grid-3 reveal">
+<div class="card"><h3><i class="fas fa-wind"></i> <span class="i18n" data-ar="الثني واللف">Bending &amp; Rolling</span></h3><ul><li><i class="fas fa-check"></i><span class="i18n" data-ar="ثني الأنابيب CNC">CNC tube bending</span></li><li><i class="fas fa-check"></i><span class="i18n" data-ar="ثني الأنابيب CN">CN tube bending</span></li></ul></div>
+<div class="card"><h3><i class="fas fa-circle-notch"></i> <span class="i18n" data-ar="ماكينات الحفر">Drilling Machines</span></h3><ul><li><i class="fas fa-check"></i><span class="i18n" data-ar="ماكينة حفر عمودية">Vertical drilling machine</span></li><li><i class="fas fa-check"></i><span class="i18n" data-ar="ماكينة حفر شبه تفريز">Semi-milling drill machine</span></li></ul></div>
+<div class="card"><h3><i class="fas fa-compact-disc"></i> <span class="i18n" data-ar="السنفرة والتلميع">Grinding &amp; Polishing</span></h3><ul><li><i class="fas fa-check"></i><span class="i18n" data-ar="ماكينة سنفرة الأسطح">Surface grinder</span></li><li><i class="fas fa-check"></i><span class="i18n" data-ar="قرص قطع">Cutting disc</span></li><li><i class="fas fa-check"></i><span class="i18n" data-ar="قرص سنفرة">Grinding disc</span></li></ul></div>
+</div>
+</section>
+<!-- PAINT PLANT -->
+<section id="paint">
+<div class="section-title reveal">
+<div class="eyebrow"><span class="i18n" data-ar="مصنع دهان البلاستيك">Plastic Painting Plant</span></div>
+<h2><span class="i18n" data-ar="ست مراحل،">Six stages,</span> <span><span class="i18n" data-ar="لتشطيب واحد">one finish</span></span></h2>
+</div>
+<div class="stage-list reveal">
+<div class="stage"><div class="stage-num"></div><div class="stage-body"><b><span class="i18n" data-ar="تحضير وخلط الدهان">Paint Preparation &amp; Mixing</span></b><span><span class="i18n" data-ar="مطابقة اللون وتجهيز المواد قبل الطلاء.">Color matching and material readiness ahead of coating.</span></span></div></div>
+<div class="stage"><div class="stage-num"></div><div class="stage-body"><b><span class="i18n" data-ar="الدهان السائل والتجفيف الحراري">Liquid Paint &amp; Baking</span></b><span><span class="i18n" data-ar="التطبيق يليه معالجة حرارية متحكم بها.">Application followed by controlled thermal curing.</span></span></div></div>
+<div class="stage"><div class="stage-num"></div><div class="stage-body"><b><span class="i18n" data-ar="التجميع الهوائي والميكانيكي">Pneumatic &amp; Mechanical Assembly</span></b><span><span class="i18n" data-ar="تركيب الملحقات والمكونات الميكانيكية على القطع المدهونة.">Fitting hardware and mechanical components onto painted parts.</span></span></div></div>
+<div class="stage"><div class="stage-num"></div><div class="stage-body"><b><span class="i18n" data-ar="الاختبار والفحص وضبط الجودة">Testing, Inspection &amp; Quality Control</span></b><span><span class="i18n" data-ar="فحوصات الأبعاد والتشطيب مقارنة بمواصفات المصنّع الأصلي.">Dimensional and finish checks against OEM specification.</span></span></div></div>
+<div class="stage"><div class="stage-num"></div><div class="stage-body"><b><span class="i18n" data-ar="التلميع والفحص النهائي للجودة">Polishing &amp; Final Quality Check</span></b><span><span class="i18n" data-ar="تحسين سطح القطعة والاعتماد النهائي.">Surface refinement and final sign-off.</span></span></div></div>
+<div class="stage"><div class="stage-num"></div><div class="stage-body"><b><span class="i18n" data-ar="التعبئة والتسليم">Packaging &amp; Delivery</span></b><span><span class="i18n" data-ar="تغليف حمائي وشحن إلى العميل.">Protective packing and dispatch to the customer.</span></span></div></div>
+</div>
+</section>
+<!-- GALLERY -->
+<section id="gallery">
+<div class="section-title reveal">
+<div class="eyebrow"><span class="i18n" data-ar="معرض مرئي">Visual Portfolio</span></div>
+<h2><span class="i18n" data-ar="نظرة داخل">Inside the</span> <span><span class="i18n" data-ar="المصنع والقطع">plant &amp; the parts</span></span></h2>
+<p><span class="i18n" data-ar="نظرة أقرب على القطع المدهونة الجاهزة، والمكبوسات الإنشائية، وخطوط الكبس واللحام والدهان التي تنتجها.">A closer look at finished painted components, structural stampings, and the press, welding and paint lines that produce them.</span></p>
+</div>
+<div class="block-title reveal"><i class="fas fa-spray-can"></i> <span class="i18n" data-ar="القطع البلاستيكية المدهونة">Painted Plastic Parts</span></div>
+<div class="gallery-grid reveal" style="margin-bottom:48px">
+<figure class="gallery-item" onclick="openLightbox(this)">
+<div class="thumb"><img alt="Painted bumpers, mirror caps, door handles and rocker panel trims" loading="lazy" src="images/gallery-painted-parts-01.jpg"/><span class="zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></span></div>
+<figcaption><b><span class="i18n" data-ar="طقم القطع الخارجية المدهونة">Painted Exterior Set</span></b><span><span class="i18n" data-ar="مصدات أمامية/خلفية · أغطية مرايا · أغطية مقابض · كسوة العتبة">Front/rear bumpers · mirror caps · handle covers · rocker trim</span></span></figcaption>
+</figure>
+<figure class="gallery-item" onclick="openLightbox(this)">
+<div class="thumb"><img alt="Painted plastic exterior parts on dark studio background" loading="lazy" src="images/gallery-painted-parts-02.jpg"/><span class="zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></span></div>
+<figcaption><b><span class="i18n" data-ar="قطع جاهزة — تصوير استوديو">Finished Parts — Studio Shot</span></b><span><span class="i18n" data-ar="طقم مطابق اللون، متضمنًا لوح باب الهيكل">Colour-matched set, door body panel included</span></span></figcaption>
+</figure>
+<figure class="gallery-item" onclick="openLightbox(this)">
+<div class="thumb"><img alt="Painted parts wrapped and staged on overhead conveyor hangers" loading="lazy" src="images/gallery-paint-hangers.jpg"/><span class="zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></span></div>
+<figcaption><b><span class="i18n" data-ar="خط الدهان — السير العلوي">Paint Line — Overhead Conveyor</span></b><span><span class="i18n" data-ar="قطع مغلفة ومجهزة بعد الطلاء">Parts wrapped and staged after coating</span></span></figcaption>
+</figure>
+</div>
+<div class="block-title reveal"><i class="fas fa-cubes"></i> <span class="i18n" data-ar="القطع المعدنية والإنشائية">Metal &amp; Structural Parts</span></div>
+<div class="gallery-grid reveal" style="margin-bottom:48px">
+<figure class="gallery-item" onclick="openLightbox(this)">
+<div class="thumb"><img alt="Vehicle chassis frame, floor pan and stamped structural components" loading="lazy" src="images/gallery-metal-components-01.jpg"/><span class="zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></span></div>
+<figcaption><b><span class="i18n" data-ar="طقم الهيكل السفلي وأرضية السيارة">Chassis &amp; Floor Pan Set</span></b><span><span class="i18n" data-ar="الهيكل، أرضيات السيارة، العارضة الخلفية، غطاء المحرك">Frame, floor pans, rear cross member, engine cover</span></span></figcaption>
+</figure>
+<figure class="gallery-item" onclick="openLightbox(this)">
+<div class="thumb"><img alt="Reference plates of chassis frame, floor pan assembly and appliance cooktop stampings" loading="lazy" src="images/gallery-metal-components-02.jpg"/><span class="zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></span></div>
+<figcaption><b><span class="i18n" data-ar="لوحات مرجعية 1–6">Reference Plates 1–6</span></b><span><span class="i18n" data-ar="هيكل الشاسيه · أرضية السيارة · العوارض · سطح الموقد">Chassis frame · floor pan · cross members · cooktop</span></span></figcaption>
+</figure>
+</div>
+<div class="block-title reveal"><i class="fas fa-industry"></i> <span class="i18n" data-ar="أرض الإنتاج">Production Floor</span></div>
+<div class="gallery-grid reveal" style="margin-bottom:48px">
+<figure class="gallery-item" onclick="openLightbox(this)">
+<div class="thumb"><img alt="Row of eccentric press machines on the stamping shop floor" loading="lazy" src="images/gallery-press-floor.jpg"/><span class="zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></span></div>
+<figcaption><b><span class="i18n" data-ar="أرض ورشة الكبس">Press Shop Floor</span></b><span><span class="i18n" data-ar="خط المكابس اللامركزية، محطات عمل مخصصة">Eccentric press line, dedicated work stations</span></span></figcaption>
+</figure>
+<figure class="gallery-item" onclick="openLightbox(this)">
+<div class="thumb"><img alt="Technician operating a hydraulic press machine, model YCT-400" loading="lazy" src="images/gallery-press-worker-01.jpg"/><span class="zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></span></div>
+<figcaption><b><span class="i18n" data-ar="مكبس هيدروليكي — YCT-400">Hydraulic Press — YCT-400</span></b><span><span class="i18n" data-ar="فني يقوم بتحميل لوح مكبوس">Operator loading a stamped panel</span></span></figcaption>
+</figure>
+<figure class="gallery-item" onclick="openLightbox(this)">
+<div class="thumb"><img alt="Technician operating a hydraulic press machine, second view" loading="lazy" src="images/gallery-press-worker-02.jpg"/><span class="zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></span></div>
+<figcaption><b><span class="i18n" data-ar="مكبس هيدروليكي — YCT-400">Hydraulic Press — YCT-400</span></b><span><span class="i18n" data-ar="تشكيل اللوح أثناء التشغيل">In-process panel forming</span></span></figcaption>
+</figure>
+<figure class="gallery-item" onclick="openLightbox(this)">
+<div class="thumb"><img alt="Robotic welding arm above a body-in-white shell on the assembly line" loading="lazy" src="images/gallery-assembly-line.jpg"/><span class="zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></span></div>
+<figcaption><b><span class="i18n" data-ar="خط تجميع الهيكل المعدني (Body-in-White)">Body-in-White Assembly Line</span></b><span><span class="i18n" data-ar="محطة لحام آلية">Automated welding station</span></span></figcaption>
+</figure>
+</div>
+<div class="block-title reveal"><i class="fas fa-diagram-project"></i> <span class="i18n" data-ar="مرجع الهيكل المعدني (Body-in-White)">Body-in-White Reference</span></div>
+<div class="gallery-grid reveal">
+<figure class="gallery-item" onclick="openLightbox(this)">
+<div class="thumb"><img alt="Exploded body-in-white structural diagram with bilingual labels" loading="lazy" src="images/gallery-biw-diagram-01.jpg"/><span class="zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></span></div>
+<figcaption><b><span class="i18n" data-ar="خلية الأمان الأساسية — خريطة إنشائية">Core Safety Cell — Structural Map</span></b><span><span class="i18n" data-ar="مناطق الانكماش، هيكل الحماية الجانبية، درجات الصلب">Crumple zones, side-impact structure, steel grades</span></span></figcaption>
+</figure>
+<figure class="gallery-item" onclick="openLightbox(this)">
+<div class="thumb"><img alt="Exploded body-in-white diagram showing bumper beams and floor pan sections" loading="lazy" src="images/gallery-biw-diagram-02.jpg"/><span class="zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></span></div>
+<figcaption><b><span class="i18n" data-ar="الهيكل المعدني — تفصيل الأقسام">Body-in-White — Section Breakdown</span></b><span><span class="i18n" data-ar="عوارض المصد، حواف السقف، أقسام أرضية السيارة">Bumper beams, roof rails, floor pan sections</span></span></figcaption>
+</figure>
+<figure class="gallery-item" onclick="openLightbox(this)">
+<div class="thumb"><img alt="Illustrated overview of a body-in-white production floor" loading="lazy" src="images/gallery-illustration.jpg"/><span class="zoom-hint"><i class="fas fa-magnifying-glass-plus"></i></span></div>
+<figcaption><b><span class="i18n" data-ar="نظرة عامة على المصنع — رسم توضيحي">Plant Overview — Illustrated</span></b><span><span class="i18n" data-ar="محطة الهيكل المعدني، مسارات مرافق مرمّزة بالألوان">Body-in-white station, colour-coded utility runs</span></span></figcaption>
+</figure>
+</div>
+</section>
+<!-- CUSTOMERS -->
+<section id="customers">
+<div class="section-title reveal">
+<div class="eyebrow"><span class="i18n" data-ar="العملاء">Customers</span></div>
+<h2><span class="i18n" data-ar="موثوق به من">Trusted by</span> <span><span class="i18n" data-ar="علامات تجارية عالمية">global brands</span></span></h2>
+<p><span class="i18n" data-ar="تورّد فيمكو مكونات معتمدة مباشرة إلى خطوط إنتاج المصنّعين الأصليين وشركات الأجهزة المنزلية التالية، عبر ثلاث قارات.">FIMCO supplies certified components directly into the production lines of the following OEMs and appliance manufacturers, across three continents.</span></p>
+</div>
+
+<div class="trust-strip reveal">
+<div class="trust-cell"><i class="fas fa-handshake"></i><div><b>26+</b><span><span class="i18n" data-ar="علامة تجارية شريكة">Partner brands</span></span></div></div>
+<div class="trust-cell"><i class="fas fa-earth-americas"></i><div><b><span class="i18n" data-ar="3 قارات">3 continents</span></b><span><span class="i18n" data-ar="آسيا، أوروبا، الأمريكتان">Asia, Europe &amp; the Americas</span></span></div></div>
+<div class="trust-cell"><i class="fas fa-calendar-check"></i><div><b><span class="i18n" data-ar="منذ 1987">Since 1987</span></b><span><span class="i18n" data-ar="خبرة تصنيع مستمرة">Continuous OEM manufacturing</span></span></div></div>
+<div class="trust-cell"><i class="fas fa-certificate"></i><div><b><span class="i18n" data-ar="IATF 16949">IATF 16949</span></b><span><span class="i18n" data-ar="معتمد لسلسلة توريد السيارات">Certified automotive supply chain</span></span></div></div>
+</div>
+
+<div class="reveal">
+<div class="cust-group">
+<div class="cust-group-head">
+<div class="block-title"><i class="fas fa-car"></i> <span class="i18n" data-ar="مصنّعو السيارات الأصليون">Automotive OEMs</span></div>
+<span class="cust-count mono"><span class="i18n" data-ar="20 علامة تجارية">20 brands</span></span>
+</div>
+<div class="logo-grid">
+<div class="logo-card" title="GM"><div class="logo-img-wrap"><img alt="GM logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/gm.jpg"/><span class="fallback-text"><span class="i18n" data-ar="GM">GM</span></span></div><span class="logo-name">GM</span></div>
+<div class="logo-card" title="Toyota"><div class="logo-img-wrap"><img alt="Toyota logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/toyota.png"/><span class="fallback-text"><span class="i18n" data-ar="Toyota">Toyota</span></span></div><span class="logo-name">Toyota</span></div>
+<div class="logo-card" title="Suzuki"><div class="logo-img-wrap"><img alt="Suzuki logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/suziki.png"/><span class="fallback-text"><span class="i18n" data-ar="Suzuki">Suzuki</span></span></div><span class="logo-name">Suzuki</span></div>
+<div class="logo-card" title="Lada"><div class="logo-img-wrap"><img alt="Lada logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/lada.jpg"/><span class="fallback-text"><span class="i18n" data-ar="Lada">Lada</span></span></div><span class="logo-name">Lada</span></div>
+<div class="logo-card" title="BMW"><div class="logo-img-wrap"><img alt="BMW logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/bmw.jpg"/><span class="fallback-text"><span class="i18n" data-ar="BMW">BMW</span></span></div><span class="logo-name">BMW</span></div>
+<div class="logo-card" title="Hyundai"><div class="logo-img-wrap"><img alt="Hyundai logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/hyundai.jpg"/><span class="fallback-text"><span class="i18n" data-ar="Hyundai">Hyundai</span></span></div><span class="logo-name">Hyundai</span></div>
+<div class="logo-card" title="Nissan"><div class="logo-img-wrap"><img alt="Nissan logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/nissan.png"/><span class="fallback-text"><span class="i18n" data-ar="Nissan">Nissan</span></span></div><span class="logo-name">Nissan</span></div>
+<div class="logo-card" title="Chery"><div class="logo-img-wrap"><img alt="Chery logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/chery.png"/><span class="fallback-text"><span class="i18n" data-ar="Chery">Chery</span></span></div><span class="logo-name">Chery</span></div>
+<div class="logo-card" title="Chevrolet"><div class="logo-img-wrap"><img alt="Chevrolet logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/chevrolet.webp"/><span class="fallback-text"><span class="i18n" data-ar="Chevrolet">Chevrolet</span></span></div><span class="logo-name">Chevrolet</span></div>
+<div class="logo-card" title="Citroën"><div class="logo-img-wrap"><img alt="Citroën logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/citroen.png"/><span class="fallback-text"><span class="i18n" data-ar="Citroën">Citroën</span></span></div><span class="logo-name">Citroën</span></div>
+<div class="logo-card" title="Dongfeng"><div class="logo-img-wrap"><img alt="Dongfeng logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/dongfeng.png"/><span class="fallback-text"><span class="i18n" data-ar="Dongfeng">Dongfeng</span></span></div><span class="logo-name">Dongfeng</span></div>
+<div class="logo-card" title="MG"><div class="logo-img-wrap"><img alt="MG logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/mg.jpg"/><span class="fallback-text"><span class="i18n" data-ar="MG">MG</span></span></div><span class="logo-name">MG</span></div>
+<div class="logo-card" title="Golden Dragon"><div class="logo-img-wrap"><img alt="Golden Dragon logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/golden dragon.jpg"/><span class="fallback-text"><span class="i18n" data-ar="Golden Dragon">Golden Dragon</span></span></div><span class="logo-name">Golden Dragon</span></div>
+<div class="logo-card" title="King Long"><div class="logo-img-wrap"><img alt="King Long logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/king long.png"/><span class="fallback-text"><span class="i18n" data-ar="King Long">King Long</span></span></div><span class="logo-name">King Long</span></div>
+<div class="logo-card" title="Foton"><div class="logo-img-wrap"><img alt="Foton logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/foton.png"/><span class="fallback-text"><span class="i18n" data-ar="Foton">Foton</span></span></div><span class="logo-name">Foton</span></div>
+<div class="logo-card" title="Jetour"><div class="logo-img-wrap"><img alt="Jetour logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/jetour.png"/><span class="fallback-text"><span class="i18n" data-ar="Jetour">Jetour</span></span></div><span class="logo-name">Jetour</span></div>
+<div class="logo-card" title="Changan"><div class="logo-img-wrap"><img alt="Changan logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/changan.jpg"/><span class="fallback-text"><span class="i18n" data-ar="Changan">Changan</span></span></div><span class="logo-name">Changan</span></div>
+<div class="logo-card" title="TVS"><div class="logo-img-wrap"><img alt="TVS logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/tvs.jpg"/><span class="fallback-text"><span class="i18n" data-ar="TVS">TVS</span></span></div><span class="logo-name">TVS</span></div>
+<div class="logo-card" title="Zemex"><div class="logo-img-wrap"><img alt="Zemex logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/zemex.jpg"/><span class="fallback-text" style="display:inline-block"><span class="i18n" data-ar="Zemex">Zemex</span></span></div><span class="logo-name">Zemex</span></div>
+<div class="logo-card" title="Bajaj"><div class="logo-img-wrap"><img alt="Bajaj logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/bajaj.jpg"/><span class="fallback-text"><span class="i18n" data-ar="Bajaj">Bajaj</span></span></div><span class="logo-name">Bajaj</span></div>
+</div>
+</div>
+
+<div class="cust-group">
+<div class="cust-group-head">
+<div class="block-title"><i class="fas fa-blender"></i> <span class="i18n" data-ar="علامات الأجهزة المنزلية">Home Appliance Brands</span></div>
+<span class="cust-count mono"><span class="i18n" data-ar="6 علامات تجارية">6 brands</span></span>
+</div>
+<div class="logo-grid">
+<div class="logo-card" title="Haier"><div class="logo-img-wrap"><img alt="Haier logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/haier.png"/><span class="fallback-text"><span class="i18n" data-ar="Haier">Haier</span></span></div><span class="logo-name">Haier</span></div>
+<div class="logo-card" title="Electrolux"><div class="logo-img-wrap"><img alt="Electrolux logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/electrolux.jpg"/><span class="fallback-text"><span class="i18n" data-ar="Electrolux">Electrolux</span></span></div><span class="logo-name">Electrolux</span></div>
+<div class="logo-card" title="Midea"><div class="logo-img-wrap"><img alt="Midea logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/midea.png"/><span class="fallback-text"><span class="i18n" data-ar="Midea">Midea</span></span></div><span class="logo-name">Midea</span></div>
+<div class="logo-card" title="Toshiba"><div class="logo-img-wrap"><img alt="Toshiba logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/toshiba.png"/><span class="fallback-text"><span class="i18n" data-ar="Toshiba">Toshiba</span></span></div><span class="logo-name">Toshiba</span></div>
+<div class="logo-card" title="Beko"><div class="logo-img-wrap"><img alt="Beko logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/beko.jpg"/><span class="fallback-text"><span class="i18n" data-ar="Beko">Beko</span></span></div><span class="logo-name">Beko</span></div>
+<div class="logo-card" title="Carrier"><div class="logo-img-wrap"><img alt="Carrier logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'" src="customer/carrier.jpg"/><span class="fallback-text"><span class="i18n" data-ar="Carrier">Carrier</span></span></div><span class="logo-name">Carrier</span></div>
+</div>
+</div>
+
+<div class="cust-cta">
+<div>
+<h3><span class="i18n" data-ar="هل تبحث عن مورد معتمد لخط إنتاجك؟">Looking for a certified supplier for your line?</span></h3>
+<p><span class="i18n" data-ar="انضم إلى أكثر من 26 علامة تجارية عالمية تثق في فيمكو لتوريد المكونات المعتمدة والتسليم في الوقت المحدد.">Join 26+ global brands that trust FIMCO for certified components and on-time delivery.</span></p>
+</div>
+<a class="btn btn-primary" href="#contact"><i class="fas fa-paper-plane"></i> <span class="i18n" data-ar="تواصل معنا الآن">Get in touch</span></a>
+</div>
+</div>
+</section>
+<!-- CERTIFICATES -->
+<section id="certificates">
+<div class="section-title reveal">
+<div class="eyebrow"><span class="i18n" data-ar="الجودة والتقدير">Quality &amp; Recognition</span></div>
+<h2><span class="i18n" data-ar="معتمدة،">Certified,</span> <span><span class="i18n" data-ar="مدققة وحائزة على جوائز">audited, awarded</span></span></h2>
+</div>
+<div class="grid-4 reveal" style="margin-bottom:24px">
+<div class="cert-cell"><i class="fas fa-award"></i><b><span class="i18n" data-ar="IATF 16949:2016">IATF 16949:2016</span></b><span><span class="i18n" data-ar="سارية حتى 08 أكتوبر 2027">Valid 08 Oct 2027</span></span></div>
+<div class="cert-cell"><i class="fas fa-shield-alt"></i><b><span class="i18n" data-ar="ISO 9001:2015">ISO 9001:2015</span></b><span><span class="i18n" data-ar="سارية حتى 08 أكتوبر 2027">Valid 08 Oct 2027</span></span></div>
+<div class="cert-cell"><i class="fas fa-leaf"></i><b><span class="i18n" data-ar="ISO 14001:2025">ISO 14001:2025</span></b><span><span class="i18n" data-ar="سارية حتى 24 ديسمبر 2027">Valid 24 Dec 2027</span></span></div>
+<div class="cert-cell"><i class="fas fa-hard-hat"></i><b><span class="i18n" data-ar="ISO 45001:2018">ISO 45001:2018</span></b><span><span class="i18n" data-ar="سارية حتى 24 ديسمبر 2027">Valid 24 Dec 2027</span></span></div>
+</div>
+<div class="grid-2 reveal" style="margin-bottom:12px">
+<div class="card"><h3><i class="fas fa-star"></i> <span class="i18n" data-ar="BIQS — المستوى 5">BIQS — Level 5</span></h3><p style="color:var(--muted);font-size:14px"><span class="i18n" data-ar="شهادة نظام الجودة الخاص بشركة جنرال موتورز.">GM Quality System certification.</span></p></div>
+<div class="card"><h3><i class="fas fa-graduation-cap"></i> <span class="i18n" data-ar="برنامج SFE">SFE Program</span></h3><p style="color:var(--muted);font-size:14px"><span class="i18n" data-ar="برنامج التطوير الوطني للموردين — أُنجز في يونيو 2010.">National Supplier Development Program — completed June 2010.</span></p></div>
+</div>
+<div class="block-title reveal" style="margin-top:32px"><i class="fas fa-trophy"></i> <span class="i18n" data-ar="جوائز التميز من المصنّعين الأصليين">OEM Excellence Awards</span></div>
+<div class="award-strip reveal">
+<div class="award-cell"><div class="yr"><span class="i18n" data-ar="GM">GM</span></div><p><span class="i18n" data-ar="جائزة تميز جودة المورد — 2022، 2023، 2024 و2025 (4 سنوات متتالية)">Supplier Quality Excellence Award — 2022, 2023, 2024 &amp; 2025 (4 years running)</span></p></div>
+<div class="award-cell"><div class="yr"><span class="i18n" data-ar="Toyota">Toyota</span></div><p><span class="i18n" data-ar="تحقيق صفر عيوب لكل مليون (Zero PPM) في إنتاج 2023">Zero PPM achieved in 2023 production</span></p></div>
+<div class="award-cell"><div class="yr"><span class="i18n" data-ar="Nissan">Nissan</span></div><p><span class="i18n" data-ar="بطاقة تقييم الموردين الإقليمية 2025 — المستوى L1، بمجموع نقاط 100.0">2025 Regional Supplier Score Card — Level L1, total score 100.0</span></p></div>
+</div>
+</section>
+<!-- CONTACT -->
+<section class="flush" id="contact">
+<div class="contact-box reveal">
+<h2><span class="i18n" data-ar="شكرًا">Thank</span> <span><span class="i18n" data-ar="لكم">You</span></span></h2>
+<p><span class="i18n" data-ar="نتطلع إلى بناء شراكة طويلة الأمد معكم.">We look forward to establishing a long-term partnership with you.</span></p>
+<div class="contact-grid3">
+<div class="contact-item"><i class="fas fa-phone-alt"></i><h4><span class="i18n" data-ar="الهاتف">Phone</span></h4><p><span class="i18n" data-ar="+2 383 385 54 / 4">+2 383 385 54 / 4</span></p></div>
+<div class="contact-item"><i class="fas fa-envelope"></i><h4><span class="i18n" data-ar="البريد الإلكتروني">Email</span></h4><p><span class="i18n" data-ar="fimcoegypt@fimco-eg.com">fimcoegypt@fimco-eg.com</span></p></div>
+<div class="contact-item"><i class="fas fa-globe"></i><h4><span class="i18n" data-ar="الموقع الإلكتروني">Website</span></h4><p><span class="i18n" data-ar="www.fimco-eg.com">www.fimco-eg.com</span></p></div>
+<div class="contact-item"><i class="fas fa-map-marked-alt"></i><h4><span class="i18n" data-ar="الموقع">Location</span></h4><p><span class="i18n" data-ar="مدينة 6 أكتوبر، المنطقة الصناعية الرابعة، القطعة 34، القاهرة، مصر">6th of October City, 4th Industrial Zone, Area 34, Cairo, Egypt</span></p></div>
+</div>
+<a class="btn btn-primary" href="#hero"><i class="fas fa-arrow-up"></i> <span class="i18n" data-ar="العودة للأعلى">Back to top</span></a>
+</div>
+</section>
+</main>
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+<span class="lightbox-close" onclick="closeLightbox(event)"><span class="i18n" data-ar="×">×</span></span>
+<img alt="" id="lightbox-img" src=""/>
+<div class="lightbox-cap"><b id="lightbox-title"></b><span id="lightbox-sub"></span></div>
+</div>
+<footer><span class="i18n" data-ar="فيمكو — شركة الصناعات التغذوية للتصنيع · نظرة عامة على مورد الفئة الأولى / الثانية للمصنّعين الأصليين · 2026">FIMCO — Feeding Industries Manufacturing Co. · OEM Tier 1 / Tier 2 Supplier Overview · 2026</span></footer>
+<script>
+// Mobile nav toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+// Scrollspy
+const sections = ['overview','capabilities','products','facility','equipment','gallery','certificates','contact'];
+const navAnchors = [...navLinks.querySelectorAll('a')];
+function onScroll(){
+  let activeId = sections[0];
+  sections.forEach(id=>{
+    const el = document.getElementById(id);
+    if(el){
+      const r = el.getBoundingClientRect();
+      if(r.top < window.innerHeight*0.4) activeId = id;
+    }
+  });
+  navAnchors.forEach(a=>a.classList.toggle('active', a.getAttribute('href') === '#'+activeId));
+}
+window.addEventListener('scroll', onScroll);
+onScroll();
+
+// Reveal on scroll
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Tabs
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const scope = btn.closest('section') || document;
+    scope.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    scope.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
+
+// Gallery lightbox
+function openLightbox(el){
+  const img = el.querySelector('img');
+  const title = el.querySelector('figcaption b');
+  const sub = el.querySelector('figcaption span');
+  document.getElementById('lightbox-img').src = img.src;
+  document.getElementById('lightbox-img').alt = img.alt;
+  document.getElementById('lightbox-title').textContent = title ? title.textContent : '';
+  document.getElementById('lightbox-sub').textContent = sub ? sub.textContent : '';
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(e){
+  if(e) e.stopPropagation();
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLightbox(); });
+document.getElementById('lightbox-img').addEventListener('click', e => e.stopPropagation());
+
+// ===== Theme customizer =====
+function shadeColor(hex, percent){
+  hex = hex.replace('#','');
+  let r = parseInt(hex.substring(0,2),16), g = parseInt(hex.substring(2,4),16), b = parseInt(hex.substring(4,6),16);
+  r = Math.max(0, Math.min(255, Math.floor(r + (percent<0 ? r : 255-r) * (percent/100))));
+  g = Math.max(0, Math.min(255, Math.floor(g + (percent<0 ? g : 255-g) * (percent/100))));
+  b = Math.max(0, Math.min(255, Math.floor(b + (percent<0 ? b : 255-b) * (percent/100))));
+  return '#' + [r,g,b].map(v=>v.toString(16).padStart(2,'0')).join('');
+}
+function applyPreset(primary, accent, secondary){
+  const root = document.documentElement;
+  root.style.setProperty('--primary', primary);
+  root.style.setProperty('--primary-dark', shadeColor(primary,-18));
+  root.style.setProperty('--accent', accent);
+  if(secondary) root.style.setProperty('--secondary', secondary);
+  document.getElementById('colorPrimary').value = primary;
+  document.getElementById('colorAccent').value = accent;
+  try{ localStorage.setItem('fimco-theme', JSON.stringify({primary,accent,secondary})); }catch(e){}
+}
+function toggleThemePanel(){ document.getElementById('themePanel').classList.toggle('open'); }
+document.addEventListener('click', e=>{
+  const panel = document.getElementById('themePanel'), fab = document.getElementById('themeFab');
+  if(panel.classList.contains('open') && !panel.contains(e.target) && e.target!==fab && !fab.contains(e.target)){
+    panel.classList.remove('open');
+  }
+});
+(function restoreTheme(){
+  try{
+    const saved = JSON.parse(localStorage.getItem('fimco-theme'));
+    if(saved) applyPreset(saved.primary, saved.accent, saved.secondary);
+  }catch(e){}
+})();
+
+// ===== Animated stat counters =====
+function animateCounters(){
+  document.querySelectorAll('.stat-card h3').forEach(el=>{
+    const text = el.textContent.trim();
+    const match = text.match(/[\d,]+/);
+    if(!match) return;
+    const target = parseInt(match[0].replace(/,/g,''),10);
+    const prefix = text.slice(0, match.index);
+    const suffix = text.slice(match.index + match[0].length);
+    const isYear = target > 1900 && target < 2100;
+    const from = isYear ? target - 28 : 0;
+    const duration = 1300;
+    const t0 = performance.now();
+    function step(now){
+      const p = Math.min((now - t0) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      const value = Math.floor(from + (target - from) * eased);
+      el.textContent = prefix + value.toLocaleString() + suffix;
+      if(p < 1) requestAnimationFrame(step); else el.textContent = prefix + target.toLocaleString() + suffix;
+    }
+    requestAnimationFrame(step);
+  });
+}
+const statsGridEl = document.querySelector('.stats-grid');
+if(statsGridEl){
+  const statsIO = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ animateCounters(); statsIO.disconnect(); } });
+  },{threshold:.35});
+  statsIO.observe(statsGridEl);
+}
+
+// ===== Language toggle (EN / AR) =====
+function applyLang(lang){
+  const nodes = document.querySelectorAll('.i18n');
+  nodes.forEach(el=>{
+    if(!el.dataset.en) el.dataset.en = el.textContent;
+    el.textContent = lang === 'ar' ? el.dataset.ar : el.dataset.en;
+  });
+  document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+  document.documentElement.setAttribute('lang', lang);
+  document.getElementById('langToggle').textContent = lang === 'ar' ? 'English' : 'عربي';
+  try{ localStorage.setItem('fimco-lang', lang); }catch(e){}
+}
+function toggleLang(){
+  const current = document.documentElement.getAttribute('lang') === 'ar' ? 'ar' : 'en';
+  applyLang(current === 'ar' ? 'en' : 'ar');
+}
+(function restoreLang(){
+  try{
+    const saved = localStorage.getItem('fimco-lang');
+    if(saved === 'ar') applyLang('ar');
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
