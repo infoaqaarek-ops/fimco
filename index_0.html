@@ -10,8 +10,8 @@
 <style>
 :root{
   --primary:#e5484d;
-  --navy:#000000;
-  --navy-2:#141414;
+  --navy:#0a1420;
+  --navy-2:#101f30;
   --accent:#17b8d6;
   --gold:#e0a544;
   --ink:#eaf0f7;
@@ -20,29 +20,7 @@
   --glass:rgba(255,255,255,.055);
   --glass-2:rgba(255,255,255,.09);
   --glass-border:rgba(255,255,255,.12);
-  --shell-shadow:0 40px 90px -24px rgba(0,0,0,.65),0 0 0 10px #060c14,0 0 0 12px #1b2836;
-  --notch-bg:#060c14;
-  transition:color .25s ease;
 }
-html[data-theme="light"]{
-  --navy:#ffffff;
-  --navy-2:#f2f4f7;
-  --ink:#12181f;
-  --muted:#5b6577;
-  --muted-2:#8791a1;
-  --glass:rgba(10,20,32,.045);
-  --glass-2:rgba(10,20,32,.08);
-  --glass-border:rgba(10,20,32,.12);
-  --shell-shadow:0 40px 90px -24px rgba(0,0,0,.18),0 0 0 10px #e7ebf1,0 0 0 12px #d7dde6;
-  --notch-bg:#e7ebf1;
-}
-html[data-theme="light"] body{background:var(--navy)}
-html[data-theme="light"] .avatar{border-color:var(--navy)}
-html[data-theme="light"] .avatar-inner,html[data-theme="light"] .app-btn .ico{color:#fff}
-html[data-theme="light"] .company-name{background:linear-gradient(120deg,#12181f 10%,#b23a2f 45%,#0a6d80 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
-html[data-theme="light"] .stat-chip strong,html[data-theme="light"] .app-btn .txt strong,html[data-theme="light"] .product-card span.label,html[data-theme="light"] .products-section h2,html[data-theme="light"] .contact-bar a{color:var(--ink)}
-html[data-theme="light"] .verified{border-color:var(--navy)}
-html[data-theme="light"] .shell::before{background:var(--notch-bg)}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
 body{
@@ -77,8 +55,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .shell{width:100%;max-width:430px;min-height:100vh;position:relative;overflow-x:hidden;z-index:1}
 @media(min-width:560px){
   body{padding:36px 12px;align-items:flex-start}
-  .shell{min-height:auto;border-radius:42px;box-shadow:var(--shell-shadow);overflow:hidden}
-  .shell::before{content:"";position:absolute;top:10px;left:50%;transform:translateX(-50%);width:120px;height:22px;background:var(--notch-bg);border-radius:0 0 16px 16px;z-index:30}
+  .shell{min-height:auto;border-radius:42px;box-shadow:0 40px 90px -24px rgba(0,0,0,.65),0 0 0 10px #060c14,0 0 0 12px #1b2836;overflow:hidden}
+  .shell::before{content:"";position:absolute;top:10px;left:50%;transform:translateX(-50%);width:120px;height:22px;background:#060c14;border-radius:0 0 16px 16px;z-index:30}
 }
 
 /* ===== top bar ===== */
@@ -173,10 +151,7 @@ html[dir="rtl"] .chev{transform:scaleX(-1)}
 
   <div class="topbar pop" style="animation-delay:0ms">
     <button class="lang-pill" id="langToggle" onclick="toggleLang()"><i class="fa-solid fa-globe"></i><span id="langLabel">عربي</span></button>
-    <div style="display:flex;align-items:center;gap:8px">
-      <button class="icon-btn" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle theme"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
-      <a class="icon-btn" href="tel:+23833855544" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
-    </div>
+    <a class="icon-btn" href="tel:+23833855544" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
   </div>
 
   <div class="hero">
@@ -290,24 +265,10 @@ function toggleLang(){
   const current = document.documentElement.getAttribute('lang') === 'ar' ? 'ar' : 'en';
   applyLang(current === 'ar' ? 'en' : 'ar');
 }
-function applyTheme(theme){
-  document.documentElement.setAttribute('data-theme', theme);
-  const icon = document.getElementById('themeIcon');
-  if(icon) icon.className = theme === 'light' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
-  try{ localStorage.setItem('fimco-app-theme', theme); }catch(e){}
-}
-function toggleTheme(){
-  const current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-  applyTheme(current === 'light' ? 'dark' : 'light');
-}
 (function init(){
   let saved = null;
   try{ saved = localStorage.getItem('fimco-app-lang'); }catch(e){}
   if(saved === 'ar') applyLang('ar');
-
-  let savedTheme = null;
-  try{ savedTheme = localStorage.getItem('fimco-app-theme'); }catch(e){}
-  applyTheme(savedTheme === 'light' ? 'light' : 'dark');
 })();
 </script>
 </body>
