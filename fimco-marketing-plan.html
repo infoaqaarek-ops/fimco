@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>خطة التسويق 2027 | فيمكو FIMCO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d1b2a;
+  --ink-2:#1c2534;
+  --signal:#d9232d;
+  --signal-d:#a81820;
+  --teal:#0092b0;
+  --teal-d:#00697f;
+  --amber:#b86f14;
+  --paper:#f2f5f9;
+  --panel:#ffffff;
+  --line:#d5dce6;
+  --line-2:#e6ebf2;
+  --muted:#4f5c72;
+  --f-head:'Noto Kufi Arabic','Cairo','Segoe UI',Tahoma,sans-serif;
+  --f-body:'IBM Plex Sans Arabic','Cairo','Segoe UI',Tahoma,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink-2);
+  font-family:var(--f-body);
+  font-size:16px;
+  line-height:1.9;
+  background-image:
+    linear-gradient(rgba(13,27,42,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(13,27,42,.03) 1px,transparent 1px);
+  background-size:56px 56px;
+}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+::selection{background:var(--signal);color:#fff}
+h1,h2,h3,h4{font-family:var(--f-head);color:var(--ink);font-weight:700}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.num{font-variant-numeric:tabular-nums}
+
+/* ============ SHELL ============ */
+.shell{display:grid;grid-template-columns:270px minmax(0,1fr);min-height:100vh}
+.side{
+  position:sticky;top:0;height:100vh;overflow-y:auto;
+  background:var(--ink);color:#fff;padding:30px 22px 24px;
+  display:flex;flex-direction:column;gap:26px;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{
+  width:44px;height:44px;border-radius:50%;flex:none;
+  background:radial-gradient(circle at 32% 28%,var(--signal),var(--signal-d) 72%);
+  border:2px solid var(--teal);
+  display:grid;place-items:center;
+  font:700 italic 20px 'Noto Kufi Arabic',sans-serif;color:#fff;
+}
+.brand b{display:block;font:800 20px/1.1 var(--f-head);letter-spacing:.03em}
+.brand span{font-size:12.5px;color:rgba(255,255,255,.68);line-height:1.4;display:block;margin-top:4px}
+.toc ol{list-style:none;counter-reset:s}
+.toc li{counter-increment:s}
+.toc a{
+  display:flex;gap:10px;align-items:baseline;
+  padding:7px 12px;font-size:14.5px;line-height:1.5;color:rgba(255,255,255,.72);
+  border-inline-start:3px solid transparent;
+  transition:color .2s,border-color .2s,background .2s;
+}
+.toc a::before{content:counter(s);min-width:1.4em;font-size:12.5px;color:rgba(255,255,255,.4);font-variant-numeric:tabular-nums}
+.toc a:hover{color:#fff;background:rgba(255,255,255,.05)}
+.toc a.on{color:#fff;border-inline-start-color:var(--signal);background:rgba(255,255,255,.07)}
+.toc a.on::before{color:var(--signal)}
+.side-foot{margin-top:auto}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;
+  font:600 14.5px var(--f-body);padding:11px 16px;cursor:pointer;
+  background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35);transition:background .2s,border-color .2s;
+}
+.btn:hover{background:rgba(255,255,255,.09);border-color:#fff}
+
+.main{padding:0 clamp(20px,4vw,64px) 90px;max-width:1240px;width:100%}
+
+/* ============ HERO ============ */
+.hero{padding:76px 0 40px}
+.hero-meta{font-size:14.5px;color:var(--muted);margin-bottom:22px}
+.hero h1{
+  font-weight:800;font-size:clamp(34px,5.2vw,66px);line-height:1.32;max-width:16em;
+  text-wrap:balance;
+}
+.hero .sub{max-width:44em;font-size:18px;color:var(--muted);margin-top:26px;line-height:1.95}
+
+.tl-panel{
+  margin-top:54px;background:#fff;border-top:4px solid var(--ink);
+  padding:26px 22px 22px;
+  clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,0 100%);
+}
+.tl-scroll{overflow-x:auto;padding-bottom:6px}
+.tl-pad{min-width:916px;padding-inline:78px}
+.tl{height:250px;position:relative}
+.tl-track{position:absolute;inset-inline:0;top:118px;height:10px}
+.tl-solid{position:absolute;right:0;width:80%;height:10px;background:var(--ink);transform-origin:right;animation:draw 1.6s cubic-bezier(.2,.7,.2,1) backwards}
+.tl-dash{
+  position:absolute;right:80%;width:20%;height:10px;
+  background:repeating-linear-gradient(-45deg,var(--signal) 0 6px,transparent 6px 12px);
+  animation:reveal 1.1s 1.5s cubic-bezier(.2,.7,.2,1) backwards;
+}
+.tl-brk{position:absolute;right:80%;top:-9px;height:28px;width:0;border-inline-start:2px solid var(--signal);transform:translateX(50%) skewX(-18deg)}
+@keyframes draw{from{transform:scaleX(0)}}
+@keyframes reveal{from{clip-path:inset(0 0 0 100%)}}
+@keyframes pop{from{opacity:0;transform:translateY(6px)}}
+.tk{position:absolute;top:123px;width:0;animation:pop .5s backwards;animation-delay:var(--d,0s)}
+.tk::before{content:"";position:absolute;left:-7px;top:-7px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--ink)}
+.tk .lab{position:absolute;left:50%;transform:translateX(-50%);width:160px;text-align:center;font-size:13.5px;line-height:1.55;color:var(--muted)}
+.tk .lab b{display:block;font:800 22px/1.2 var(--f-head);color:var(--ink);margin-bottom:2px}
+.tk.up .lab{bottom:24px}
+.tk.dn .lab{top:24px}
+.tk.now::before{border-color:var(--signal);background:var(--signal);width:20px;height:20px;left:-10px;top:-10px}
+.tk.now .lab b{color:var(--signal-d)}
+.tk.end::before{border-color:var(--signal);border-style:dashed}
+.tk.end .lab b{color:var(--signal-d)}
+.tk.end .lab{width:140px}
+.tk.start::before{border-color:var(--signal)}
+.tk.start .lab b{color:var(--signal-d)}
+.tl-cap{margin-top:12px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 28px}
+.tl-cap i{display:inline-block;width:26px;height:8px;vertical-align:middle;margin-inline-end:8px}
+.tl-cap .k1{background:var(--ink)}
+.tl-cap .k2{background:repeating-linear-gradient(-45deg,var(--signal) 0 5px,transparent 5px 10px)}
+
+/* ============ SECTIONS ============ */
+.sec{padding-top:92px;scroll-margin-top:12px}
+.sec-head{border-top:3px solid var(--ink);padding-top:24px;position:relative;margin-bottom:38px}
+.sec-head::before{content:"";position:absolute;top:-3px;inset-inline-start:0;width:76px;height:3px;background:var(--signal)}
+.sec-head h2{font-weight:800;font-size:clamp(26px,3.2vw,38px);line-height:1.4}
+.sec-head .lede{margin-top:12px;max-width:46em;font-size:17.5px;color:var(--muted);line-height:1.95}
+.sec h3{font-size:20px;line-height:1.55;margin:40px 0 14px}
+.sec h3:first-child{margin-top:0}
+.sec p{max-width:52em}
+.sec p+p{margin-top:12px}
+.note{font-size:14.5px;color:var(--muted);margin-top:12px;max-width:52em}
+.ul{list-style:none;display:grid;gap:8px}
+.ul li{position:relative;padding-inline-start:20px}
+.ul li::before{content:"";position:absolute;inset-inline-start:0;top:.85em;width:8px;height:8px;background:var(--signal)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:34px}
+.panel{background:#fff;border:1px solid var(--line);padding:26px}
+.cut{clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,0 100%)}
+.dark{background:var(--ink);color:#fff;border:0}
+.dark h3,.dark h4{color:#fff}
+
+/* summary */
+.idea{font-size:19px;line-height:2;max-width:46em}
+.steps{list-style:none;counter-reset:st;display:grid;gap:0;border-top:1px solid var(--line)}
+.steps li{counter-increment:st;display:grid;grid-template-columns:44px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(st);font:800 30px/1 var(--f-head);color:var(--signal)}
+.steps b{display:block;font:700 17.5px var(--f-head);color:var(--ink);margin-bottom:2px}
+.steps span{color:var(--muted);font-size:15.5px}
+.glance{display:grid;gap:0;border-top:3px solid var(--ink);background:#fff}
+.glance div{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:14px 18px;border-bottom:1px solid var(--line-2)}
+.glance dt{font-weight:700;color:var(--ink)}
+.glance dd{color:var(--ink-2)}
+
+/* tables */
+.tw{overflow-x:auto;border:1px solid var(--line);background:#fff}
+table.t{width:100%;border-collapse:collapse;font-size:15px;line-height:1.75;min-width:720px}
+table.t th{
+  text-align:start;font:700 14.5px var(--f-head);color:var(--ink);
+  padding:14px 16px;border-bottom:2px solid var(--ink);background:#fafbfd;white-space:nowrap;
+}
+table.t td{padding:14px 16px;border-bottom:1px solid var(--line-2);vertical-align:top}
+table.t tr:last-child td{border-bottom:0}
+table.t td:first-child{font-weight:600;color:var(--ink)}
+table.t .n{font-variant-numeric:tabular-nums;text-align:center}
+table.t th.n{text-align:center}
+.pill{display:inline-block;padding:1px 10px;font-size:13px;font-weight:600;border:1px solid var(--line);background:#fff;white-space:nowrap}
+.pill.hi{color:var(--signal-d);border-color:var(--signal)}
+.pill.md{color:var(--amber);border-color:var(--amber)}
+.pill.lo{color:var(--teal-d);border-color:var(--teal)}
+
+/* SWOT */
+.swot{display:grid;grid-template-columns:1fr 1fr;background:#fff;border:1px solid var(--line)}
+.swot .q{padding:24px 26px 26px;border-top:4px solid var(--c)}
+.swot .q:nth-child(odd){border-inline-end:1px solid var(--line)}
+.swot .q:nth-child(-n+2){border-bottom:1px solid var(--line)}
+.swot h3{margin:0 0 4px;font-size:19px}
+.swot small{display:block;color:var(--muted);font-size:13.5px;margin-bottom:12px}
+.swot ul{list-style:none;display:grid;gap:8px;font-size:15.5px}
+.swot li{position:relative;padding-inline-start:16px}
+.swot li::before{content:"";position:absolute;inset-inline-start:0;top:.85em;width:6px;height:6px;background:var(--c)}
+.q.s{--c:var(--teal-d)}.q.w{--c:var(--signal)}.q.o{--c:var(--ink)}.q.th{--c:var(--amber)}
+.unknown{margin-top:22px;border-inline-start:4px solid var(--amber);background:#fff;padding:16px 20px;font-size:15.5px}
+.unknown b{color:var(--ink)}
+
+/* statement */
+.statement{padding:34px 38px;font:600 clamp(20px,2.4vw,27px)/1.85 var(--f-head)}
+.statement small{display:block;font:500 14px var(--f-body);color:rgba(255,255,255,.65);margin-bottom:10px}
+.taglines{display:grid;gap:0;margin-top:0;border-top:1px solid var(--line)}
+.taglines div{display:grid;grid-template-columns:1fr auto;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.taglines b{font:700 18px var(--f-head);color:var(--ink)}
+.taglines span{font-size:14px;color:var(--muted)}
+.dd{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);background:#fff}
+.dd>div{padding:22px 24px}
+.dd>div:first-child{border-inline-end:1px solid var(--line)}
+.dd h4{font-size:17px;margin-bottom:10px}
+.dd .do h4{color:var(--teal-d)}
+.dd .dont h4{color:var(--signal-d)}
+
+/* copy blocks */
+.copy{position:relative;background:#fff;border:1px solid var(--line);padding:18px 20px 18px;margin-top:12px}
+.copy .lb{font:700 14.5px var(--f-head);color:var(--ink);margin-bottom:8px;padding-inline-end:90px}
+.copy .tx{white-space:pre-line;font-size:15.5px;line-height:1.95}
+.copy .tx[dir=ltr]{text-align:left;font-size:15px;line-height:1.75}
+.copy button{
+  position:absolute;top:12px;inset-inline-end:12px;font:600 13px var(--f-body);cursor:pointer;
+  border:1px solid var(--line);background:#fff;color:var(--ink);padding:4px 12px;transition:border-color .2s,color .2s;
+}
+.copy button:hover{border-color:var(--teal);color:var(--teal-d)}
+
+/* matrix */
+.matrix-wrap{margin-top:8px}
+.matrix{
+  position:relative;aspect-ratio:16/9;min-height:400px;background:#fff;border:1px solid var(--line);overflow:hidden;
+}
+.matrix::before,.matrix::after{content:"";position:absolute;background:var(--line)}
+.matrix::before{inset-block:0;right:50%;width:1px}
+.matrix::after{inset-inline:0;top:50%;height:1px}
+.mq{position:absolute;font:700 14px var(--f-head);color:var(--muted);padding:10px 14px}
+.mq.a{top:0;right:0;color:var(--signal-d)}
+.mq.b{top:0;left:0}
+.mq.c{bottom:0;right:0}
+.mq.d{bottom:0;left:0}
+.pt{position:absolute;right:calc(var(--x)*1%);bottom:calc(var(--y)*1%);width:0;height:0}
+.pt i{position:absolute;left:-8px;top:-8px;width:16px;height:16px;border-radius:50%;background:var(--c,var(--ink));border:2px solid #fff;box-shadow:0 0 0 1px var(--c,var(--ink))}
+.pt b{position:absolute;top:12px;left:0;transform:translateX(-50%);white-space:nowrap;font:600 13.5px var(--f-body);color:var(--ink)}
+.pt.p1{--c:var(--signal)}.pt.p2{--c:var(--teal)}.pt.p3{--c:#8493a8}
+.axis{display:flex;justify-content:space-between;font-size:13.5px;color:var(--muted);margin-top:8px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:14px;font-size:14px;color:var(--muted)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-inline-end:8px;vertical-align:-1px}
+
+/* content mix */
+.mix{display:flex;height:46px;border:1px solid var(--ink);margin-top:6px}
+.mix span{display:grid;place-items:center;color:#fff;font:700 14.5px var(--f-head);width:calc(var(--w)*1%);background:var(--c)}
+.mixk{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px 28px;margin-top:18px}
+.mixk div{display:grid;grid-template-columns:14px 1fr;gap:10px;font-size:15px}
+.mixk i{width:14px;height:14px;margin-top:8px;background:var(--c)}
+.mixk b{color:var(--ink)}
+.series{display:grid;gap:0;border-top:1px solid var(--line)}
+.series div{display:grid;grid-template-columns:200px 1fr;gap:18px;padding:14px 0;border-bottom:1px solid var(--line)}
+.series b{font:700 17px var(--f-head);color:var(--ink)}
+.series span{color:var(--muted);font-size:15.5px}
+
+/* funnel */
+.flow{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--line);background:#fff}
+.flow>div{padding:18px 16px 20px;border-inline-start:1px solid var(--line);position:relative}
+.flow>div:first-child{border-inline-start:0}
+.flow>div::before{content:"";position:absolute;top:0;inset-inline:0;height:5px;background:var(--ink);opacity:calc(1 - var(--i)*.13)}
+.flow>div:last-child::before{background:var(--signal);opacity:1}
+.flow h4{font-size:16.5px;margin:6px 0 8px;line-height:1.5}
+.flow p{font-size:14.5px;line-height:1.75;color:var(--ink-2)}
+.flow small{display:block;margin-top:10px;font-size:13.5px;color:var(--teal-d);font-weight:600;line-height:1.6}
+
+/* gantt */
+.gwrap{overflow-x:auto;background:#fff;border:1px solid var(--line)}
+.gantt{
+  position:relative;display:grid;min-width:980px;
+  grid-template-columns:200px repeat(12,minmax(64px,1fr));
+  grid-template-rows:auto repeat(13,46px);
+}
+.g-h{grid-row:1;padding:10px 4px;text-align:center;font:700 13.5px/1.3 var(--f-head);color:var(--ink);border-bottom:2px solid var(--ink);background:#fafbfd;position:relative;z-index:3}
+.g-h small{display:block;font:500 11.5px var(--f-body);color:var(--muted)}
+.g-l{grid-column:1;padding:0 16px;display:flex;align-items:center;font-weight:600;font-size:14px;color:var(--ink);line-height:1.4;position:relative;z-index:2;background:#fff}
+.g-line{grid-column:1/-1;border-bottom:1px solid var(--line-2)}
+.g-v{grid-column:2/-1;grid-row:1/-1;background:repeating-linear-gradient(to left,transparent 0,transparent calc(100%/12 - 1px),var(--line-2) calc(100%/12 - 1px),var(--line-2) calc(100%/12))}
+.g-bar{
+  align-self:center;height:28px;margin:0 3px;padding:0 10px;display:flex;align-items:center;
+  font:600 12px var(--f-body);color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:relative;z-index:2;
+}
+.g-bar.sm{padding:0 4px;justify-content:center;font-size:11.5px}
+.b-ink{background:var(--ink)}.b-red{background:var(--signal)}.b-teal{background:var(--teal-d)}.b-amber{background:var(--amber)}
+.b-pale{background:#fff;color:var(--ink);border:1px dashed var(--ink)}
+.b-lt{background:#dbe7ee;color:var(--ink)}
+.g-ram{
+  grid-column:3/5;grid-row:2/15;margin-inline-start:12.5%;margin-inline-end:35%;z-index:1;
+  background:repeating-linear-gradient(-45deg,rgba(184,111,20,.13) 0 8px,rgba(184,111,20,.05) 8px 16px);
+  border-inline:1px solid rgba(184,111,20,.5);
+}
+.phases{display:grid;gap:0;margin-top:26px;border-top:3px solid var(--ink);background:#fff}
+.phases div{display:grid;grid-template-columns:200px 170px 1fr;gap:18px;padding:16px 18px;border-bottom:1px solid var(--line-2);align-items:baseline}
+.phases b{font:700 16.5px var(--f-head);color:var(--ink)}
+.phases em{font-style:normal;color:var(--muted);font-size:14.5px}
+.phases span{font-size:15px}
+
+/* team */
+.raci td:not(:first-child),.raci th:not(:first-child){text-align:center}
+.raci td:not(:first-child){font-weight:700;font-family:var(--f-head);color:var(--ink)}
+
+/* events playbook */
+.cols3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:20px}
+.panel h4{font-size:17px;line-height:1.6;margin-bottom:4px;color:var(--ink)}
+.panel .when{display:block;font-size:13.5px;color:var(--teal-d);font-weight:600;margin-bottom:14px}
+.panel .ul{font-size:15px;line-height:1.85}
+.legend-note{margin-top:12px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center}
+
+/* checklist */
+.prog{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.prog .bar{flex:1;height:8px;background:var(--line);position:relative}
+.prog .bar i{position:absolute;inset-block:0;right:0;width:0;background:var(--signal);transition:width .3s}
+.prog b{font:700 16px var(--f-head);font-variant-numeric:tabular-nums;color:var(--ink);min-width:60px;text-align:end}
+.ck-g{margin-top:22px}
+.ck-g h4{font-size:16px;margin-bottom:6px;color:var(--teal-d)}
+.ck{display:grid;grid-template-columns:24px 1fr;gap:12px;padding:11px 0;border-bottom:1px solid var(--line-2);cursor:pointer;align-items:start}
+.ck input{appearance:none;-webkit-appearance:none;width:22px;height:22px;border:2px solid var(--ink);background:#fff;margin-top:5px;cursor:pointer;display:grid;place-items:center}
+.ck input:checked{background:var(--ink)}
+.ck input:checked::after{content:"";width:9px;height:5px;border-inline-start:2.5px solid #fff;border-bottom:2.5px solid #fff;transform:rotate(-45deg) translate(1px,-1px)}
+.ck input:checked+span{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(13,27,42,.35)}
+.decide{margin-top:34px}
+.decide-l li{padding:6px 0 6px 0}
+.decide-l li{padding-inline-start:20px}
+
+.closing{margin-top:80px;padding-top:24px;border-top:1px solid var(--line);font-size:14.5px;color:var(--muted);max-width:56em}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1180px){
+  .flow{grid-template-columns:repeat(3,1fr)}
+  .flow>div:nth-child(4){border-inline-start:0}
+  .flow>div:nth-child(n+4){border-top:1px solid var(--line)}
+}
+@media(max-width:1000px){
+  .shell{display:block}
+  .side{position:sticky;top:0;z-index:50;height:auto;flex-direction:row;padding:8px 12px;gap:8px;overflow-x:auto;overflow-y:hidden;align-items:center}
+  .brand{display:none}
+  .side-foot{display:none}
+  .toc ol{display:flex}
+  .toc a{white-space:nowrap;padding:9px 12px;border-inline-start:0;border-bottom:3px solid transparent}
+  .toc a.on{border-bottom-color:var(--signal)}
+  .sec{scroll-margin-top:60px}
+  .hero{padding-top:44px}
+  .bud{grid-template-columns:1fr}
+  .swot{grid-template-columns:1fr}
+  .swot .q:nth-child(odd){border-inline-end:0}
+  .swot .q:not(:last-child){border-bottom:1px solid var(--line)}
+  .dd{grid-template-columns:1fr}
+  .dd>div:first-child{border-inline-end:0;border-bottom:1px solid var(--line)}
+  .phases div,.series div{grid-template-columns:1fr;gap:4px}
+  .glance div{grid-template-columns:1fr;gap:2px}
+}
+@media(max-width:700px){
+  .flow{grid-template-columns:1fr 1fr}
+  .flow>div:nth-child(odd){border-inline-start:0}
+  .flow>div:nth-child(even){border-inline-start:1px solid var(--line)}
+  .flow>div:nth-child(n+3){border-top:1px solid var(--line)}
+  .matrix{min-height:460px;aspect-ratio:auto}
+  .pt b{font-size:12px;white-space:normal;width:78px;text-align:center}
+  .statement{padding:26px 22px}
+  .tl-panel{padding:22px 10px 18px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+@media print{
+  body{background:#fff;font-size:12.5px}
+  .side{display:none}
+  .shell{display:block}
+  .main{padding:0 8mm;max-width:none}
+  .sec{padding-top:34px;break-inside:auto}
+  .sec-head,.tw,.panel,.copy,.swot,.flow,.gwrap,.matrix{break-inside:avoid}
+  table.t tr{break-inside:avoid}
+  .tw,.gwrap{overflow:visible}
+  .tl-pad{min-width:0;padding-inline:60px}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+
+<!-- ================= SIDEBAR ================= -->
+<aside class="side" aria-label="فهرس الخطة">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">f</div>
+    <div>
+      <b>FIMCO</b>
+      <span>خطة التسويق<br>يناير – ديسمبر 2027</span>
+    </div>
+  </div>
+  <nav class="toc">
+    <ol>
+      <li><a href="#summary">الملخص التنفيذي</a></li>
+      <li><a href="#situation">تحليل الوضع</a></li>
+      <li><a href="#goals">الأهداف والمؤشرات</a></li>
+      <li><a href="#audience">الجمهور المستهدف</a></li>
+      <li><a href="#messaging">التموضع والرسائل</a></li>
+      <li><a href="#foundation">مرحلة التأسيس</a></li>
+      <li><a href="#channels">القنوات</a></li>
+      <li><a href="#content">المحتوى</a></li>
+      <li><a href="#paid">الإعلانات المدفوعة</a></li>
+      <li><a href="#funnel">من المتابع إلى عرض السعر</a></li>
+      <li><a href="#events">المعارض والفعاليات</a></li>
+      <li><a href="#occasions">المناسبات الرسمية في مصر</a></li>
+      <li><a href="#roadmap">خارطة الـ12 شهرًا</a></li>
+      <li><a href="#team">الفريق والمسؤوليات</a></li>
+      <li><a href="#risks">المخاطر</a></li>
+      <li><a href="#next">أول 14 يومًا</a></li>
+    </ol>
+  </nav>
+  <div class="side-foot"><button class="btn" type="button" onclick="window.print()">طباعة / حفظ PDF</button></div>
+</aside>
+
+<main class="main">
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <p class="hero-meta">الإصدار 1.2، أُعدّت في 21 سبتمبر 2026 لشركة الصناعات التغذوية للتصنيع (FIMCO)، وتُنفَّذ من يناير إلى ديسمبر 2027</p>
+  <h1>صنعنا سمعتنا على أرض المصنع. حان وقت أن يراها العالم.</h1>
+  <p class="sub">خطة تسويق لعام 2027 كاملًا، من يناير إلى ديسمبر، لبناء أول حضور رقمي لشركة FIMCO من الصفر، وتحويله إلى استفسارات مؤهلة من مصنّعي السيارات والأجهزة المنزلية.</p>
+
+  <div class="tl-panel">
+    <div class="tl-scroll"><div class="tl-pad">
+      <div class="tl" role="img" aria-label="خط زمني: 39 عامًا من الإنتاج المتواصل منذ 1987 وصفر صفحات على وسائل التواصل اليوم، يليه عام 2027، أول 12 شهرًا من الحضور الرقمي">
+        <div class="tl-track">
+          <div class="tl-solid"></div>
+          <div class="tl-brk"></div>
+          <div class="tl-dash"></div>
+        </div>
+        <div class="tk up" style="right:0;--d:.2s"><div class="lab"><b>1987</b>التأسيس ضمن MB Group، وبدء تشكيل الصاج</div></div>
+        <div class="tk dn" style="right:22.56%;--d:.5s"><div class="lab"><b>1998</b>الانتقال إلى 6 أكتوبر وبدء دهان البلاستيك</div></div>
+        <div class="tk up" style="right:67.7%;--d:.9s"><div class="lab"><b>2020</b>توسعة الطاقة الإنتاجية</div></div>
+        <div class="tk dn now" style="right:80%;--d:1.4s"><div class="lab"><b>اليوم</b>0 صفحة على وسائل التواصل</div></div>
+        <div class="tk up start" style="right:90%;--d:1.9s"><div class="lab"><b>1 يناير 2027</b>تبدأ الخطة</div></div>
+        <div class="tk dn end" style="right:100%;--d:2.4s"><div class="lab"><b>ديسمبر 2027</b>نهاية أول سنة ظهور، وتمام الأربعين</div></div>
+      </div>
+    </div></div>
+    <div class="tl-cap">
+      <span><i class="k1"></i>39 عامًا من الإنتاج المتواصل (بمقياس رسم)</span>
+      <span><i class="k2"></i>عام 2027، أول 12 شهرًا من الحضور الرقمي (خارج المقياس)</span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= 1. SUMMARY ================= -->
+<section class="sec" id="summary">
+  <div class="sec-head">
+    <h2>الملخص التنفيذي</h2>
+    <p class="lede">لدى FIMCO ما يصعب تقليده: 39 عامًا من الإنتاج، واعتماد IATF 16949، وجوائز من GM وToyota وNissan. ما ينقصها مكان يراه فيه المشتري الجديد. هذه الخطة تبني ذلك المكان.</p>
+  </div>
+
+  <div class="cols">
+    <div>
+      <h3>الفكرة الاستراتيجية: إثبات قبل الترويج</h3>
+      <p class="idea">لا نحتاج إلى ادعاءات جديدة، فالأدلة جاهزة: شهادات وجوائز وأرقام وخطوط إنتاج حقيقية. مهمتنا أن نعرضها بانتظام في المنصات التي يبحث فيها المشترون ومهندسو الجودة، ثم نقود من يهتم إلى خطوة واحدة واضحة: <strong>اطلب عرض سعر</strong>.</p>
+      <dl class="glance" style="margin-top:28px">
+        <div><dt>المدة</dt><dd>12 شهرًا، من 1 يناير إلى 31 ديسمبر 2027</dd></div>
+        <div><dt>الجمهور الأول</dt><dd>مشترو ومهندسو جودة في مصنّعي السيارات (OEM) وموردي Tier 1 وشركات الأجهزة المنزلية</dd></div>
+        <div><dt>القنوات</dt><dd>LinkedIn وFacebook وYouTube وGoogle وWhatsApp Business، ثم Instagram من أبريل</dd></div>
+        <div><dt>المقياس الرئيس</dt><dd>35 استفسارًا تجاريًا مؤهلًا خلال السنة</dd></div>
+        <div><dt>قبل البداية</dt><dd>أكتوبر – ديسمبر 2026 تسخين اختياري: حجز أسماء الحسابات، وطلب موافقات العملاء، وبدء جمع الأرشيف. لا ننشر شيئًا قبل يناير.</dd></div>
+        <div><dt>ملاحظة</dt><dd>دورة البيع في قطاع السيارات طويلة، فلا نحكم بعدد المتابعين وحده. نتابع مؤشرات مبكرة: استفسارات، اجتماعات، طلبات زيارة مصنع.</dd></div>
+      </dl>
+    </div>
+    <div>
+      <h3>الخطة في أربع خطوات</h3>
+      <ol class="steps">
+        <li><div><b>أسّس (يناير – فبراير 2027)</b><span>الهوية والحسابات وصفحة طلب عرض السعر والتتبع، ومكتبة صور وفيديو من يومي تصوير، وإطلاق هادئ خلال رمضان.</span></div></li>
+        <li><div><b>أعلن (14 مارس – مايو)</b><span>إعلان علني بعد عيد الفطر بمحتوى من أرض المصنع وإيقاع ثابت، واختبار إعلانات LinkedIn وGoogle من أبريل، ويوم المورّدين في أبريل.</span></div></li>
+        <li><div><b>حوّل (يونيو – أغسطس)</b><span>توسيع ما نجح من الإعلانات، ومراسلة قائمة من 60 شركة مستهدفة، وأول ندوة LinkedIn Live، وقرار المشاركة في معارض الخريف.</span></div></li>
+        <li><div><b>ضاعف (سبتمبر – ديسمبر)</b><span>ذروة حملة FIMCO 40 وحلقتها الأخيرة، وفتح حوارات التصدير، وتجديد الشهادات، وخطة 2028.</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2. SITUATION ================= -->
+<section class="sec" id="situation">
+  <div class="sec-head">
+    <h2>تحليل الوضع</h2>
+    <p class="lede">كل نقطة قوة أدناه مأخوذة من ملف الشركة 2026. أما نقطة الضعف الأساسية فهي التي ذكرتموها: لا وجود على وسائل التواصل.</p>
+  </div>
+
+  <div class="swot">
+    <div class="q s">
+      <h3>نقاط القوة</h3><small>داخلية، ندعم بها الرسالة</small>
+      <ul>
+        <li>منظومة جودة معتمدة: IATF 16949 وISO 9001 وISO 14001 وISO 45001 وBIQS Level 5.</li>
+        <li>شهادات من العملاء: جائزة GM لتميز جودة المورد أربع سنوات متتالية (2022–2025)، وToyota Zero PPM في إنتاج 2023، وNissan بمستوى L1 ودرجة 100 في بطاقة الأداء الإقليمية 2025.</li>
+        <li>تصنيع متكامل في موقع واحد: كبس حتى 1,000 طن، ولحام (نقطي وCO₂ وليزر وأرجون)، وقوالب داخلية، ودهان أجزاء بلاستيكية.</li>
+        <li>39 عامًا في الإنتاج، و26 علامة عميلة (20 في السيارات و6 في الأجهزة المنزلية) على ثلاث قارات.</li>
+        <li>طاقة للنمو: 5,200 م² غير مستغلة من أصل 12,000 م²، وخط دهان إلكتروستاتيكي جديد (342 م²) قيد الإنشاء في 2026.</li>
+      </ul>
+    </div>
+    <div class="q w">
+      <h3>نقاط الضعف</h3><small>داخلية، نعالجها في الخطة</small>
+      <ul>
+        <li>لا حسابات على أي منصة تواصل، فلا يوجد ما يُكتشف أو يُشارك أو يُتابَع.</li>
+        <li>المشتري الجديد لا يجد مصدرًا مستقلًا يثبت هذه السمعة سوى الموقع وملف الشركة.</li>
+        <li>لا رصيد من المحتوى المرئي المنتظم (يتطلب يومي تصوير أولًا ثم يومًا شهريًا).</li>
+        <li>لا يوجد مسار رقمي واضح يقود الزائر إلى طلب عرض سعر أو مكالمة.</li>
+      </ul>
+    </div>
+    <div class="q o">
+      <h3>الفرص</h3><small>خارجية، نستثمرها</small>
+      <ul>
+        <li>توجّه الشركة المعلن في 2025: نمو التصدير والتنويع. والحضور الرقمي أرخص طريقة لبدء حوار مع مشترٍ خارج مصر.</li>
+        <li>قطاع الأجهزة المنزلية (Haier وElectrolux وMidea وToshiba وBeko وCarrier): سوق ثانٍ لخدمة الدهان لا يعرفها كثير من مشتري السيارات.</li>
+        <li>ملء الطاقة الجديدة: خط الدهان الإلكتروستاتيكي يحتاج حجم طلب جديدًا، أي حملة مخصصة لخدمة الدهان.</li>
+        <li>2027 هو عام الذكرى الأربعين، وهو يطابق سنة الخطة تمامًا: قصة "أربعة عقود على أرض المصنع".</li>
+        <li>معارض الخريف السنوية في المنطقة (Autotech Egypt وAutomechanika Dubai): نزورها استطلاعًا في 2026، ونقرر المشاركة في 2027 بحسب الأرقام.</li>
+      </ul>
+    </div>
+    <div class="q th">
+      <h3>التهديدات</h3><small>خارجية، نحتاط لها</small>
+      <ul>
+        <li>المشتري يقارن الموردين رقميًا أولًا، والمورّد الأوضح حضورًا يدخل قائمة الاختيار قبل غيره.</li>
+        <li>قيود السرية وحقوق استخدام أسماء العملاء وشعاراتهم (GM وToyota وNissan وغيرها).</li>
+        <li>دورة بيع طويلة: النتائج التجارية تتأخر عن النشاط بأشهر.</li>
+        <li>ضعف الاستمرار: نشر مكثف شهرين ثم توقف يضر أكثر من عدم البدء.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="unknown"><b>ما لا نعرفه بعد:</b> أرقام زيارات الموقع الحالية، ووضع المنافسين رقميًا، وحجم الفريق المتاح. تُحسم هذه الأمور في أول أسبوعين (انظر مرحلة التأسيس)، وتُعاير الأهداف بعدها.</div>
+</section>
+
+<!-- ================= 3. GOALS ================= -->
+<section class="sec" id="goals">
+  <div class="sec-head">
+    <h2>الأهداف والمؤشرات</h2>
+    <p class="lede">أربعة أهداف مرتبة بحسب الأثر التجاري. الأرقام أدناه مقترحة، وتُثبَّت أرقام الأساس في الأسبوع الأول ثم تُعاير بعد مراجعة يونيو (90 يومًا من الإعلان العلني).</p>
+  </div>
+
+  <div class="cols" style="margin-bottom:34px">
+    <ul class="ul">
+      <li><b>الفرص:</b> تحويل الاهتمام إلى طلب عرض سعر أو مكالمة تعارف مع مشترٍ.</li>
+      <li><b>الثقة:</b> أن يجد المشتري أدلة قابلة للتحقق (اعتمادات، جوائز، مقاطع من الإنتاج) في أقل من دقيقتين.</li>
+    </ul>
+    <ul class="ul">
+      <li><b>الظهور:</b> أن تجد FIMCO عند البحث بالاسم وبالخدمة في Google وLinkedIn.</li>
+      <li><b>الفريق:</b> أن تصبح جهة توظيف يعرفها المهندسون والفنيون في المنطقة الصناعية.</li>
+    </ul>
+  </div>
+
+  <div class="tw">
+  <table class="t">
+    <thead><tr><th>المؤشر</th><th class="n">البداية (يناير)</th><th class="n">نهاية مايو 2027</th><th class="n">نهاية أغسطس 2027</th><th class="n">نهاية ديسمبر 2027</th></tr></thead>
+    <tbody>
+      <tr><td>استفسارات تجارية مؤهلة (تراكمي)</td><td class="n">0</td><td class="n">4</td><td class="n">15</td><td class="n"><strong>35</strong></td></tr>
+      <tr><td>اجتماعات أو مكالمات تعارف مع مشترين جدد (تراكمي)</td><td class="n">0</td><td class="n">3</td><td class="n">10</td><td class="n">25</td></tr>
+      <tr><td>طلبات زيارة مصنع أو تقييم مورّد (تراكمي)</td><td class="n">0</td><td class="n">0</td><td class="n">2</td><td class="n">5</td></tr>
+      <tr><td>متابعو LinkedIn</td><td class="n">0</td><td class="n">300</td><td class="n">1,000</td><td class="n">2,500</td></tr>
+      <tr><td>متابعو Facebook</td><td class="n">0</td><td class="n">800</td><td class="n">2,500</td><td class="n">6,000</td></tr>
+      <tr><td>مشتركو YouTube</td><td class="n">0</td><td class="n">40</td><td class="n">150</td><td class="n">400</td></tr>
+      <tr><td>زيارات الموقع الشهرية (مقارنة بأرقام الأساس)</td><td class="n">الأساس</td><td class="n">×1.5</td><td class="n">×2</td><td class="n">×3</td></tr>
+      <tr><td>زمن الرد على أي استفسار</td><td class="n">—</td><td class="n" colspan="3">أقل من يوم عمل واحد، طوال الخطة</td></tr>
+      <tr><td>الالتزام بتقويم النشر</td><td class="n">—</td><td class="n" colspan="3">100% من المنشورات المجدولة</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">"مؤهل" يعني حصل على 3 نقاط أو أكثر في بطاقة التأهيل (قسم "من المتابع إلى عرض السعر"). تُحسب المؤشرات من الإعلان العلني يوم 14 مارس 2027، أي أن الخطة تعمل نحو تسعة أشهر ونصف بحضور علني كامل.</p>
+</section>
+
+<!-- ================= 4. AUDIENCE ================= -->
+<section class="sec" id="audience">
+  <div class="sec-head">
+    <h2>الجمهور المستهدف</h2>
+    <p class="lede">قرار إدخال مورد جديد لا يتخذه شخص واحد. المشتري يقرر التجاري، والمهندس يقيّم الفني، ولكل منهما ما يقنعه.</p>
+  </div>
+  <div class="tw">
+  <table class="t">
+    <thead><tr><th>الشريحة</th><th>ما الذي يقرره</th><th>ما يبحث عنه</th><th>أين نصل إليه</th><th>رسالتنا له</th></tr></thead>
+    <tbody>
+      <tr><td>مسؤول المشتريات والتوريد (Purchasing / Sourcing Manager)</td><td>ضم مورد جديد إلى قائمة العروض</td><td>سعر تنافسي، واستقرار، والتزام بالتسليم، ومورد لا يسبب مشكلة</td><td>LinkedIn، بحث Google، المعارض، مراسلة مباشرة</td><td>مورد معتمد بتسليم في الموعد وقدرة تحت سقف واحد</td></tr>
+      <tr><td>مهندس جودة الموردين والمشروع (SQE / NPI)</td><td>قبول المورد فنيًا وتقييمه</td><td>IATF 16949، ونسب PPM، وقدرات القياس والاختبار، وقوالب داخلية</td><td>YouTube (جولات العمليات)، صفحة الجودة في الموقع، LinkedIn</td><td>أدلة قابلة للتحقق: شهادات ونتائج وجولة في خط الإنتاج</td></tr>
+      <tr><td>مشتري أجزاء بلاستيكية مدهونة في شركات الأجهزة المنزلية</td><td>اختيار مورد للمقابض والأغطية وأجزاء الغسالات</td><td>مطابقة اللون، وثبات الجودة، وحجم إنتاج مستمر</td><td>LinkedIn، Google، معارض الأجهزة والمصانع</td><td>خط دهان بست مراحل بمعايير السيارات لقطع الأجهزة</td></tr>
+      <tr><td>مشتر خارج مصر (الخليج وشمال أفريقيا)</td><td>تجربة مورد مصري لأول مرة</td><td>إثبات أن المعايير عالمية، وخبرة في التوريد للعلامات الكبرى</td><td>LinkedIn بالإنجليزية، وGoogle، ومعارض المنطقة</td><td>قدرة تصنيع بمعايير OEM من مصر، ومعتمدة من GM وToyota وNissan</td></tr>
+      <tr><td>المرشحون للتوظيف: مهندسون وفنيون (جمهور ثانوي)</td><td>أين يعمل</td><td>شركة مستقرة، وسلامة، وتدريب، وتطور</td><td>Facebook، Instagram، LinkedIn</td><td>39 عامًا من الاستقرار، ومصنع يتوسع، وسلامة مهنية معتمدة ISO 45001</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ================= 5. MESSAGING ================= -->
+<section class="sec" id="messaging">
+  <div class="sec-head">
+    <h2>التموضع والرسائل</h2>
+    <p class="lede">نتحدث بالأرقام والشهادات، لا بالصفات. المشتري الصناعي يصدّق ما يمكنه التحقق منه.</p>
+  </div>
+
+  <div class="statement dark cut">
+    <small>جملة التموضع</small>
+    FIMCO مورّد OEM مصري معتمد يجمع الكبس واللحام والقوالب والدهان تحت سقف واحد، بخبرة منذ 1987 وسجل جودة تشهد له جوائز GM وToyota وNissan.
+  </div>
+
+  <h3>أربع رسائل، ولكل منها دليل</h3>
+  <div class="tw">
+  <table class="t">
+    <thead><tr><th>الرسالة</th><th>الدليل الذي نعرضه</th><th>جملة جاهزة للاستخدام</th></tr></thead>
+    <tbody>
+      <tr><td>جودة يمكن التحقق منها</td><td>IATF 16949 وISO 9001 وISO 14001 وISO 45001 وBIQS Level 5. جائزة GM أربع سنوات، وToyota Zero PPM في 2023، وNissan L1 بدرجة 100 في 2025.</td><td>"لا نقول إننا الأفضل. نعرض لكم الشهادات."</td></tr>
+      <tr><td>من الصاج إلى اللمسة الأخيرة</td><td>كبس حتى 1,000 طن، ولحام بأربع تقنيات، وقوالب داخلية، ودهان في ست مراحل، كلها في موقع واحد.</td><td>"قطعتك تمر من الكبس إلى الدهان دون أن تغادر مصنعنا."</td></tr>
+      <tr><td>أربعة عقود من الخبرة</td><td>تأسيس 1987، والانتقال إلى 6 أكتوبر 1998، والتوسعة 2020، وعملاء على ثلاث قارات.</td><td>"أربعة عقود على أرض المصنع."</td></tr>
+      <tr><td>جاهزون للنمو معكم</td><td>5,200 م² للتوسع، وخط دهان جديد، وتركيز معلن على التصدير.</td><td>"مساحة وطاقة لمشروعك القادم."</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>شعارات مقترحة للحملة</h3>
+  <div class="taglines">
+    <div><b>من الصاج إلى اللمسة الأخيرة</b><span>الشعار الرئيس المقترح</span></div>
+    <div><b>أربعة عقود على أرض المصنع</b><span>لحملة FIMCO 40 في 2027</span></div>
+    <div><b>معتمدون. متكاملون. في الموعد.</b><span>للإعلانات المدفوعة</span></div>
+  </div>
+
+  <h3>نبرة الصوت واللغة</h3>
+  <div class="dd">
+    <div class="do">
+      <h4>نفعل</h4>
+      <ul class="ul">
+        <li>رقم أو دليل في كل منشور.</li>
+        <li>لقطات حقيقية من المصنع بدل الصور الجاهزة.</li>
+        <li>عربية بسيطة، ونترك المصطلحات كما يستخدمها المشتري: PPM وTier 1 وPPAP.</li>
+        <li>الرد على كل تعليق ورسالة خلال يوم عمل.</li>
+      </ul>
+    </div>
+    <div class="dont">
+      <h4>لا نفعل</h4>
+      <ul class="ul">
+        <li>عرض شعار أي عميل أو قطعته دون موافقة كتابية منه.</li>
+        <li>نشر رسومات هندسية أو أرقام قطع أو شاشات تظهر بيانات عملاء.</li>
+        <li>ادعاءات بلا مستند: "الأفضل" و"الأول" و"الوحيد".</li>
+        <li>الحديث عن الأسعار أو الطاقة المتاحة علنًا.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note"><b>سياسة اللغة:</b> LinkedIn بالإنجليزية في 60% من المنشورات وبالعربية في 40%. Facebook وInstagram بالعربية. YouTube بتعليق صوتي عربي وترجمة إنجليزية مكتوبة. الموقع وGoogle Business بالعربية والإنجليزية.</p>
+</section>
+
+<!-- ================= 6. FOUNDATION ================= -->
+<section class="sec" id="foundation">
+  <div class="sec-head">
+    <h2>مرحلة التأسيس</h2>
+    <p class="lede">يناير كله للتأسيس، وفبراير (رمضان) للإطلاق الهادئ. لا نُعلن عن صفحة فارغة، فأول ما يراه الزائر يحدد انطباعه. نفتح الحسابات ونعبّئها بـ12 منشورًا معتمدًا قبل الإعلان العلني يوم الأحد 14 مارس، أول أسبوع عمل كامل بعد عيد الفطر.</p>
+  </div>
+
+  <div class="cols">
+    <div>
+      <h3>الهوية والحسابات</h3>
+      <ul class="ul">
+        <li>حجز اسم مستخدم موحد على كل المنصات قبل أي إعلان. الاختيار الأول <span class="num" dir="ltr">fimco-eg</span> (يطابق النطاق)، والبديل <span class="num" dir="ltr">fimcoegypt</span> (يطابق البريد). تحقق من التوفر.</li>
+        <li>إنشاء الحسابات ببريد مؤسسي، وتفعيل التحقق بخطوتين، وتعيين مديرين اثنين على الأقل لكل صفحة، وحفظ كلمات المرور في مدير كلمات مرور. لا تُربط الصفحات بحساب شخصي وحيد.</li>
+        <li>مجموعة هوية: شعار بمقاسات كل منصة، وصورة غلاف، وثلاثة قوالب منشورات (رقم، ولقطة، وشخص).</li>
+      </ul>
+      <h3>الأصول</h3>
+      <ul class="ul">
+        <li>يومان للتصوير الأول يغطيان الكبس واللحام والدهان والجودة والمخازن والفريق والواجهة. المخرجات: نحو 60 صورة نهائية، و8 مقاطع من 15 إلى 45 ثانية، وفيلم تعريفي من 2 إلى 3 دقائق.</li>
+        <li>قائمة مكتوبة بما يجوز نشره من أسماء العملاء وشعاراتهم وجوائزهم، مع طلب الموافقة من كل عميل.</li>
+        <li>خمسة ملفات "صفحة واحدة"، واحد لكل عائلة منتجات: أجزاء الهيكل، والمكونات الإنشائية، والدعامات والحوامل، ودروع الحرارة، والأجزاء البلاستيكية الخارجية.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>الموقع والتتبع</h3>
+      <ul class="ul">
+        <li>صفحة "اطلب عرض سعر" بنموذج قصير: نوع القطعة، والمادة، والكمية السنوية المتوقعة، وموعد بدء الإنتاج، ورفع الرسم أو العينة.</li>
+        <li>تركيب Google Analytics 4 وSearch Console وLinkedIn Insight Tag، واعتماد تسمية موحدة لروابط UTM.</li>
+        <li>توثيق ملف Google Business Profile (المنطقة الصناعية الرابعة، 6 أكتوبر) وإضافة الصور.</li>
+        <li>خط WhatsApp Business برد آلي وساعات عمل، وبريد marketing@ مؤسسي.</li>
+      </ul>
+      <h3>البيع والمنافسون</h3>
+      <ul class="ul">
+        <li>ملف CRM (مثل Odoo CRM إن كان مستخدمًا، أو أي نظام قائم) يسجل كل استفسار مع مصدره ومسؤوله.</li>
+        <li>قائمة حسابات مستهدفة من 60 شركة: مصنّعو سيارات وموردو Tier 1 ومصنعو دراجات نارية وثلاثية العجلات وأجهزة منزلية.</li>
+        <li>تحليل 8 إلى 10 موردين منافسين في مصر والمنطقة: ماذا ينشرون وبأي وتيرة وما الذي ينقصهم.</li>
+        <li>تجديد الشهادات يقع داخل الخطة: IATF 16949 وISO 9001 تنتهيان في 8 أكتوبر 2027، وISO 14001 وISO 45001 في 24 ديسمبر 2027. نحدد مع مدير الجودة مواعيد التدقيق مبكرًا، ولا نعرض صورة شهادة بعد انتهائها، ونحدّث الصور فور التجديد.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="unknown"><b>تسخين قبل يناير (اختياري):</b> أكتوبر إلى ديسمبر 2026. نحجز أسماء المستخدمين، ونرسل طلبات موافقة العملاء (تستغرق أسابيع)، ونبدأ جمع أرشيف الأربعين، ونزور Autotech Egypt (9–11 أكتوبر) وAutomechanika Dubai (10–12 نوفمبر) للاستطلاع وبناء قائمة الحسابات. لا ننشر شيئًا قبل يناير.</div>
+
+  <h3>نصوص جاهزة للنسخ</h3>
+  <div class="cols">
+    <div>
+      <div class="copy"><div class="lb">نبذة LinkedIn وFacebook (عربي)</div><button type="button" data-copy="c1">نسخ</button>
+<div class="tx" id="c1">فيمكو — شركة الصناعات التغذوية للتصنيع. مورّد OEM من الفئة الأولى والثانية لقطاع السيارات في مدينة 6 أكتوبر، في إنتاج مستمر منذ 1987. كبس معادن حتى 1,000 طن، ولحام، وتصنيع قوالب داخلي، ودهان أجزاء بلاستيكية، كلها في موقع واحد. معتمدون IATF 16949 وISO 9001 وISO 14001 وISO 45001 وBIQS Level 5.</div></div>
+      <div class="copy"><div class="lb">نبذة Instagram (قصيرة)</div><button type="button" data-copy="c3">نسخ</button>
+<div class="tx" id="c3">مورّد OEM لقطع السيارات منذ 1987. كبس ولحام وقوالب ودهان تحت سقف واحد. IATF 16949. 6 أكتوبر، مصر.</div></div>
+      <div class="copy"><div class="lb">منشور الإطلاق (عربي)</div><button type="button" data-copy="c5">نسخ</button>
+<div class="tx" id="c5">فيمكو الآن على LinkedIn وFacebook وYouTube.
+
+منذ 1987 ونحن نصنع قطع السيارات في المنطقة الصناعية الرابعة بمدينة 6 أكتوبر: كبس ولحام وقوالب ودهان، تحت سقف واحد وبمعايير IATF 16949.
+
+بنينا سمعتنا على أرض المصنع. ومن اليوم سنُريكم كيف نعمل: كل أسبوع لقطة حقيقية من خط الإنتاج، وأرقام من سجل الجودة، ووجوه من فريقنا.
+
+تابعوا الصفحة، وإن كان لديكم قطعة تحتاج إلى مورّد فاطلبوا عرض سعر عبر www.fimco-eg.com</div></div>
+    </div>
+    <div>
+      <div class="copy"><div class="lb">LinkedIn About (English)</div><button type="button" data-copy="c2">نسخ</button>
+<div class="tx" id="c2" dir="ltr">FIMCO — Feeding Industries Manufacturing Co. An OEM Tier 1/2 automotive supplier in 6th of October City, Egypt, in continuous production since 1987. Metal stamping up to 1,000 tons, welding, in-house tooling and plastic parts painting under one roof. Certified to IATF 16949, ISO 9001, ISO 14001, ISO 45001 and BIQS Level 5.</div></div>
+      <div class="copy"><div class="lb">Launch post (English)</div><button type="button" data-copy="c4">نسخ</button>
+<div class="tx" id="c4" dir="ltr">FIMCO is now on LinkedIn.
+
+Since 1987 we have been manufacturing automotive components in 6th of October City, Egypt: stamping, welding, tooling and painting under one roof, certified to IATF 16949.
+
+We built our reputation on the factory floor. From today we will show you how we work: one real look at the production line every week, numbers from our quality record, and the people behind the parts.
+
+Looking for a certified supplier? Request a quote at www.fimco-eg.com</div></div>
+    </div>
+  </div>
+  <p class="note">الاسم العربي "شركة الصناعات التغذوية للتصنيع" مأخوذ من ملف الشركة. طابقوه مع الاسم الرسمي قبل النشر.</p>
+</section>
+
+<!-- ================= 7. CHANNELS ================= -->
+<section class="sec" id="channels">
+  <div class="sec-head">
+    <h2>القنوات</h2>
+    <p class="lede">نبدأ بأقل عدد من القنوات يمكن الالتزام به بجودة. الرسم أدناه ترتيب مبدئي بحسب الأثر التجاري والجهد المطلوب، ويُراجع في يونيو بأرقام حقيقية.</p>
+  </div>
+
+  <div class="matrix-wrap">
+    <div class="matrix" role="img" aria-label="مصفوفة القنوات: الموقع وصفحة طلب عرض السعر وLinkedIn وبحث Google الأعلى أثرًا. وWhatsApp وGoogle Business وFacebook الأقل جهدًا. وTikTok وInstagram مؤجلان.">
+      <div class="mq a">ابدأ فورًا</div><div class="mq b">استثمر تدريجيًا</div>
+      <div class="mq c">دعم منخفض الجهد</div><div class="mq d">لاحقًا</div>
+      <span class="pt p1" style="--x:38;--y:90"><i></i><b>الموقع وصفحة RFQ</b></span>
+      <span class="pt p1" style="--x:50;--y:80"><i></i><b>LinkedIn</b></span>
+      <span class="pt p1" style="--x:65;--y:70"><i></i><b>بحث Google</b></span>
+      <span class="pt p2" style="--x:88;--y:72"><i></i><b>معارض وفعاليات</b></span>
+      <span class="pt p2" style="--x:76;--y:52"><i></i><b>YouTube</b></span>
+      <span class="pt p2" style="--x:24;--y:58"><i></i><b>Facebook</b></span>
+      <span class="pt p2" style="--x:12;--y:68"><i></i><b>WhatsApp Business</b></span>
+      <span class="pt p2" style="--x:12;--y:40"><i></i><b>Google Business</b></span>
+      <span class="pt p3" style="--x:56;--y:34"><i></i><b>Instagram</b></span>
+      <span class="pt p3" style="--x:84;--y:14"><i></i><b>TikTok</b></span>
+    </div>
+    <div class="axis"><span>أقل جهدًا</span><span>الجهد المطلوب</span><span>أكثر جهدًا</span></div>
+    <div class="legend">
+      <span><i style="background:var(--signal)"></i>أولوية أولى</span>
+      <span><i style="background:var(--teal)"></i>أولوية ثانية</span>
+      <span><i style="background:#8493a8"></i>مؤجلة أو منخفضة</span>
+      <span>المحور الرأسي: الأثر على الفرص التجارية، من الأدنى إلى الأعلى.</span>
+    </div>
+  </div>
+
+  <h3>دور كل قناة وإيقاعها</h3>
+  <div class="tw">
+  <table class="t">
+    <thead><tr><th>القناة</th><th>دورها</th><th>الجمهور</th><th>اللغة</th><th>الإيقاع</th><th>البدء</th></tr></thead>
+    <tbody>
+      <tr><td>LinkedIn</td><td>المنصة الرئيسية: المصداقية والوصول للمشترين والتوظيف</td><td>مشترون، مهندسو جودة، مصدّرون</td><td>إنجليزي 60% وعربي 40%</td><td>3 منشورات أسبوعيًا (منشوران في رمضان) وتعليقات يومية</td><td>إطلاق هادئ في فبراير، وإعلان علني يوم 14 مارس</td></tr>
+      <tr><td>Facebook</td><td>حضور محلي، وتوظيف، ومجتمع العاملين والموردين، واستفسارات عبر Messenger</td><td>جمهور محلي عريض، ومتقدمو وظائف</td><td>عربي</td><td>3 منشورات أسبوعيًا (منشوران في رمضان، بعد الإفطار)</td><td>مع LinkedIn</td></tr>
+      <tr><td>YouTube</td><td>مكتبة الأدلة: جولات العمليات والأفلام التعريفية، وتظهر في نتائج البحث</td><td>مهندسون ومقيّمو موردين</td><td>عربي بترجمة إنجليزية</td><td>فيديوان شهريًا و4 مقاطع Shorts</td><td>14 مارس</td></tr>
+      <tr><td>Instagram</td><td>الوجه البشري للمصنع: Reels وStories</td><td>موظفون حاليون ومحتملون</td><td>عربي</td><td>2 Reels أسبوعيًا من إعادة استخدام لقطات YouTube</td><td>أبريل</td></tr>
+      <tr><td>Google Business Profile</td><td>الظهور في الخرائط وعند البحث بالاسم</td><td>من يبحث عن الشركة أو موقعها</td><td>عربي وإنجليزي</td><td>منشور شهري وتحديث الصور</td><td>يناير</td></tr>
+      <tr><td>WhatsApp Business</td><td>استقبال الاستفسارات والرد السريع</td><td>مشترون جاهزون للتواصل</td><td>عربي وإنجليزي</td><td>رد خلال يوم عمل</td><td>يناير</td></tr>
+      <tr><td>الموقع وSEO</td><td>نقطة التحويل: صفحات العائلات الخمس وصفحة الجودة وصفحة RFQ</td><td>كل الشرائح</td><td>عربي وإنجليزي</td><td>تحديث مستمر، ومقال تقني شهريًا من أبريل</td><td>يناير</td></tr>
+      <tr><td>نشرة بريدية</td><td>إبقاء العملاء والموردين والعملاء المحتملين على اطلاع</td><td>قاعدة بيانات تُبنى من الاستفسارات والمعارض</td><td>إنجليزي وعربي</td><td>مرة شهريًا</td><td>مايو</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="cols" style="margin-top:34px">
+    <div>
+      <h3>لن نبدأ بـ TikTok وX الآن</h3>
+      <p>جمهور المشترين الصناعيين ليس هناك، والجهد المطلوب لا يقابله عائد قريب. نعيد التقييم في مراجعة سبتمبر بحسب أرقام القنوات الأخرى.</p>
+    </div>
+    <div>
+      <h3>موظفو الشركة قناة مجانية</h3>
+      <p>نطلب من 20 مهندسًا ومديرًا متابعة الصفحة ومشاركة المنشورات الرئيسة على حساباتهم يوم الإطلاق. منشور من مهندس جودة يصل إلى مهندسي الجودة عند العملاء أكثر من منشور الشركة. ونعد دليلًا من صفحة واحدة يوضح ما يُشارك وما لا يُشارك.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8. CONTENT ================= -->
+<section class="sec" id="content">
+  <div class="sec-head">
+    <h2>المحتوى</h2>
+    <p class="lede">خمسة محاور، وست سلاسل متكررة، ويوم تصوير شهري. المصنع نفسه هو مصدر المحتوى، ولسنا بحاجة إلى ابتكار شيء من خارجه.</p>
+  </div>
+
+  <h3>توزيع المحاور</h3>
+  <div class="mix" role="img" aria-label="توزيع المحتوى: داخل المصنع 30%، الأدلة والجودة 25%، المنتجات 20%، الناس 15%، رؤى صناعية 10%">
+    <span style="--w:30;--c:var(--ink)">30%</span>
+    <span style="--w:25;--c:var(--signal)">25%</span>
+    <span style="--w:20;--c:var(--teal-d)">20%</span>
+    <span style="--w:15;--c:var(--amber)">15%</span>
+    <span style="--w:10;--c:#6b7a90">10%</span>
+  </div>
+  <div class="mixk">
+    <div style="--c:var(--ink)"><i></i><span><b>داخل المصنع.</b> خطوط الكبس واللحام والدهان أثناء العمل.</span></div>
+    <div style="--c:var(--signal)"><i></i><span><b>الأدلة والجودة.</b> الشهادات والجوائز والأرقام، بعد موافقة العملاء.</span></div>
+    <div style="--c:var(--teal-d)"><i></i><span><b>المنتجات.</b> عائلات القطع الخمس وحالات الاستخدام.</span></div>
+    <div style="--c:var(--amber)"><i></i><span><b>الناس.</b> المهندسون والفنيون والسلامة والتدريب.</span></div>
+    <div style="--c:#6b7a90"><i></i><span><b>رؤى صناعية.</b> إجابات فنية قصيرة يفيد بها المشتري والمهندس.</span></div>
+  </div>
+
+  <h3>السلاسل المتكررة</h3>
+  <div class="series">
+    <div><b>من الصاج إلى القطعة</b><span>حلقة لكل مرحلة (الكبس، واللحام، والدهان) تتبع قطعة واحدة من اللوح الخام إلى التغليف. فيديو 45 ثانية على LinkedIn وحلقة كاملة من 3 إلى 4 دقائق على YouTube.</span></div>
+    <div><b>أرقام من أرض المصنع</b><span>بطاقة واحدة لكل دليل: سنوات الجائزة، وIATF 16949، وSFE Program، وZero PPM. بعد موافقة العميل.</span></div>
+    <div><b>نبني</b><span>تقدم خط الدهان الإلكتروستاتيكي الجديد (342 م²) وتوسعة المصنعين A وB. سلسلة تُثبت أن الشركة تنمو.</span></div>
+    <div><b>وجوه فيمكو</b><span>مهندس جودة، ومشغّل كبس، وفني لحام: من هو، وماذا يفعل، وكم سنة في الشركة. تخدم التوظيف والثقة معًا.</span></div>
+    <div><b>سؤال مهندس</b><span>إجابة من دقيقة عن سؤال يسأله المشتري فعلًا: متى نختار اللحام بالليزر؟ ماذا يعني PPM صفر؟</span></div>
+    <div><b>أربعة عقود</b><span>حملة 2027 (التفاصيل أدناه).</span></div>
+  </div>
+
+  <h3>تقويم أول أربعة أسابيع بعد الإعلان (من 14 مارس)</h3>
+  <p class="note" style="margin:0 0 14px"><b>قبل الإعلان:</b> في فبراير (رمضان) ننشر منشورين أسبوعيًا من مخزون الـ12 منشورًا، بعد الإفطار على Facebook، ونوجّه الوقت إلى التصوير وجمع الأرشيف.</p>
+  <div class="tw">
+  <table class="t">
+    <thead><tr><th>الأسبوع</th><th>LinkedIn (3 منشورات)</th><th>Facebook (3 منشورات)</th><th>YouTube وInstagram</th></tr></thead>
+    <tbody>
+      <tr><td>1: الإعلان (14–18 مارس)</td><td>الأحد: إعلان الإطلاق ومشاركة 20 موظفًا.<br>الثلاثاء: خريطة عائلات المنتجات الخمس (Carousel).<br>الخميس: ماذا تعني IATF 16949 للمشتري؟</td><td>الأحد: إعلان الإطلاق بالعربية.<br>الثلاثاء: ألبوم "جولة في المصنع".<br>الخميس: من نحن في 30 ثانية (Reel).</td><td>رفع الفيلم التعريفي (2–3 دقائق) وثلاثة مقاطع قصيرة منه.</td></tr>
+      <tr><td>2: بدء "من الصاج إلى القطعة"</td><td>الأحد: حلقة الكبس (فيديو 45 ثانية).<br>الثلاثاء: خمسة أرقام من ورشة الكبس.<br>الخميس: وجه من فيمكو: مهندس الجودة.</td><td>الأحد: حلقة الكبس بالعربية مع سؤال للمتابعين.<br>الثلاثاء: لقطة خلف الكواليس.<br>الخميس: وجه من فيمكو.</td><td>حلقة الكبس كاملة، ومقطعا Shorts.</td></tr>
+      <tr><td>3: اللحام والأدلة</td><td>الأحد: حلقة اللحام (نقطي، CO₂، ليزر، أرجون).<br>الثلاثاء: بطاقة جائزة جودة (بعد موافقة العميل).<br>الخميس: سؤال مهندس.</td><td>الأحد: حلقة اللحام.<br>الثلاثاء: بطاقة الجائزة بالعربية.<br>الخميس: وجه من فيمكو: فني لحام.</td><td>حلقة اللحام كاملة، ومقطعا Shorts.</td></tr>
+      <tr><td>4: الدهان والبناء</td><td>الأحد: حلقة الدهان (ست مراحل).<br>الثلاثاء: "نبني": تقدم خط الدهان الجديد.<br>الخميس: استطلاع: ما أهم ما تبحث عنه في مورد جديد؟</td><td>الأحد: حلقة الدهان.<br>الثلاثاء: "نبني".<br>الخميس: الاستطلاع نفسه بالعربية.</td><td>حلقة الدهان كاملة، وReel من "نبني".</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">أيام النشر الأحد إلى الخميس (أسبوع العمل في مصر)، والوقت المبدئي بين 9 و11 صباحًا بتوقيت القاهرة. يُعدَّل التوقيت بعد شهرين بحسب إحصاءات الصفحات.</p>
+
+  <div class="panel cut" style="margin-top:38px;border-top:4px solid var(--signal)">
+    <h3 style="margin-bottom:10px">حملة FIMCO 40: "أربعة عقود على أرض المصنع"</h3>
+    <p>2027 هو عام الأربعين، وهو نفسه عام الخطة، وهذه مناسبة تسويقية نادرة وقصة لا يملكها منافس جديد. الفكرة: <b>40 قصة في 40 أسبوعًا</b>، قصة كل أسبوع من 14 مارس إلى 18 ديسمبر 2027، عبر أربعة فصول: التأسيس، والانتقال إلى أكتوبر، والتوسعة، والتصدير. تصل الحملة إلى ذروتها في شهر الذكرى (يُحدد بتاريخ التأسيس الفعلي) بفيلم وحدث مع العملاء، وتُختم بالحلقة 40 في ديسمبر.</p>
+    <p><b>يبدأ العمل قبل يناير:</b> جمع الأرشيف من صور قديمة وشهادات وقصاصات ومقابلات مع المؤسسين والعاملين القدامى، لأن ما يضيع منه لا يمكن تصويره لاحقًا.</p>
+  </div>
+</section>
+
+<!-- ================= 9. PAID ================= -->
+<section class="sec" id="paid">
+  <div class="sec-head">
+    <h2>الإعلانات المدفوعة</h2>
+    <p class="lede">لا ننفق قبل أن تكتمل ثلاثة شروط: صفحة RFQ تعمل، والتحويلات متتبعة، و20 منشورًا على الأقل على الصفحات. الإنفاق على صفحة فارغة إهدار.</p>
+  </div>
+  <div class="tw">
+  <table class="t">
+    <thead><tr><th>المنصة</th><th>الهدف</th><th>الاستهداف</th><th>الصيغ</th><th class="n">الأولوية</th><th>البدء</th></tr></thead>
+    <tbody>
+      <tr><td>LinkedIn Ads</td><td>نماذج عملاء محتملين، والوصول للمشترين مباشرة</td><td>المسميات: Purchasing وSourcing وSupplier Quality وProgram/NPI وPlant Manager. الصناعات: تصنيع المركبات وقطع الغيار، والآلات، والأجهزة المنزلية. الموقع: مصر ثم السعودية والإمارات وشمال أفريقيا. ورفع قائمة الـ60 شركة (Matched Audiences).</td><td>صورة، Carousel، فيديو، مع Lead Gen Form</td><td class="n"><span class="pill hi">أساسية</span></td><td>أبريل 2027</td></tr>
+      <tr><td>Google Search</td><td>التقاط من يبحث الآن عن مورد</td><td>كلمات عربية وإنجليزية (أدناه)، وصفحة هبوط واحدة لكل عائلة</td><td>إعلانات بحث نصية</td><td class="n"><span class="pill hi">أساسية</span></td><td>أبريل 2027</td></tr>
+      <tr><td>Meta (Facebook وInstagram)</td><td>التوظيف، وإعادة استهداف زوار الموقع</td><td>مصر، مهندسون وفنيون، وزوار الموقع في آخر 30 يومًا</td><td>فيديو قصير، ونموذج وظائف</td><td class="n"><span class="pill md">داعمة</span></td><td>مايو 2027</td></tr>
+      <tr><td>YouTube</td><td>إعادة استهداف من شاهد الفيلم التعريفي</td><td>مشاهدو الفيلم، وزوار صفحة الجودة</td><td>فيديو 30 ثانية</td><td class="n"><span class="pill lo">محدودة</span></td><td>يونيو 2027</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="cols" style="margin-top:34px">
+    <div>
+      <h3>كلمات بحث مقترحة</h3>
+      <p><span class="pill" dir="ltr">sheet metal stamping Egypt</span> <span class="pill" dir="ltr">automotive stamping supplier Egypt</span> <span class="pill" dir="ltr">Tier 2 automotive supplier Egypt</span> <span class="pill" dir="ltr">plastic parts painting Egypt</span> <span class="pill" dir="ltr">die and tooling manufacturing Egypt</span> <span class="pill">مصنع كبس صاج</span> <span class="pill">تشكيل معادن للسيارات مصر</span> <span class="pill">دهان قطع بلاستيك سيارات</span></p>
+      <p class="note">كلمات مستبعدة: وظائف، تدريب، مستعمل، سكراب، للبيع.</p>
+    </div>
+    <div>
+      <h3>كيف نختبر ونقرر</h3>
+      <ul class="ul">
+        <li>أول 4 أسابيع: جمهوران ومادتان إعلانيتان لكل منصة.</li>
+        <li>نوقف المادة الأضعف بعد 2,000 ظهور لها.</li>
+        <li>نقارن <strong>تكلفة الاستفسار المؤهل</strong> لا تكلفة النقرة. نقرة رخيصة من غير مشترٍ لا قيمة لها.</li>
+        <li>نُخفف الإنفاق في أغسطس (إجازات الصيف)، ونعيد التقييم في سبتمبر.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10. FUNNEL ================= -->
+<section class="sec" id="funnel">
+  <div class="sec-head">
+    <h2>من المتابع إلى عرض السعر</h2>
+    <p class="lede">الانتباه ليس الهدف. الهدف طلب حقيقي يصل إلى شخص يرد عليه في يوم عمل. وهذا المسار هو ما يفصل التسويق عن المبيعات.</p>
+  </div>
+
+  <div class="flow" style="margin-bottom:36px">
+    <div style="--i:0"><h4>يكتشفنا</h4><p>مقطع أو منشور أو نتيجة بحث أو لقاء في معرض.</p><small>المقياس: الوصول والظهور</small></div>
+    <div style="--i:1"><h4>يتحقق</h4><p>يزور الموقع، ويشاهد الفيلم، ويفتح صفحة الشهادات.</p><small>المقياس: زيارات صفحة الجودة، ومشاهدات فوق 50%</small></div>
+    <div style="--i:2"><h4>يتواصل</h4><p>نموذج RFQ، أو رسالة WhatsApp، أو Lead Form على LinkedIn.</p><small>المقياس: عدد الاستفسارات</small></div>
+    <div style="--i:3"><h4>نؤهله</h4><p>مكالمة تأهيل خلال يوم عمل، وبطاقة تقييم من 5 نقاط.</p><small>المقياس: استفسارات مؤهلة</small></div>
+    <div style="--i:4"><h4>نسعّر ونُثبت</h4><p>عرض سعر، ودراسة قالب أو عينة، وزيارة مصنع أو تقييم مورّد.</p><small>المقياس: طلبات زيارة وتقييم</small></div>
+    <div style="--i:5"><h4>يصبح عميلًا</h4><p>تسجيل كمورّد وأول أمر شراء.</p><small>المقياس: عملاء جدد (مؤشر متأخر)</small></div>
+  </div>
+
+  <div class="cols">
+    <div>
+      <h3>بطاقة التأهيل (0 إلى 5)</h3>
+      <p>نقطة لكل بند. من 3 نقاط فأكثر يُعد الاستفسار مؤهلًا.</p>
+      <ul class="ul" style="margin-top:12px">
+        <li>القطعة ضمن عملياتنا (كبس أو لحام أو دهان).</li>
+        <li>الكمية السنوية المتوقعة معروفة.</li>
+        <li>موعد بدء الإنتاج (SOP) خلال 12 شهرًا.</li>
+        <li>رسم أو عينة متاحة للدراسة.</li>
+        <li>المتصل صاحب قرار أو مؤثر مباشر فيه.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>تسلسل المتابعة</h3>
+      <div class="tw"><table class="t" style="min-width:0">
+        <tbody>
+          <tr><td>اليوم 0</td><td>رد وتأكيد استلام، خلال يوم عمل.</td></tr>
+          <tr><td>اليوم 2</td><td>ملف "صفحة واحدة" للعائلة ذات الصلة.</td></tr>
+          <tr><td>اليوم 7</td><td>دعوة لجولة في المصنع أو مكالمة تقنية.</td></tr>
+          <tr><td>اليوم 21</td><td>متابعة بمحتوى جديد ذي صلة (حلقة أو خبر).</td></tr>
+          <tr><td>اليوم 45</td><td>إغلاق الاستفسار أو جدولته لموعد لاحق.</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 11. EVENTS ================= -->
+<section class="sec" id="events">
+  <div class="sec-head">
+    <h2>المعارض والفعاليات</h2>
+    <p class="lede">المعرضان الرئيسيان في المنطقة موجّهان أساسًا لسوق ما بعد البيع، بينما FIMCO مورد OEM. لذلك نتعامل معهما كزيارة وتعارف، ونقرر العرض كجناح في مراجعة يونيو بأرقام أول ثلاثة أشهر من الإعلان.</p>
+  </div>
+  <div class="tw">
+  <table class="t">
+    <thead><tr><th>الفعالية</th><th>الموعد والمكان</th><th>القرار</th><th>الهدف من المشاركة</th></tr></thead>
+    <tbody>
+      <tr><td>زيارتان قبل الخطة</td><td>Autotech Egypt: 9–11 أكتوبر 2026 (EIEC). Automechanika Dubai: 10–12 نوفمبر 2026 (Expo City)</td><td><span class="pill lo">زيارة اختيارية</span></td><td>استطلاع المنافسين، وبناء قائمة الحسابات المستهدفة، وتعلّم ما ينجح في الأجنحة. لا نعلن عن الصفحات هناك لأنها لن تكون مفتوحة بعد.</td></tr>
+      <tr><td>يوم المورّدين في المصنع</td><td>أبريل 2027، بعد عيد الفطر وقبل عيد الأضحى (منتصف مايو تقريبًا)</td><td><span class="pill hi">تنظيم ذاتي</span></td><td>دعوة فرق المشتريات والجودة لدى العملاء والمستهدفين لجولة من 3 ساعات وعرض للطاقة الجديدة.</td></tr>
+      <tr><td>ندوة LinkedIn Live</td><td>يونيو وسبتمبر وديسمبر 2027</td><td><span class="pill md">مقترح</span></td><td>حلقة تقنية مع مهندس جودة، وتسجيلها لتصبح محتوى دائمًا.</td></tr>
+      <tr><td>Autotech Egypt 2027</td><td>موعد 2027 لم يُعلن بعد. نسخة 2025 كانت 24–26 أكتوبر، ونسخة 2026 في 9–11 أكتوبر، بتنظيم Informa Markets</td><td><span class="pill md">زيارة، والعرض يُقرر في يونيو</span></td><td>أكبر تجمع للمشترين والموردين في مصر. نعرض إن أظهرت أرقام أول 90 يومًا اهتمامًا من موردي الفئة الأولى والثانية.</td></tr>
+      <tr><td>Automechanika Dubai 2027</td><td>موعد 2027 لم يُعلن بعد. نسخة 2025 كانت 9–11 ديسمبر، ونسخة 2026 في 10–12 نوفمبر، بتنظيم Messe Frankfurt</td><td><span class="pill md">زيارة، والعرض يُقرر في يونيو</span></td><td>15 اجتماعًا مع مشترين وموزعين من المنطقة، ومنصة لفتح حوارات التصدير.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">المعلومات من مواقع المنظمين وقت الإعداد (سبتمبر 2026). مواعيد 2027 لم تُعلن بعد، وبعض المصادر تعطي تواريخ مختلفة لنفس المعرض، فتأكدوا من الموقع الرسمي قبل الحجز. لكل معرض نرسل شخصين: تجاري وفني. نضيف كل بطاقة عمل إلى CRM ونتصل بصاحبها على LinkedIn خلال 24 ساعة.</p>
+  <h3>ماذا نفعل في المعرض</h3>
+  <p>المعرض ليس حدثًا منفصلًا، بل نقطة في مسار المتابعة الموصوف أعلاه. قيمته تُصنع قبله وبعده أكثر مما تُصنع في أيامه الثلاثة. الدليل التالي يصلح للزيارة وللجناح معًا، وما يختلف بينهما في الجدول الذي يليه.</p>
+
+  <div class="cols3">
+    <div class="panel">
+      <h4>قبل المعرض</h4><span class="when">من 8 أسابيع قبل الافتتاح حتى يومه الأول</span>
+      <ul class="ul">
+        <li>نطلب من المنظم قائمة العارضين والزوار المسجلين، ونختار منها أسماء من قائمة الحسابات المستهدفة.</li>
+        <li>نرسل دعوة شخصية لكل اسم على LinkedIn أو بالبريد لحجز لقاء قصير، قبل المعرض بأسبوعين على الأقل.</li>
+        <li>نعلن مشاركتنا على الصفحات قبله بأسبوعين: مكان اللقاء أو رقم الجناح ومن سيكون هناك.</li>
+        <li>نجهز ملف "الصفحة الواحدة" لكل عائلة من العائلات الخمس، ورمز QR يفتح صفحة "اطلب عرض سعر"، وفيلمًا قصيرًا للشاشة.</li>
+        <li>نجهز عينات قطع حقيقية (كبس ولحام ودهان) بعد موافقة العميل وفحص الجودة لما يجوز عرضه.</li>
+        <li>نجهز نموذج تسجيل الزوار على هاتف أو جهاز لوحي، بنفس بطاقة التأهيل (0 إلى 5) ومرتبطًا بـCRM.</li>
+        <li>نتدرب على تعريف مدته 60 ثانية، ونوزع الأدوار: من يستقبل، ومن يشرح فنيًا، ومن يسجل.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4>أثناء المعرض</h4><span class="when">كل يوم من أيامه</span>
+      <ul class="ul">
+        <li>نبدأ اليوم باجتماع 10 دقائق: مواعيد اليوم، والأسماء المستهدفة، وتوزيع الأدوار.</li>
+        <li>نلتقي أولًا بأصحاب المواعيد المسبقة، ثم نمر على الأجنحة والأسماء المستهدفة.</li>
+        <li>بعد كل لقاء نملأ بطاقة التأهيل فورًا، مع سطر واحد عن طلب المشتري وموعد المتابعة. لا نؤجل ذلك إلى المساء.</li>
+        <li>نرسل الملف المناسب في اليوم نفسه عبر WhatsApp أو البريد، بدل توزيع مطبوعات ثقيلة.</li>
+        <li>ننشر منشورًا واحدًا كل يوم على LinkedIn بلقطة من الجناح أو من لقاء، بعد التأكد من موافقة من يظهر فيها.</li>
+        <li>نراقب الأجنحة المنافسة: ماذا يعرضون وكيف يستقبلون الزائر، ونكتب ملخصًا قصيرًا في نهاية اليوم.</li>
+        <li>لا نذكر أسعارًا ولا طاقة متاحة في الجناح، فهذا يُترك لعرض السعر بعد التأهيل.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4>بعد المعرض</h4><span class="when">من 24 ساعة إلى 45 يومًا</span>
+      <ul class="ul">
+        <li><b>خلال 24 ساعة:</b> رسالة شخصية لكل بطاقة، مع الملف المناسب، وطلب اتصال على LinkedIn.</li>
+        <li><b>خلال 3 أيام:</b> نُدخل كل البطاقات في CRM ونصنفها: مؤهل (3 نقاط فأكثر)، أو متابعة لاحقة، أو غير مناسب.</li>
+        <li><b>خلال أسبوع:</b> منشور شكر مع خلاصة المعرض وفيديو قصير، ودعوة المؤهلين إلى جولة في المصنع.</li>
+        <li><b>ثم:</b> يدخل المؤهلون في تسلسل المتابعة نفسه، من اليوم 0 إلى اليوم 45.</li>
+        <li><b>خلال أسبوعين:</b> اجتماع تقييم داخلي وتقرير من صفحة واحدة: ماذا نجح، وكم بطاقة مؤهلة، وهل نكرر المشاركة.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>زيارة أم جناح: ما الذي يتغير</h3>
+  <div class="tw">
+  <table class="t">
+    <thead><tr><th>البند</th><th>زيارة</th><th>جناح عارض</th></tr></thead>
+    <tbody>
+      <tr><td>الفريق</td><td>شخصان: تجاري وفني.</td><td>شخصان في الجناح طوال ساعات المعرض، وثالث للقاءات المسبقة والمتابعة.</td></tr>
+      <tr><td>الهدف الأول</td><td>استطلاع المنافسين، وتعارف، وبناء قائمة الحسابات.</td><td>لقاءات محجوزة مسبقًا، وعرض القدرات، وجمع بطاقات مؤهلة.</td></tr>
+      <tr><td>المواد</td><td>بطاقات تعريف، وملف "الصفحة الواحدة" رقميًا، وقائمة الأسماء المستهدفة.</td><td>عينات قطع، وشاشة فيديو، وملفات العائلات الخمس، ورمز QR لصفحة RFQ.</td></tr>
+      <tr><td>الحضور الرقمي</td><td>منشور واحد بعد الزيارة.</td><td>منشور قبل بأسبوعين، ومنشور يومي أثناء المعرض، ومنشور شكر بعده.</td></tr>
+      <tr><td>ما نقيسه</td><td>عدد التعارفات، والأسماء المضافة للقائمة، وما تعلمناه عن المنافسين.</td><td>بطاقات مؤهلة، ولقاءات مؤكدة، وطلبات زيارة مصنع.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note"><b>كيف نحكم على معرض:</b> بعدد الاستفسارات المؤهلة بعد 45 يومًا، لا بعدد من مرّ بالجناح. كل بطاقة تُتابَع خلال 24 ساعة. والمقياس الأولي لمعرض دبي خارج مصر 15 لقاءً كما في الجدول أعلاه، ويُعاد ضبطه بعد أول مشاركة.</p>
+
+  <h3>يوم المورّدين في المصنع: برنامج من 3 ساعات</h3>
+  <div class="tw">
+  <table class="t" style="min-width:0">
+    <tbody>
+      <tr><td>الساعة 0:00</td><td>استقبال وتسجيل، وإرشادات السلامة وتجهيز معدات الوقاية (وفق ISO 45001).</td></tr>
+      <tr><td>0:20</td><td>عرض 20 دقيقة: FIMCO اليوم، والاعتمادات، وما أضفناه من طاقة جديدة.</td></tr>
+      <tr><td>0:50</td><td>جولة على الخطوط بالترتيب: الكبس، ثم اللحام، ثم القوالب، ثم الدهان.</td></tr>
+      <tr><td>1:50</td><td>منطقة الجودة: كيف نقيس ونفحص وما الذي نوثقه لكل قطعة.</td></tr>
+      <tr><td>2:20</td><td>حوار مفتوح مع الجودة والمبيعات، وتسجيل اهتمام كل ضيف: ما القطع التي يدرس توريدها؟</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">بعد اليوم: رسالة شكر خلال 24 ساعة، وصور مختارة (بموافقة من يظهر فيها) تُنشر خلال أسبوع، وتدخل كل بطاقة تأهيل في تسلسل المتابعة. الموعد المقترح لهذا اليوم في أبريل يظهر في قسم المناسبات الرسمية التالي.</p>
+</section>
+
+<!-- ================= 12. OCCASIONS ================= -->
+<section class="sec" id="occasions">
+  <div class="sec-head">
+    <h2>المناسبات الرسمية في مصر</h2>
+    <p class="lede">كل مناسبة رسمية في 2027 تؤثر على شيئين: ما ننشره، وما نستطيع الرد عليه في الإجازة. القاعدة: نهنئ بأدب وبساطة، ولا نستخدم المناسبة للبيع، ونغطي الاستفسارات في الإجازات الطويلة.</p>
+  </div>
+
+  <div class="tw">
+  <table class="t">
+    <thead><tr><th>المناسبة</th><th>الموعد المتوقع</th><th>الأثر على العمل</th><th>ماذا نفعل</th></tr></thead>
+    <tbody>
+      <tr><td>عيد الميلاد المجيد</td><td>الخميس 7 يناير</td><td><span class="pill md">إجازة يوم</span></td><td>الصفحات لم تُفتح بعد، فنكتفي بتهنئة شخصية من الإدارة لعملائنا وموظفينا المسيحيين عبر البريد أو WhatsApp، لا رسالة جماعية.</td></tr>
+      <tr><td>ثورة 25 يناير وعيد الشرطة</td><td>الاثنين 25 يناير (قد تُنقل إلى الخميس 28)</td><td><span class="pill md">إجازة يوم</span></td><td>لا منشور عام قبل الإطلاق. نتحقق من أثرها على موعد يومي التصوير الأول ومواعيد الشحن مع العملاء.</td></tr>
+      <tr><td>شهر رمضان (ليس إجازة رسمية)</td><td>تقريبًا 8 فبراير إلى 8 أو 9 مارس، ويتحدد بالرؤية</td><td><span class="pill md">إيقاع عمل أهدأ</span></td><td>كما في الخارطة: منشوران أسبوعيًا، وتوجيه الوقت إلى التصوير والأرشيف. تهنئة بقدوم الشهر، ونضع لقاءات المشترين في أول النهار.</td></tr>
+      <tr><td>عيد الفطر</td><td>الثلاثاء 9 مارس تقريبًا، ولعدة أيام</td><td><span class="pill hi">إجازة طويلة</span></td><td>قبله بيومين: نجدول التهنئة ونفعّل الرد الآلي بموعد العودة. أثناءه: التهنئة فقط، ولا متابعات مبيعات ولا إعلانات. بعده: نراجع كل ما وصل في أول يوم عمل، ثم الإعلان العلني يوم الأحد 14 مارس.</td></tr>
+      <tr><td>عيد تحرير سيناء</td><td>الأحد 25 أبريل (قد تُنقل إلى الخميس 29)</td><td><span class="pill md">إجازة يوم</span></td><td>منشور وطني بسيط بلا عرض تجاري: تصميم بالهوية وجملة قصيرة. لا نضع يوم المورّدين في أسبوعها.</td></tr>
+      <tr><td>عيد العمال</td><td>السبت 1 مايو</td><td><span class="pill lo">يوافق العطلة الأسبوعية</span></td><td>أنسب مناسبة لمحتوى الفريق: قصة فنيين وعمال من أرض المصنع بموافقتهم (سنوات الخبرة وما يصنعونه)، ونربطها بصفحة الوظائف وإعلانات Meta للتوظيف.</td></tr>
+      <tr><td>شم النسيم</td><td>الاثنين 3 مايو (يسبقه عيد القيامة الأحد 2 مايو)</td><td><span class="pill md">إجازة يوم</span></td><td>تهنئة خفيفة صباحًا، ونؤجل منشور الأسبوع التقني إلى الثلاثاء.</td></tr>
+      <tr><td>وقفة عرفات وعيد الأضحى</td><td>السبت 15 والأحد 16 مايو تقريبًا، ولعدة أيام</td><td><span class="pill hi">إجازة طويلة</span></td><td>قبله بيومين: نوقف الإعلانات المدفوعة، ونجهز منشورات الأسبوع مسبقًا، ونفعّل الرد الآلي، ونحدد مناوبًا للاستفسارات العاجلة. بعده: نرد على المتراكم في أول يوم عمل، ونعيد تشغيل الإعلانات.</td></tr>
+      <tr><td>رأس السنة الهجرية 1449</td><td>الأحد 6 يونيو تقريبًا</td><td><span class="pill md">إجازة يوم</span></td><td>تهنئة قصيرة بلا محتوى إضافي. نضع ندوة LinkedIn Live في منتصف يونيو بعيدًا عنها.</td></tr>
+      <tr><td>ثورة 30 يونيو</td><td>الأربعاء 30 يونيو (قد تُنقل إلى الخميس 1 يوليو)</td><td><span class="pill md">إجازة يوم</span></td><td>منشور وطني بسيط بلا عرض تجاري، ونُنبّه المبيعات إلى احتمال نقل الإجازة.</td></tr>
+      <tr><td>ثورة 23 يوليو</td><td>الجمعة 23 يوليو</td><td><span class="pill lo">يوافق العطلة الأسبوعية</span></td><td>منشور وطني قصير مجدول مسبقًا، ولا أثر على العمل.</td></tr>
+      <tr><td>المولد النبوي الشريف</td><td>السبت 14 أغسطس تقريبًا</td><td><span class="pill lo">يوافق العطلة الأسبوعية</span></td><td>تهنئة بسيطة مجدولة. أغسطس شهر تخفيف الإعلانات أصلًا، فلا نغير شيئًا.</td></tr>
+      <tr><td>عيد القوات المسلحة ونصر أكتوبر</td><td>الأربعاء 6 أكتوبر (قد تُنقل إلى الخميس 7)</td><td><span class="pill md">إجازة يوم</span></td><td>منشور تقدير وطني بسيط. ونضعها في الحسبان عند حجز رحلة معرض الخريف، فبعدها بيومين (8 أكتوبر) ينتهي اعتماد IATF 16949 وISO 9001.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="legend-note">
+    <span><span class="pill hi">إجازة طويلة</span> العيدان: إيقاف الإعلانات ورد آلي ومناوب</span>
+    <span><span class="pill md">إجازة يوم</span> منشور مجدول، وانتباه لاحتمال النقل إلى الخميس</span>
+    <span><span class="pill lo">يوافق العطلة الأسبوعية</span> لا أثر على العمل</span>
+  </div>
+  <p class="note">المواعيد الوطنية ثابتة، أما مواعيد الأعياد الدينية فتقديرية حتى تعلنها دار الإفتاء ويصدر قرار مجلس الوزراء، وقد تُنقل إجازة يوم إلى الخميس المجاور بقرار رسمي. المصدر: قوائم الإجازات الرسمية المنشورة لعام 2027 وقت الإعداد (سبتمبر 2026). نراجع كل موعد قبله بأسبوعين.</p>
+
+  <h3>قواعد ثابتة لكل مناسبة</h3>
+  <div class="dd">
+    <div class="do">
+      <h4>نفعل</h4>
+      <ul class="ul">
+        <li>نعتمد تقويم المناسبات قبل بداية كل شهر، ونجدول التهاني مسبقًا.</li>
+        <li>تصميم واحد لكل مناسبة بهوية FIMCO وجملة قصيرة: بالعربية، وبالإنجليزية على LinkedIn.</li>
+        <li>قبل أي إجازة طويلة: رد آلي على WhatsApp والبريد بموعد العودة، ومناوب للعاجل، وإبلاغ العملاء بأي أثر على مواعيد التسليم.</li>
+        <li>في أول يوم عمل بعد الإجازة: نراجع كل ما وصل ونرد خلال يوم عمل واحد، كما في مسار الاستفسارات.</li>
+        <li>نراجع قرارات مجلس الوزراء قبل كل مناسبة لأن الإجازة قد تُنقل.</li>
+      </ul>
+    </div>
+    <div class="dont">
+      <h4>لا نفعل</h4>
+      <ul class="ul">
+        <li>لا نستخدم المناسبة للترويج المباشر أو لعرض تجاري.</li>
+        <li>لا نهنئ بموعد لم تعلنه الجهة الرسمية بعد، فالأعياد الدينية تتحدد بالرؤية.</li>
+        <li>لا نشغّل الإعلانات المدفوعة في العيدين، فلا أحد يرد على الاستفسارات.</li>
+        <li>لا نستخدم صورًا أو رموزًا لا نملك حقها، ولا نمزح في المناسبات الوطنية والدينية.</li>
+        <li>لا نغيّر صياغة التهنئة المعتمدة من الإدارة دون مراجعتها.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>تنسيق المناسبات مع المعارض والفعاليات</h3>
+  <ul class="ul">
+    <li><b>يوم المورّدين:</b> أسبوع 11 إلى 15 أبريل أو أسبوع 18 إلى 22 أبريل، بعيدًا عن 25 أبريل وعن احتمال نقل إجازته إلى 29 أبريل، وقبل عيد الأضحى بأسابيع.</li>
+    <li><b>ندوات LinkedIn Live:</b> منتصف يونيو (بعيدًا عن 6 يونيو وعن 30 يونيو و1 يوليو)، وسبتمبر وديسمبر بلا إجازات رسمية.</li>
+    <li><b>معارض الخريف:</b> نؤكد موعد المعرض أولًا ثم نضبط الرحلة والفريق على 6 أكتوبر وتدقيق الشهادات في 8 أكتوبر، حتى لا يتصادم المعرض مع التدقيق.</li>
+    <li><b>النوافذ الأفضل للفعاليات الكبيرة:</b> سبتمبر ونوفمبر وديسمبر، فلا إجازات رسمية فيها، وفيها ذروة حملة FIMCO 40.</li>
+  </ul>
+</section>
+
+<!-- ================= 13. ROADMAP ================= -->
+<section class="sec" id="roadmap">
+  <div class="sec-head">
+    <h2>خارطة 2027</h2>
+    <p class="lede">التوقيت مرتب حول ثلاثة أشياء: رمضان الذي يقع في فبراير ومارس فنبدأ خلاله بإطلاق هادئ، والإعلان العلني بعد عيد الفطر، وتجديد الشهادات في الخريف. وذكرى الأربعين تصاحب السنة كلها.</p>
+  </div>
+
+  <div class="gwrap"><div class="gantt">
+    <div class="g-h" style="grid-column:1"></div>
+    <div class="g-h" style="grid-column:2">يناير<small>2027</small></div>
+    <div class="g-h" style="grid-column:3">فبراير<small>2027</small></div>
+    <div class="g-h" style="grid-column:4">مارس<small>2027</small></div>
+    <div class="g-h" style="grid-column:5">أبريل<small>2027</small></div>
+    <div class="g-h" style="grid-column:6">مايو<small>2027</small></div>
+    <div class="g-h" style="grid-column:7">يونيو<small>2027</small></div>
+    <div class="g-h" style="grid-column:8">يوليو<small>2027</small></div>
+    <div class="g-h" style="grid-column:9">أغسطس<small>2027</small></div>
+    <div class="g-h" style="grid-column:10">سبتمبر<small>2027</small></div>
+    <div class="g-h" style="grid-column:11">أكتوبر<small>2027</small></div>
+    <div class="g-h" style="grid-column:12">نوفمبر<small>2027</small></div>
+    <div class="g-h" style="grid-column:13">ديسمبر<small>2027</small></div>
+
+    <div class="g-v"></div>
+    <div class="g-ram" title="رمضان تقريبًا 8 فبراير إلى 8 أو 9 مارس 2027، ويتحدد بالرؤية"></div>
+
+    <div class="g-line" style="grid-row:2"></div><div class="g-l" style="grid-row:2">الأساس: هوية وحسابات وموقع</div>
+    <div class="g-bar b-ink" style="grid-row:2;grid-column:2/3">4 أسابيع</div>
+
+    <div class="g-line" style="grid-row:3"></div><div class="g-l" style="grid-row:3">LinkedIn وFacebook</div>
+    <div class="g-bar b-pale" style="grid-row:3;grid-column:3/4">إطلاق هادئ</div>
+    <div class="g-bar b-red" style="grid-row:3;grid-column:4/14">إعلان 14 مارس، ثم 3 منشورات أسبوعيًا</div>
+
+    <div class="g-line" style="grid-row:4"></div><div class="g-l" style="grid-row:4">YouTube</div>
+    <div class="g-bar b-red" style="grid-row:4;grid-column:4/14">الفيلم التعريفي ثم فيديوان شهريًا</div>
+
+    <div class="g-line" style="grid-row:5"></div><div class="g-l" style="grid-row:5">Instagram</div>
+    <div class="g-bar b-teal" style="grid-row:5;grid-column:5/14">2 Reels أسبوعيًا</div>
+
+    <div class="g-line" style="grid-row:6"></div><div class="g-l" style="grid-row:6">الموقع وSEO</div>
+    <div class="g-bar b-ink" style="grid-row:6;grid-column:2/5">صفحات العائلات وRFQ</div>
+    <div class="g-bar b-lt" style="grid-row:6;grid-column:5/14">مقال تقني شهريًا وتحسين الصفحات</div>
+
+    <div class="g-line" style="grid-row:7"></div><div class="g-l" style="grid-row:7">إعلانات مدفوعة</div>
+    <div class="g-bar b-pale" style="grid-row:7;grid-column:5/7">اختبار</div>
+    <div class="g-bar b-red" style="grid-row:7;grid-column:7/14">توسيع ما نجح، وتخفيف في أغسطس</div>
+
+    <div class="g-line" style="grid-row:8"></div><div class="g-l" style="grid-row:8">قائمة الحسابات والمراسلة المباشرة</div>
+    <div class="g-bar b-teal" style="grid-row:8;grid-column:4/14">60 شركة مستهدفة، وتواصل شهري</div>
+
+    <div class="g-line" style="grid-row:9"></div><div class="g-l" style="grid-row:9">فعاليات ذاتية</div>
+    <div class="g-bar b-ink" style="grid-row:9;grid-column:5/6" title="يوم المورّدين في المصنع">مورّدون</div>
+    <div class="g-bar b-teal" style="grid-row:9;grid-column:7/8" title="ندوة LinkedIn Live">Live</div>
+    <div class="g-bar b-teal" style="grid-row:9;grid-column:10/11" title="ندوة LinkedIn Live">Live</div>
+    <div class="g-bar b-teal" style="grid-row:9;grid-column:13/14" title="ندوة LinkedIn Live">Live</div>
+
+    <div class="g-line" style="grid-row:10"></div><div class="g-l" style="grid-row:10">معارض خارجية</div>
+    <div class="g-bar b-amber" style="grid-row:10;grid-column:7/8" title="قرار المشاركة كعارض في مراجعة يونيو">قرار</div>
+    <div class="g-bar b-pale" style="grid-row:10;grid-column:11/14">Autotech وAutomechanika (تُؤكد)</div>
+
+    <div class="g-line" style="grid-row:11"></div><div class="g-l" style="grid-row:11">حملة FIMCO 40</div>
+    <div class="g-bar b-lt" style="grid-row:11;grid-column:2/4">جمع الأرشيف</div>
+    <div class="g-bar b-red" style="grid-row:11;grid-column:4/14">قصة أسبوعية من 14 مارس، والحلقة 40 في ديسمبر</div>
+
+    <div class="g-line" style="grid-row:12"></div><div class="g-l" style="grid-row:12">تجديد الشهادات</div>
+    <div class="g-bar b-pale" style="grid-row:12;grid-column:8/11">تدقيق التجديد (يُحدد مع الجودة)</div>
+    <div class="g-bar b-amber" style="grid-row:12;grid-column:11/12" title="انتهاء IATF 16949 وISO 9001 يوم 8 أكتوبر 2027">8 أكتوبر</div>
+    <div class="g-bar b-amber" style="grid-row:12;grid-column:13/14" title="انتهاء ISO 14001 وISO 45001 يوم 24 ديسمبر 2027">24 ديسمبر</div>
+
+    <div class="g-line" style="grid-row:13"></div><div class="g-l" style="grid-row:13">المراجعة والقياس</div>
+    <div class="g-bar b-ink" style="grid-row:13;grid-column:3/4" title="بوابة الانتقال إلى الإعلان العلني">بوابة</div>
+    <div class="g-bar b-ink" style="grid-row:13;grid-column:7/8" title="مراجعة 90 يومًا: معايرة الأهداف">مراجعة</div>
+    <div class="g-bar b-ink" style="grid-row:13;grid-column:10/11">مراجعة</div>
+    <div class="g-bar b-ink" style="grid-row:13;grid-column:13/14">خطة 2028</div>
+
+    <div class="g-line" style="grid-row:14"></div><div class="g-l" style="grid-row:14">مناسبات رسمية</div>
+    <div class="g-bar sm b-pale" style="grid-row:14;grid-column:2/3" title="عيد الميلاد 7 يناير، وثورة 25 يناير">7 و25</div>
+    <div class="g-bar sm b-amber" style="grid-row:14;grid-column:4/5" title="عيد الفطر تقريبًا 9 مارس">الفطر</div>
+    <div class="g-bar sm b-pale" style="grid-row:14;grid-column:5/6" title="عيد تحرير سيناء 25 أبريل">سيناء</div>
+    <div class="g-bar sm b-amber" style="grid-row:14;grid-column:6/7" title="عيد العمال 1 مايو، وشم النسيم 3 مايو، وعيد الأضحى تقريبًا 16 مايو">3 مناسبات</div>
+    <div class="g-bar sm b-pale" style="grid-row:14;grid-column:7/8" title="رأس السنة الهجرية تقريبًا 6 يونيو، وثورة 30 يونيو">مناسبتان</div>
+    <div class="g-bar sm b-pale" style="grid-row:14;grid-column:8/9" title="ثورة 23 يوليو">23/7</div>
+    <div class="g-bar sm b-pale" style="grid-row:14;grid-column:9/10" title="المولد النبوي تقريبًا 14 أغسطس">المولد</div>
+    <div class="g-bar sm b-pale" style="grid-row:14;grid-column:11/12" title="عيد القوات المسلحة ونصر أكتوبر 6 أكتوبر">6/10</div>
+  </div></div>
+  <p class="note">المنطقة المخططة في فبراير ومارس هي رمضان (تقريبًا 8 فبراير إلى 8 أو 9 مارس 2027، وعيد الفطر 9 أو 10 مارس، ويتحدد بالرؤية). نخفض المنشورات إلى اثنين أسبوعيًا، ونوجه الوقت إلى التصوير والأرشيف، ثم نعلن يوم الأحد 14 مارس. وفي آخر الجدول صف المناسبات الرسمية، والعيدان فيه باللون البرتقالي لأنهما إجازتان طويلتان (التفاصيل في القسم السابق).</p>
+
+  <div class="phases">
+    <div><b>المرحلة 0: التأسيس والإطلاق الهادئ</b><em>يناير – 13 مارس 2027</em><span><b>شرط الانتقال:</b> حسابات جاهزة وآمنة، و12 منشورًا معتمدًا، وصفحة RFQ تعمل مع تتبع، ومكتبة أصول من يومي التصوير الأول، وقائمة موافقات العملاء موقّعة.</span></div>
+    <div><b>المرحلة 1: الإعلان والتعبئة</b><em>14 مارس – مايو 2027</em><span><b>شرط الانتقال:</b> 10 أسابيع من الالتزام الكامل بالتقويم، و300 متابع على LinkedIn، و4 استفسارات مؤهلة، وتنفيذ يوم المورّدين، ومعرفة أول تكلفة نقرة واستفسار.</span></div>
+    <div><b>المرحلة 2: التحويل</b><em>يونيو – أغسطس 2027</em><span><b>شرط الانتقال:</b> 15 استفسارًا تراكميًا، والتواصل مع 60% من قائمة الحسابات، وقرار المشاركة في معارض الخريف.</span></div>
+    <div><b>المرحلة 3: المضاعفة</b><em>سبتمبر – ديسمبر 2027</em><span><b>مخرجات النهاية:</b> 35 استفسارًا، و5 طلبات زيارة أو تقييم، والحلقة 40، وتحديث الصفحات بعد تجديد الشهادات، وخطة 2028.</span></div>
+  </div>
+</section>
+
+<!-- ================= 14. TEAM ================= -->
+<section class="sec" id="team">
+  <div class="sec-head">
+    <h2>الفريق والمسؤوليات</h2>
+    <p class="lede">من ينفذ، ومن يعتمد، ومن يُستشار في كل مهمة، وكيف تمر الموافقات قبل النشر.</p>
+  </div>
+
+  <div class="tw">
+  <table class="t raci">
+    <thead><tr><th>المهمة</th><th>مدير التسويق</th><th>منسق المحتوى أو الوكالة</th><th>مهندس المبيعات</th><th>مدير الجودة</th><th>الإدارة العليا</th></tr></thead>
+    <tbody>
+      <tr><td>إنتاج المحتوى وجدولته</td><td>A</td><td>R</td><td>C</td><td>C</td><td>I</td></tr>
+      <tr><td>المراجعة الفنية قبل النشر</td><td>I</td><td>I</td><td>C</td><td>A / R</td><td>I</td></tr>
+      <tr><td>الموافقة على استخدام أسماء العملاء</td><td>R</td><td>I</td><td>C</td><td>C</td><td>A</td></tr>
+      <tr><td>النشر والرد على التعليقات</td><td>A</td><td>R</td><td>C</td><td>I</td><td>I</td></tr>
+      <tr><td>الرد على الاستفسارات التجارية</td><td>I</td><td>I</td><td>A / R</td><td>C</td><td>I</td></tr>
+      <tr><td>الإعلانات المدفوعة</td><td>A / R</td><td>C</td><td>C</td><td>I</td><td>C</td></tr>
+      <tr><td>التقرير الشهري</td><td>A / R</td><td>C</td><td>C</td><td>I</td><td>I</td></tr>
+      <tr><td>الاشتراك في معرض أو زيارته (التجهيز والمتابعة)</td><td>R</td><td>C</td><td>R</td><td>C</td><td>A</td></tr>
+      <tr><td>تقويم المناسبات الرسمية والتهاني</td><td>A</td><td>R</td><td>C</td><td>I</td><td>I</td></tr>
+      <tr><td>تغطية الاستفسارات في الإجازات الطويلة</td><td>C</td><td>I</td><td>A / R</td><td>I</td><td>I</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">R ينفّذ، A يعتمد ويُسأل عن النتيجة، C يُستشار، I يُبلَّغ. <b>سير الموافقة:</b> مسودة، ثم مراجعة فنية من الجودة، ثم فحص أسماء العملاء وحقوقهم، ثم النشر. المهلة 48 ساعة، والقوالب المتكررة تُعتمد مرة واحدة مسبقًا. <b>الحد الأدنى للفريق:</b> مسؤول تسويق واحد بصلاحية قرار، ومصور ومونتير بعقد شهري أو وكالة، ومهندس مبيعات يخصص جزءًا من وقته للاستفسارات.</p>
+</section>
+
+<!-- ================= 15. RISKS ================= -->
+<section class="sec" id="risks">
+  <div class="sec-head">
+    <h2>المخاطر</h2>
+    <p class="lede">أخطر مخاطرة هي التوقف عن النشر بعد الشهر الثاني. وأكثرها حساسية هي نشر شيء يخص عميلًا دون إذنه.</p>
+  </div>
+  <div class="tw">
+  <table class="t">
+    <thead><tr><th>الخطر</th><th>الاحتمال</th><th>التأثير</th><th>ما نفعله</th></tr></thead>
+    <tbody>
+      <tr><td>قيود السرية وحقوق علامات العملاء</td><td><span class="pill md">متوسط</span></td><td><span class="pill hi">عالٍ</span></td><td>قائمة موافقات مكتوبة، وطمس الشاشات والرسومات وأرقام القطع، ولا نشر لشعار أو جائزة قبل الموافقة.</td></tr>
+      <tr><td>انتهاء صلاحية شهادات معروضة على الصفحات (IATF وISO 9001 في 8 أكتوبر 2027)</td><td><span class="pill md">متوسط</span></td><td><span class="pill hi">عالٍ</span></td><td>جدولة التدقيق مع مدير الجودة مبكرًا، ومراجعة كل منشور وصفحة تعرض شهادة، وتحديث الصور فور التجديد.</td></tr>
+      <tr><td>توقف النشر بعد الشهر الثاني</td><td><span class="pill hi">عالٍ</span></td><td><span class="pill hi">عالٍ</span></td><td>تقويم أسبوعي، ومخزون محتوى يكفي أسبوعين، ومالك واحد للخطة، ويوم تصوير شهري ثابت.</td></tr>
+      <tr><td>توقع نتائج تجارية سريعة</td><td><span class="pill hi">عالٍ</span></td><td><span class="pill md">متوسط</span></td><td>الاتفاق مسبقًا على المؤشرات المبكرة، ومراجعة رسمية كل ربع سنة.</td></tr>
+      <tr><td>بطء الرد على الاستفسارات</td><td><span class="pill md">متوسط</span></td><td><span class="pill hi">عالٍ</span></td><td>مهندس مبيعات مخصص، وحد أقصى يوم عمل، وقوالب رد جاهزة.</td></tr>
+      <tr><td>تعليق سلبي أو شكوى علنية</td><td><span class="pill md">متوسط</span></td><td><span class="pill md">متوسط</span></td><td>رد خلال يوم عمل، ونقل التفاصيل إلى محادثة خاصة، ومسؤولان عن الأزمات: التسويق والجودة.</td></tr>
+      <tr><td>تصوير يعرّض عاملًا للخطر أو يظهره دون موافقة</td><td><span class="pill md">متوسط</span></td><td><span class="pill md">متوسط</span></td><td>جولة سلامة قبل التصوير وفق ISO 45001، ومعدات الوقاية ظاهرة، ونموذج موافقة تصوير موقّع.</td></tr>
+      <tr><td>فقدان السيطرة على حساب أو اختراقه</td><td><span class="pill lo">منخفض</span></td><td><span class="pill hi">عالٍ</span></td><td>مديران لكل صفحة، وتحقق بخطوتين، وبريد مؤسسي، ومدير كلمات مرور.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ================= 16. NEXT ================= -->
+<section class="sec" id="next">
+  <div class="sec-head">
+    <h2>أول 14 يومًا</h2>
+    <p class="lede">ما يُنجز أولًا يفتح الباب لكل ما بعده. هذه أول 14 يومًا من يناير 2027، ويمكن إنجاز أول ثلاثة بنود قبلها في التسخين الاختياري. علّم البنود عند إنجازها، ويحفظ المتصفح تقدمك على هذا الجهاز.</p>
+  </div>
+
+  <div class="prog" aria-live="polite"><div class="bar"><i id="pbar"></i></div><b id="ptxt">0 / 14</b></div>
+
+  <div class="ck-g"><h4>الأيام 1 إلى 3</h4>
+    <label class="ck"><input type="checkbox" data-id="a1"><span>تسمية مالك الخطة وصلاحياته (قرار الإدارة).</span></label>
+    <label class="ck"><input type="checkbox" data-id="a2"><span>حجز اسم المستخدم على LinkedIn وFacebook وInstagram وYouTube.</span></label>
+    <label class="ck"><input type="checkbox" data-id="a3"><span>إنشاء بريد marketing@ مؤسسي، وتفعيل التحقق بخطوتين، وتعيين مديرين للحسابات.</span></label>
+  </div>
+  <div class="ck-g"><h4>الأيام 4 إلى 7</h4>
+    <label class="ck"><input type="checkbox" data-id="b1"><span>تثبيت أرقام الأساس: زيارات الموقع ومصادرها وعدد الاستفسارات الحالية.</span></label>
+    <label class="ck"><input type="checkbox" data-id="b2"><span>تجميع قائمة العملاء والجوائز المطلوب نشرها، وإرسال طلبات الموافقة الكتابية.</span></label>
+    <label class="ck"><input type="checkbox" data-id="b3"><span>اختيار المصور والمونتير أو الوكالة، وحجز يومي التصوير الأول.</span></label>
+    <label class="ck"><input type="checkbox" data-id="b4"><span>تحليل 8 إلى 10 موردين منافسين على LinkedIn وفي مواقعهم.</span></label>
+  </div>
+  <div class="ck-g"><h4>الأيام 8 إلى 14</h4>
+    <label class="ck"><input type="checkbox" data-id="c1"><span>تجهيز الهوية على المنصات: الشعار والغلاف وثلاثة قوالب ونصوص التعريف.</span></label>
+    <label class="ck"><input type="checkbox" data-id="c2"><span>إضافة صفحة "اطلب عرض سعر" مع النموذج ورفع الملفات.</span></label>
+    <label class="ck"><input type="checkbox" data-id="c3"><span>تركيب GA4 وSearch Console وLinkedIn Insight Tag، وتوحيد تسمية UTM.</span></label>
+    <label class="ck"><input type="checkbox" data-id="c4"><span>طلب توثيق Google Business Profile.</span></label>
+    <label class="ck"><input type="checkbox" data-id="c5"><span>إعداد ملفات "الصفحة الواحدة" للعائلات الخمس.</span></label>
+    <label class="ck"><input type="checkbox" data-id="c6"><span>بناء قائمة الحسابات المستهدفة (60 شركة) في CRM، وكتابة أول 12 منشورًا وعرضها على الجودة.</span></label>
+    <label class="ck"><input type="checkbox" data-id="c7"><span>اعتماد تقويم المناسبات الرسمية لـ2027، وتجهيز قوالب التهنئة الأولى (رمضان وعيد الفطر).</span></label>
+  </div>
+
+  <h3 class="decide">قرارات مطلوبة من الإدارة</h3>
+  <ul class="ul decide-l">
+    <li>تقويم المعارض والمناسبات: المعارض التي نزورها، وصياغة رسائل المناسبات الوطنية والدينية ومن يعتمدها.</li>
+    <li>اسم مسؤول التسويق، ومن يملك صلاحية اعتماد المحتوى.</li>
+    <li>ما يجوز نشره من أسماء العملاء والجوائز، ومن يوقّع الموافقات.</li>
+    <li>موعد يومي التصوير الأول، وتنسيقهما مع جدول الإنتاج والسلامة.</li>
+    <li>الأسواق ذات الأولوية خارج مصر للسنة الأولى.</li>
+  </ul>
+
+  <p class="closing">أُعدّت هذه الخطة من بيانات ملف الشركة 2026 ومن معلومة أن الشركة بلا حسابات على وسائل التواصل. الأهداف والنسب مقترحات قابلة للتعديل، ولم يُجرَ بعد تحليل للمنافسين ولا قياس لحركة الموقع الحالية. مواعيد المعارض ورمضان والأعياد والمناسبات الرسمية من مصادر منشورة وقت الإعداد. مواعيد معارض 2027 لم تُعلن بعد فيجب تأكيدها قبل الحجز، ومواعيد الأعياد الدينية تتحدد بالرؤية وقرارات نقل الإجازات تصدر من مجلس الوزراء، فتُراجَع قبل كل مناسبة.</p>
+</section>
+
+</main>
+</div>
+
+<script>
+(function(){
+  /* ---- scrollspy ---- */
+  var links=[].slice.call(document.querySelectorAll('.toc a'));
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(l){l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id)});
+        var on=document.querySelector('.toc a.on');
+        if(on&&window.innerWidth<=1000){on.scrollIntoView({inline:'center',block:'nearest'})}
+      }
+    });
+  },{rootMargin:'-15% 0px -75% 0px'});
+  links.forEach(function(l){var s=document.querySelector(l.getAttribute('href'));if(s)io.observe(s)});
+
+  /* ---- copy buttons ---- */
+  document.querySelectorAll('[data-copy]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var txt=document.getElementById(btn.dataset.copy).innerText.trim();
+      var done=function(){var o=btn.textContent;btn.textContent='تم النسخ';setTimeout(function(){btn.textContent=o},1600)};
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(done,function(){fallback(txt);done()});
+      }else{fallback(txt);done()}
+    });
+  });
+  function fallback(t){
+    var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';
+    document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(e){}ta.remove();
+  }
+
+  /* ---- checklist ---- */
+  var KEY='fimco-plan-checks',boxes=[].slice.call(document.querySelectorAll('.ck input'));
+  var saved={};try{saved=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){}
+  boxes.forEach(function(b){b.checked=!!saved[b.dataset.id]});
+  function upd(){
+    var n=boxes.filter(function(b){return b.checked}).length;
+    document.getElementById('pbar').style.width=(n/boxes.length*100)+'%';
+    document.getElementById('ptxt').textContent=n+' / '+boxes.length;
+  }
+  boxes.forEach(function(b){
+    b.addEventListener('change',function(){
+      var o={};boxes.forEach(function(x){if(x.checked)o[x.dataset.id]=1});
+      try{localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}
+      upd();
+    });
+  });
+  upd();
+})();
+</script>
+</body>
+</html>
