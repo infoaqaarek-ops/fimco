@@ -1,0 +1,18 @@
+{
+  "servers": [
+    {
+      "companyName": "اسم الشركة",
+      "serverUrl": "https://your-odoo-server.com",
+      "dbName": "your_database_name",
+      "adminUser": "admin_user",
+      "adminPass": "admin_password",
+      "active": 1,
+      "start_work": "",
+      "end_work": "",
+      "fingerprintActivation": 0,
+      "leaveRequestActivation": 0,
+      "hr_folder": 0,
+      "approvals_activation": 0
+    }
+  ]
+}
