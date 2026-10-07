@@ -1,11 +1,11 @@
 {
   "servers": [
     {
-      "companyName": "اسم الشركة",
-      "serverUrl": "https://your-odoo-server.com",
-      "dbName": "your_database_name",
-      "adminUser": "admin_user",
-      "adminPass": "admin_password",
+      "companyName": "sawa_group_buy",
+      "serverUrl": "http://192.168.8.150:8069",
+      "dbName": "sawa_group_buy",
+      "adminUser": "odoo",
+      "adminPass": "odoo",
       "active": 1,
       "start_work": "",
       "end_work": "",
