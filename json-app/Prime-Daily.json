@@ -2,7 +2,7 @@
   "servers": [
     {
       "companyName": "antifat3",
-      "serverUrl": "http://192.168.8.53:8069",
+      "serverUrl": "http://192.168.1.53:8069",
       "dbName": "antifat3",
       "adminUser": "odoo",
       "adminPass": "odoo",
