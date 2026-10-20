@@ -1,7 +1,7 @@
 {
   "servers": [
     {
-      "companyName": "employee_portal_v2_final",
+      "companyName": "hr_flutter_model_odoo_e_17",
       "serverUrl": "http://192.168.1.54:8069",
       "dbName": "employee_portal_v2_final",
       "adminUser": "odoo",
