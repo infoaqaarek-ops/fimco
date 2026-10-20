@@ -9,10 +9,10 @@
       "active": 1,
       "start_work": "",
       "end_work": "",
-      "fingerprintActivation": 0,
-      "leaveRequestActivation": 0,
-      "hr_folder": 0,
-      "approvals_activation": 0
+      "fingerprintActivation": 1,
+      "leaveRequestActivation": 1,
+      "hr_folder": 1,
+      "approvals_activation": 1
     }
   ]
 }
