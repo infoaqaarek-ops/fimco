@@ -1,11 +1,11 @@
 {
   "servers": [
     {
-      "companyName": "antifat3",
-      "serverUrl": "http://192.168.1.54:8069",
-      "dbName": "antifat3",
-      "adminUser": "odoo",
-      "adminPass": "odoo",
+      "companyName": "primedaily-s1",
+      "serverUrl": "https://primedaily-s1-39384533.dev.odoo.com/odoo",
+      "dbName": "primedaily-s1",
+      "adminUser": "admin",
+      "adminPass": "admin",
       "active": 1,
       "start_work": "",
       "end_work": "",
