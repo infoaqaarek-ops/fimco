@@ -2,7 +2,7 @@
   "servers": [
     {
       "companyName": "primedaily-s1-39384533",
-      "serverUrl": "https://primedaily-s1-39384533.dev.odoo.com/odoo",
+      "serverUrl": "https://primedaily-s1-39384533.dev.odoo.com",
       "dbName": "primedaily-s1-39384533",
       "adminUser": "admin",
       "adminPass": "admin",
