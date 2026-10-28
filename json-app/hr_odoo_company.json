@@ -4,6 +4,8 @@
       "companyName": "abjfs-test-39689370",
       "serverUrl": "https://abjfs-test-39689370.dev.odoo.com/",
       "dbName": "abjfs-test-39689370",
+      "adminUser": "admin",
+      "adminPass": "admin",
       "active": 1,
       "start_work": "",
       "end_work": "",
