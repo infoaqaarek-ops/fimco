@@ -1,7 +1,7 @@
 {
   "servers": [
     {
-      "companyName": "abjfs-test-39689370",
+      "companyName": "abjfs",
       "serverUrl": "https://abjfs-test-39689370.dev.odoo.com/",
       "dbName": "abjfs-test-39689370",
    
