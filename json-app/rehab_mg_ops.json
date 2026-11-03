@@ -1,9 +1,9 @@
 {
   "servers": [
     {
-      "companyName": "abjfs",
-      "serverUrl": "https://abjfs-test-39689370.dev.odoo.com/",
-      "dbName": "abjfs-test-39689370",
+      "companyName": "rehab_mg_ops",
+      "serverUrl": "http://192.168.8.173:8069/",
+      "dbName": "rehab_mg_ops",
    
       "active": 1,
       "start_work": "",
