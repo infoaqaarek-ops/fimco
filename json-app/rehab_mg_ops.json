@@ -1,0 +1,17 @@
+{
+  "servers": [
+    {
+      "companyName": "abjfs",
+      "serverUrl": "https://abjfs-test-39689370.dev.odoo.com/",
+      "dbName": "abjfs-test-39689370",
+   
+      "active": 1,
+      "start_work": "",
+      "end_work": "",
+      "fingerprintActivation": 1,
+      "leaveRequestActivation": 1,
+      "hr_folder": 1,
+      "approvals_activation": 1
+    }
+  ]
+}
