@@ -2,7 +2,7 @@
   "servers": [
     {
       "companyName": "rehab_mg_ops",
-      "serverUrl": "http://192.168.8.173:8069",
+      "serverUrl": "http://192.168.8.177:8069",
       "dbName": "rehab_mg_ops",
    
       "active": 1,
