@@ -2,7 +2,7 @@
   "servers": [
     {
       "companyName": "primedaily-s1-39384533",
-      "serverUrl": "https://primedaily-s1-39384533.dev.odoo.com",
+      "serverUrl": "https://primedaily-s1-41316034.dev.odoo.com",
       "dbName": "primedaily-s1-39384533",
       "active": 1,
       "start_work": "",
