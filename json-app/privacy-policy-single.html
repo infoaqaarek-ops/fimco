@@ -17,6 +17,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Tahom
 .lang-switch{display:flex;gap:8px;justify-content:center;margin-bottom:16px}
 .lang-switch button{border:1px solid var(--brand);background:#fff;color:var(--brand-dark);padding:8px 22px;border-radius:999px;font-size:.95rem;cursor:pointer;font-family:inherit}
 .lang-switch button.active{background:var(--brand);color:#fff}
+.lang-switch button:focus-visible{outline:3px solid var(--brand-dark);outline-offset:2px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:16px;box-shadow:0 6px 20px rgba(86,54,214,.06)}
 .card h2{margin:0 0 10px;font-size:1.2rem;color:var(--brand-dark)}
 .card h3{margin:14px 0 4px;font-size:1rem}
@@ -24,6 +25,8 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Tahom
 .card ul{margin:6px 0;padding-inline-start:22px;color:var(--ink-soft)}
 .card li{margin:4px 0}
 .updated{display:inline-block;background:var(--brand-light);color:var(--brand-dark);border-radius:999px;padding:4px 14px;font-size:.85rem;margin-bottom:12px}
+.notice{background:var(--brand-light);border-radius:12px;padding:10px 14px;color:var(--brand-dark)!important}
+mark.ph{background:#FFF3B0;color:#000;padding:0 4px;border-radius:4px}
 a{color:var(--brand-dark)}
 footer{text-align:center;color:var(--ink-soft);font-size:.85rem;padding:0 16px 32px}
 [data-lang]{display:none}
@@ -33,63 +36,111 @@ html[lang="ar"] span[data-lang="ar"],html[lang="en"] span[data-lang="en"]{displa
 </style>
 </head>
 <body>
-  <header class="hero">
-    <h1 data-lang="ar">سياسة الخصوصية</h1>
-    <h1 data-lang="en">Privacy Policy</h1>
-    <p>برايم ديلي · Prime Daily</p>
-  </header>
-  <main class="container">
-    <div class="lang-switch">
-      <button id="btn-ar" class="active" type="button">العربية</button>
-      <button id="btn-en" type="button">English</button>
-    </div>
-    <span class="updated"><span data-lang="ar">آخر تحديث: 28 أكتوبر 2026</span><span data-lang="en">Last updated: October 28, 2026</span></span>
-    <section class="card">
-      <div data-lang="ar"><h2>1. مقدمة</h2><p>تطبيق «برايم ديلي» (Prime Daily) خدمة اشتراكات وجبات صحية مع توصيل للمنزل. توضح هذه السياسة المعلومات التي نجمعها وكيف نستخدمها ونحميها. باستخدامك التطبيق فإنك توافق على هذه السياسة.</p></div>
-      <div data-lang="en"><h2>1. Introduction</h2><p>Prime Daily (“the App”) is a healthy meal subscription and home delivery service. This policy explains what information we collect, how we use it and how we protect it. By using the App you agree to this policy.</p></div>
-    </section>
-    <section class="card">
-      <div data-lang="ar"><h2>2. المعلومات التي نجمعها</h2><ul><li><b>بيانات الحساب:</b> الاسم ورقم الهاتف والبريد الإلكتروني (اختياري) ورمز التحقق (OTP).</li><li><b>البيانات الصحية:</b> الطول والوزن والعمر ومستوى النشاط والأهداف، والحساسية الغذائية والأمراض المزمنة التي تدخلها طوعًا لحساب السعرات وتخصيص وجباتك.</li><li><b>العناوين والموقع:</b> عناوين التوصيل وإحداثياتها، وموقعك الحالي عند السماح به لتحديد العنوان والتحقق من تغطية منطقتك.</li><li><b>بيانات الاشتراك والدفع:</b> الباقات والوجبات المختارة وجدول التوصيل والمحفظة ونقاط الولاء والمبالغ المدفوعة. لا نخزّن بيانات بطاقات الدفع داخل التطبيق.</li><li><b>الصور:</b> صورة الملف الشخصي إن اخترتها (وللسائقين: صور إثبات التوصيل).</li><li><b>بيانات الجهاز:</b> رمز الإشعارات (Push token) ونوع الجهاز واللغة.</li><li><b>الدعم الفني:</b> الرسائل والتذاكر التي ترسلها لنا.</li></ul></div>
-      <div data-lang="en"><h2>2. Information We Collect</h2><ul><li><b>Account data:</b> name, phone number, email (optional) and one-time verification codes (OTP).</li><li><b>Health data:</b> height, weight, age, activity level, goals, food allergies and chronic conditions that you voluntarily enter to calculate calories and tailor your meals.</li><li><b>Addresses and location:</b> delivery addresses and coordinates, and your current location when you allow it, to set your address and check coverage.</li><li><b>Subscription and payment data:</b> chosen packages and meals, delivery schedule, wallet, loyalty points and amounts paid. We do not store payment card details inside the App.</li><li><b>Photos:</b> a profile picture if you choose one (and proof-of-delivery photos for drivers).</li><li><b>Device data:</b> push notification token, device type and language.</li><li><b>Support:</b> messages and tickets you send us.</li></ul></div>
-    </section>
-    <section class="card">
-      <div data-lang="ar"><h2>3. كيف نستخدم معلوماتك</h2><ul><li>إنشاء حسابك وتسجيل دخولك والتحقق من هويتك.</li><li>إعداد وجباتك وتوصيلها في الموعد والعنوان الصحيحين.</li><li>حساب احتياجاتك من السعرات واقتراح الباقات المناسبة وتجنب مسببات الحساسية.</li><li>إدارة الاشتراك والمحفظة والاسترجاع والتجميد والإلغاء.</li><li>إرسال إشعارات عن طلباتك وتوصيلك وتحديثات الخدمة.</li><li>الدعم الفني وتحسين التطبيق والالتزام بالمتطلبات القانونية.</li></ul></div>
-      <div data-lang="en"><h2>3. How We Use Your Information</h2><ul><li>Create your account, sign you in and verify your identity.</li><li>Prepare and deliver your meals at the right time and address.</li><li>Calculate your calorie needs, suggest suitable packages and avoid allergens.</li><li>Manage subscriptions, wallet, refunds, freezes and cancellations.</li><li>Send notifications about your orders, delivery and service updates.</li><li>Provide support, improve the App and meet legal requirements.</li></ul></div>
-    </section>
-    <section class="card">
-      <div data-lang="ar"><h2>4. مشاركة المعلومات</h2><p>لا نبيع بياناتك الشخصية. نشاركها فقط مع:</p><ul><li><b>سائقي التوصيل:</b> الاسم ورقم الهاتف والعنوان اللازم لإتمام التوصيل.</li><li><b>مزوّدي الخدمات التقنية:</b> مثل Google Firebase لإرسال الإشعارات، وخوادم الاستضافة التي تشغّل نظامنا.</li><li><b>الجهات الرسمية:</b> عند وجود التزام قانوني.</li></ul></div>
-      <div data-lang="en"><h2>4. Sharing of Information</h2><p>We do not sell your personal data. We share it only with:</p><ul><li><b>Delivery drivers:</b> the name, phone number and address needed to complete delivery.</li><li><b>Technology providers:</b> such as Google Firebase for push notifications, and the hosting servers that run our system.</li><li><b>Authorities:</b> where required by law.</li></ul></div>
-    </section>
-    <section class="card">
-      <div data-lang="ar"><h2>5. الأذونات التي يطلبها التطبيق</h2><ul><li><b>الموقع:</b> لتحديد عنوان التوصيل والتحقق من التغطية.</li><li><b>الإشعارات:</b> لإبلاغك بحالة الطلبات والتوصيل.</li><li><b>الصور/الكاميرا:</b> لصورة الملف الشخصي (وإثبات التوصيل للسائقين).</li><li><b>الإنترنت:</b> مطلوب لعمل التطبيق.</li></ul><p>يمكنك سحب أي إذن من إعدادات جهازك في أي وقت، وقد تتأثر بعض الميزات.</p></div>
-      <div data-lang="en"><h2>5. Permissions the App Requests</h2><ul><li><b>Location:</b> to set your delivery address and check coverage.</li><li><b>Notifications:</b> to keep you updated on orders and delivery.</li><li><b>Photos/Camera:</b> for your profile picture (and proof of delivery for drivers).</li><li><b>Internet:</b> required for the App to work.</li></ul><p>You can revoke any permission from your device settings at any time; some features may then be affected.</p></div>
-    </section>
-    <section class="card">
-      <div data-lang="ar"><h2>6. الاحتفاظ بالبيانات وحذف الحساب</h2><p>نحتفظ ببياناتك طالما حسابك نشط. يمكنك حذف حسابك من التطبيق: <b>الملف الشخصي ← حذف الحساب</b>. عند الحذف يُلغى أي اشتراك نشط أو مجمّد تلقائيًا ويُضاف المبلغ التناسبي المتبقي إلى محفظتك للتسوية، ثم يُوقف حسابك وملفك الصحي وإشعاراتك وتُمسح بياناتك المحلية من جهازك. قد نحتفظ بسجلات الفواتير والمعاملات للمدة التي يفرضها القانون والمحاسبة.</p><p>يمكنك أيضًا طلب حذف بياناتك عبر التواصل معنا على البريد أدناه.</p></div>
-      <div data-lang="en"><h2>6. Data Retention and Account Deletion</h2><p>We keep your data while your account is active. You can delete your account in the App: <b>Profile → Delete account</b>. On deletion, any active or frozen subscription is cancelled automatically and the remaining pro-rata amount is credited to your wallet for settlement; your account, health profile and notifications are then deactivated and local data is erased from your device. We may retain invoices and transaction records for as long as law and accounting require.</p><p>You may also request deletion of your data by contacting us at the email below.</p></div>
-    </section>
-    <section class="card">
-      <div data-lang="ar"><h2>7. أمان البيانات</h2><p>نستخدم اتصالات مشفّرة (HTTPS) وضوابط وصول لحماية بياناتك، ولا توجد وسيلة نقل أو تخزين آمنة بنسبة 100%، لذا لا نستطيع ضمان أمان مطلق.</p></div>
-      <div data-lang="en"><h2>7. Data Security</h2><p>We use encrypted connections (HTTPS) and access controls to protect your data. No method of transmission or storage is 100% secure, so we cannot guarantee absolute security.</p></div>
-    </section>
-    <section class="card">
-      <div data-lang="ar"><h2>8. حقوقك</h2><p>يحق لك الاطلاع على بياناتك وتعديلها (من الملف الشخصي) وطلب حذفها وسحب موافقتك على معالجتها، ويمكنك التحكم في الإشعارات من إعدادات الجهاز.</p></div>
-      <div data-lang="en"><h2>8. Your Rights</h2><p>You may access and edit your data (from your profile), request its deletion, withdraw your consent to processing, and control notifications from your device settings.</p></div>
-    </section>
-    <section class="card">
-      <div data-lang="ar"><h2>9. خصوصية الأطفال</h2><p>التطبيق غير موجّه لمن هم دون 18 عامًا، ولا نجمع بيانات أطفال عن قصد.</p></div>
-      <div data-lang="en"><h2>9. Children’s Privacy</h2><p>The App is not directed at anyone under 18 and we do not knowingly collect children’s data.</p></div>
-    </section>
-    <section class="card">
-      <div data-lang="ar"><h2>10. التعديلات على السياسة</h2><p>قد نحدّث هذه السياسة، وسننشر النسخة الجديدة هنا مع تاريخ التحديث. استمرارك في استخدام التطبيق يعني قبولك للتعديلات.</p></div>
-      <div data-lang="en"><h2>10. Changes to This Policy</h2><p>We may update this policy and will post the new version here with its update date. Continued use of the App means you accept the changes.</p></div>
-    </section>
-    <section class="card">
-      <div data-lang="ar"><h2>11. تواصل معنا</h2><p>لأي استفسار عن الخصوصية: <a href="mailto:support@example.com">support@example.com</a></p></div>
-      <div data-lang="en"><h2>11. Contact Us</h2><p>For any privacy question: <a href="mailto:support@example.com">support@example.com</a></p></div>
-    </section>
-  </main>
-  <footer>© 2026 Prime Daily</footer>
+<!-- ملاحظة للمطوّر: الحقول المظلّلة بالأصفر (class="ph") لازم تتبدّل ببياناتك الحقيقية قبل النشر، ثم امسح تنسيق mark.ph أو اتركه ولكن بدون نصوص بين أقواس. -->
+<header class="hero">
+  <h1 data-lang="ar">سياسة الخصوصية</h1>
+  <h1 data-lang="en">Privacy Policy</h1>
+  <p>برايم ديلي · Prime Daily</p>
+</header>
+<main class="container">
+  <div class="lang-switch">
+    <button id="btn-ar" type="button" class="active">العربية</button>
+    <button id="btn-en" type="button">English</button>
+  </div>
+  <span class="updated"><span data-lang="ar">آخر تحديث: 9 نوفمبر 2026</span><span data-lang="en">Last updated: November 9, 2026</span></span>
+
+  <section class="card">
+    <div data-lang="ar"><h2>1. مقدمة ومن نحن</h2><p>تطبيق «برايم ديلي» (Prime Daily) خدمة اشتراكات وجبات صحية مع توصيل للمنزل، تقدّمها <mark class="ph">[اسم الجهة المطوّرة / الشركة كما في السجل التجاري]</mark> («نحن»)، وهي الجهة المسؤولة عن معالجة بياناتك. توضح هذه السياسة المعلومات التي نجمعها وكيف نستخدمها ونحميها. باستخدامك التطبيق فإنك توافق على هذه السياسة.</p></div>
+    <div data-lang="en"><h2>1. Introduction and Who We Are</h2><p>Prime Daily (“the App”) is a healthy meal subscription and home delivery service provided by <mark class="ph">[Company legal name as registered]</mark> (“we”), the entity responsible for processing your data. This policy explains what information we collect, how we use it and how we protect it. By using the App you agree to this policy.</p></div>
+  </section>
+
+  <section class="card">
+    <div data-lang="ar"><h2>2. المعلومات التي نجمعها</h2><ul><li><b>بيانات الحساب:</b> الاسم ورقم الهاتف والبريد الإلكتروني (اختياري) ورمز التحقق (OTP).</li><li><b>البيانات الصحية:</b> موضحة في القسم 3.</li><li><b>العناوين والموقع:</b> عناوين التوصيل وإحداثياتها، وموقعك الدقيق الحالي عند السماح به، أثناء استخدام التطبيق فقط، لتحديد العنوان والتحقق من تغطية منطقتك. لا نتتبع موقعك في الخلفية.</li><li><b>بيانات الاشتراك والدفع:</b> الباقات والوجبات المختارة وجدول التوصيل والمحفظة ونقاط الولاء والمبالغ المدفوعة. لا نخزّن بيانات بطاقات الدفع داخل التطبيق.</li><li><b>الصور:</b> صورة الملف الشخصي إن اخترتها (وللسائقين: صور إثبات التوصيل).</li><li><b>بيانات الجهاز والاستخدام:</b> رمز الإشعارات (Push token) ونوع الجهاز ونظام التشغيل واللغة، ومعرّفات الجهاز ومعرّف الإعلانات (Advertising ID)، والشاشات والأحداث التي تتفاعل معها داخل التطبيق (مثل عرض باقة أو إتمام اشتراك).</li><li><b>الدعم الفني:</b> الرسائل والتذاكر التي ترسلها لنا.</li></ul></div>
+    <div data-lang="en"><h2>2. Information We Collect</h2><ul><li><b>Account data:</b> name, phone number, email (optional) and one-time verification codes (OTP).</li><li><b>Health data:</b> described in Section 3.</li><li><b>Addresses and location:</b> delivery addresses and coordinates, and your precise current location when you allow it, only while you use the App, to set your address and check coverage. We do not track your location in the background.</li><li><b>Subscription and payment data:</b> chosen packages and meals, delivery schedule, wallet, loyalty points and amounts paid. We do not store payment card details inside the App.</li><li><b>Photos:</b> a profile picture if you choose one (and proof-of-delivery photos for drivers).</li><li><b>Device and usage data:</b> push notification token, device type, operating system and language, device identifiers and the advertising ID, and the screens and events you interact with in the App (such as viewing a package or completing a subscription).</li><li><b>Support:</b> messages and tickets you send us.</li></ul></div>
+  </section>
+
+  <section class="card">
+    <div data-lang="ar"><h2>3. البيانات الصحية</h2>
+      <h3>ما الذي نجمعه</h3><p>عند إنشاء ملفك الصحي نطلب: الجنس وتاريخ الميلاد والوزن والطول ومستوى النشاط والهدف (فقدان وزن أو حفاظ عليه أو بناء عضلات)، والحساسية الغذائية، وأي أمراض مزمنة أو ملاحظات طبية ترغب في إضافتها. كل هذه الحقول اختيارية عدا ما يلزم لحساب سعراتك.</p>
+      <h3>لماذا نستخدمها</h3><p>نستخدمها فقط لتقدير احتياجك اليومي من السعرات بمعادلة Mifflin-St Jeor، واقتراح الباقات والوجبات المناسبة، واستبعاد الوجبات التي تحتوي على مسببات حساسية أعلنتها أو لا تناسب حالة أدخلتها. لا نستخدمها لأي غرض آخر.</p>
+      <h3>ما لا نفعله</h3><ul><li>لا نستخدم بياناتك الصحية في الإعلانات أو التسويق أو تحليل السلوك.</li><li>لا نبيعها ولا نشاركها مع جهات إعلانية أو وسطاء بيانات.</li><li>لا نرسل قيمها (الوزن والطول والحساسية والأمراض) إلى أدوات القياس والإعلان (AppsFlyer وFirebase).</li><li>لا نقرأها من تطبيق الصحة أو أي حساس، ولا نخزّنها في iCloud.</li></ul>
+      <h3>الموافقة وحقوقك</h3><p>نعالج بياناتك الصحية بناءً على موافقتك الصريحة التي نطلبها قبل حفظها، وفق نظام حماية البيانات الشخصية. يمكنك من شاشة «حسابي» تعديل بياناتك الصحية أو سحب موافقتك أو حذف حسابك فتُحذف بياناتك الصحية.</p>
+      <p class="notice"><b>تنبيه:</b> التطبيق لا يقدّم نصيحة طبية ولا يشخّص أو يعالج أي مرض. أرقام السعرات تقديرية، ولا تغني عن استشارة طبيب أو أخصائي تغذية مرخّص، خاصة عند وجود حالة صحية. راجع مكوّنات الوجبة بنفسك إن كانت لديك حساسية.</p></div>
+    <div data-lang="en"><h2>3. Health Data</h2>
+      <h3>What we collect</h3><p>When you create your health profile we ask for: gender, date of birth, weight, height, activity level, goal (lose weight, maintain it or build muscle), food allergies, and any chronic conditions or medical notes you choose to add. All fields are optional except what is needed to calculate your calories.</p>
+      <h3>Why we use it</h3><p>We use it only to estimate your daily calorie needs with the Mifflin-St Jeor equation, to suggest suitable packages and meals, and to exclude meals that contain allergens you declared or that are not suitable for a condition you entered. We use it for no other purpose.</p>
+      <h3>What we do not do</h3><ul><li>We do not use your health data for advertising, marketing or behavioral profiling.</li><li>We do not sell it or share it with advertisers or data brokers.</li><li>We do not send its values (weight, height, allergies, conditions) to measurement and advertising tools (AppsFlyer and Firebase).</li><li>We do not read it from a health app or any sensor, and we do not store it in iCloud.</li></ul>
+      <h3>Consent and your rights</h3><p>We process your health data based on your explicit consent, requested before it is saved, in line with the applicable personal data protection law. From the “My Account” screen you can edit your health data, withdraw your consent, or delete your account, which deletes your health data.</p>
+      <p class="notice"><b>Notice:</b> The App does not provide medical advice and does not diagnose or treat any condition. Calorie figures are estimates and do not replace consulting a licensed doctor or dietitian, especially if you have a medical condition. Please check meal ingredients yourself if you have an allergy.</p></div>
+  </section>
+
+  <section class="card">
+    <div data-lang="ar"><h2>4. كيف نستخدم معلوماتك</h2><ul><li>إنشاء حسابك وتسجيل دخولك والتحقق من هويتك.</li><li>إعداد وجباتك وتوصيلها في الموعد والعنوان الصحيحين.</li><li>إدارة الاشتراك والمحفظة والاسترجاع والتجميد والإلغاء.</li><li>إرسال إشعارات عن طلباتك وتوصيلك وتحديثات الخدمة.</li><li>قياس أداء التطبيق وحملاتنا الإعلانية (القسم 5).</li><li>الدعم الفني وتحسين التطبيق والالتزام بالمتطلبات القانونية.</li></ul></div>
+    <div data-lang="en"><h2>4. How We Use Your Information</h2><ul><li>Create your account, sign you in and verify your identity.</li><li>Prepare and deliver your meals at the right time and address.</li><li>Manage subscriptions, wallet, refunds, freezes and cancellations.</li><li>Send notifications about your orders, delivery and service updates.</li><li>Measure App performance and our advertising campaigns (Section 5).</li><li>Provide support, improve the App and meet legal requirements.</li></ul></div>
+  </section>
+
+  <section class="card">
+    <div data-lang="ar"><h2>5. التحليلات والتتبّع والإعلانات</h2>
+      <p>نستخدم أدوات طرف ثالث لفهم استخدام التطبيق وقياس نتائج حملاتنا الإعلانية:</p>
+      <ul><li><b>Google Analytics for Firebase:</b> لتحليل الشاشات والأحداث وسلوك الاستخدام العام.</li><li><b>AppsFlyer:</b> لقياس مصدر تثبيت التطبيق وأداء الحملات الإعلانية.</li></ul>
+      <p>تجمع هذه الأدوات معرّفات الجهاز ومعرّف الإعلانات وأحداث الاستخدام وأحداث الشراء (مثل عرض باقة أو إضافتها أو إتمام اشتراك)، وقد تربطها بحسابك لتحليل الأداء وتحسين الإعلانات. <b>لا ترسل هذه الأدوات بياناتك الصحية.</b></p>
+      <h3>كيف تتحكم في ذلك</h3><ul><li><b>iPhone:</b> نطلب إذنك عبر نافذة «السماح بالتتبع» عند أول تشغيل. يمكنك تغييره من الإعدادات ← الخصوصية والأمان ← التتبع.</li><li><b>Android:</b> يمكنك حذف معرّف الإعلانات أو إيقاف تخصيص الإعلانات من الإعدادات ← Google ← الإعلانات.</li></ul>
+      <p>لمعرفة كيف تعالج Google وAppsFlyer البيانات راجع سياسة الخصوصية لدى كل منهما.</p></div>
+    <div data-lang="en"><h2>5. Analytics, Tracking and Advertising</h2>
+      <p>We use third-party tools to understand how the App is used and to measure the results of our advertising campaigns:</p>
+      <ul><li><b>Google Analytics for Firebase:</b> to analyze screens, events and general usage behavior.</li><li><b>AppsFlyer:</b> to measure where App installs come from and how ad campaigns perform.</li></ul>
+      <p>These tools collect device identifiers, the advertising ID, usage events and purchase events (such as viewing a package, adding it, or completing a subscription), and may link them to your account to analyze performance and improve advertising. <b>These tools do not receive your health data.</b></p>
+      <h3>How to control this</h3><ul><li><b>iPhone:</b> we ask for your permission through the “Allow Tracking” prompt on first launch. You can change it in Settings → Privacy &amp; Security → Tracking.</li><li><b>Android:</b> you can delete your advertising ID or turn off ads personalization in Settings → Google → Ads.</li></ul>
+      <p>To learn how Google and AppsFlyer process data, see each provider’s privacy policy.</p></div>
+  </section>
+
+  <section class="card">
+    <div data-lang="ar"><h2>6. مشاركة المعلومات</h2><p>لا نبيع بياناتك الشخصية. نشاركها فقط مع:</p><ul><li><b>سائقي التوصيل:</b> الاسم ورقم الهاتف والعنوان اللازم لإتمام التوصيل.</li><li><b>مزوّدي الخدمات التقنية:</b> Google (Firebase) للإشعارات والتحليلات، وAppsFlyer لقياس الحملات (القسم 5)، وخوادم الاستضافة التي تشغّل نظامنا.</li><li><b>مزوّد الدفع:</b> <mark class="ph">[اسم مزوّد الدفع، أو احذف هذا البند إن لم يوجد]</mark> لإتمام عمليات الدفع.</li><li><b>الجهات الرسمية:</b> عند وجود التزام قانوني.</li></ul></div>
+    <div data-lang="en"><h2>6. Sharing of Information</h2><p>We do not sell your personal data. We share it only with:</p><ul><li><b>Delivery drivers:</b> the name, phone number and address needed to complete delivery.</li><li><b>Technology providers:</b> Google (Firebase) for notifications and analytics, AppsFlyer for campaign measurement (Section 5), and the hosting servers that run our system.</li><li><b>Payment provider:</b> <mark class="ph">[payment provider name, or delete this item if none]</mark> to process payments.</li><li><b>Authorities:</b> where required by law.</li></ul></div>
+  </section>
+
+  <section class="card">
+    <div data-lang="ar"><h2>7. نقل البيانات خارج بلدك</h2><p>قد تُعالج بياناتك على خوادم تابعة لمزوّدي الخدمات المذكورين (مثل Google وAppsFlyer) في دول أخرى. نعتمد على مزوّدين يطبّقون ضمانات مناسبة لحماية البيانات، وننقل بياناتك وفق ما يسمح به النظام المعمول به.</p></div>
+    <div data-lang="en"><h2>7. Transfers Outside Your Country</h2><p>Your data may be processed on servers operated by the providers named above (such as Google and AppsFlyer) in other countries. We rely on providers that apply appropriate data protection safeguards, and we transfer data as permitted by applicable law.</p></div>
+  </section>
+
+  <section class="card">
+    <div data-lang="ar"><h2>8. الأذونات التي يطلبها التطبيق</h2><ul><li><b>الموقع:</b> لتحديد عنوان التوصيل والتحقق من التغطية، أثناء استخدام التطبيق فقط.</li><li><b>الإشعارات:</b> لإبلاغك بحالة الطلبات والتوصيل.</li><li><b>الكاميرا والصور:</b> لصورة الملف الشخصي (وإثبات التوصيل للسائقين).</li><li><b>معرّف الإعلانات والتتبع:</b> لقياس الحملات الإعلانية (القسم 5)، وهو اختياري على iPhone ويمكن إيقافه على Android.</li><li><b>الإنترنت وحالة الشبكة:</b> مطلوبان لعمل التطبيق.</li></ul><p>يمكنك سحب أي إذن من إعدادات جهازك في أي وقت، وقد تتأثر بعض الميزات.</p></div>
+    <div data-lang="en"><h2>8. Permissions the App Requests</h2><ul><li><b>Location:</b> to set your delivery address and check coverage, only while you use the App.</li><li><b>Notifications:</b> to keep you updated on orders and delivery.</li><li><b>Camera and photos:</b> for your profile picture (and proof of delivery for drivers).</li><li><b>Advertising ID and tracking:</b> to measure ad campaigns (Section 5); optional on iPhone and can be turned off on Android.</li><li><b>Internet and network state:</b> required for the App to work.</li></ul><p>You can revoke any permission from your device settings at any time; some features may then be affected.</p></div>
+  </section>
+
+  <section class="card">
+    <div data-lang="ar"><h2>9. الاحتفاظ بالبيانات وحذف الحساب</h2><p>نحتفظ ببياناتك طالما حسابك نشط.</p>
+      <h3>الحذف من داخل التطبيق</h3><p>اذهب إلى <b>الملف الشخصي ← حذف الحساب</b>. عند الحذف يُلغى أي اشتراك نشط أو مجمّد تلقائيًا ويُضاف المبلغ التناسبي المتبقي إلى محفظتك للتسوية، ثم يُوقف حسابك وملفك الصحي وإشعاراتك وتُمسح بياناتك المحلية من جهازك.</p>
+      <h3>الحذف دون الدخول إلى التطبيق</h3><p>يمكنك طلب حذف حسابك وبياناتك بمراسلتنا على <a href="mailto:privacy@example.com"><mark class="ph">[البريد الإلكتروني]</mark></a> بعنوان «طلب حذف الحساب» مع ذكر رقم الهاتف المسجّل لدينا، أو من خلال <mark class="ph">[رابط صفحة طلب الحذف، إن وُجدت]</mark>. نتحقق من هويتك وننفّذ الطلب خلال <mark class="ph">[30]</mark> يومًا.</p>
+      <h3>ما قد نحتفظ به</h3><p>قد نحتفظ بسجلات الفواتير والمعاملات للمدة التي يفرضها القانون والمحاسبة، دون بقية بياناتك الشخصية.</p></div>
+    <div data-lang="en"><h2>9. Data Retention and Account Deletion</h2><p>We keep your data while your account is active.</p>
+      <h3>Delete from inside the App</h3><p>Go to <b>Profile → Delete account</b>. On deletion, any active or frozen subscription is cancelled automatically and the remaining pro-rata amount is credited to your wallet for settlement; your account, health profile and notifications are then deactivated and local data is erased from your device.</p>
+      <h3>Delete without opening the App</h3><p>You can request deletion of your account and data by emailing <a href="mailto:privacy@example.com"><mark class="ph">[email address]</mark></a> with the subject “Account deletion request” and the phone number registered with us, or through <mark class="ph">[deletion request page link, if any]</mark>. We verify your identity and complete the request within <mark class="ph">[30]</mark> days.</p>
+      <h3>What we may keep</h3><p>We may retain invoices and transaction records for as long as law and accounting require, but not the rest of your personal data.</p></div>
+  </section>
+
+  <section class="card">
+    <div data-lang="ar"><h2>10. أمان البيانات</h2><p>نستخدم اتصالات مشفّرة (HTTPS) وضوابط وصول لحماية بياناتك، ولا توجد وسيلة نقل أو تخزين آمنة بنسبة 100%، لذا لا نستطيع ضمان أمان مطلق.</p></div>
+    <div data-lang="en"><h2>10. Data Security</h2><p>We use encrypted connections (HTTPS) and access controls to protect your data. No method of transmission or storage is 100% secure, so we cannot guarantee absolute security.</p></div>
+  </section>
+
+  <section class="card">
+    <div data-lang="ar"><h2>11. حقوقك</h2><p>يحق لك الاطلاع على بياناتك وتعديلها (من الملف الشخصي) وطلب حذفها وسحب موافقتك على معالجتها (من شاشة «حسابي»)، والاعتراض على التتبع من إعدادات جهازك. لأي طلب آخر راسلنا على البريد في القسم 13.</p></div>
+    <div data-lang="en"><h2>11. Your Rights</h2><p>You may access and edit your data (from your profile), request its deletion, withdraw your consent to processing (from the “My Account” screen), and opt out of tracking from your device settings. For any other request, email us at the address in Section 13.</p></div>
+  </section>
+
+  <section class="card">
+    <div data-lang="ar"><h2>12. خصوصية الأطفال والتعديلات</h2><p>التطبيق غير موجّه لمن هم دون 18 عامًا، ولا نجمع بيانات أطفال عن قصد. قد نحدّث هذه السياسة، وسننشر النسخة الجديدة هنا مع تاريخ التحديث، وسنُعلمك داخل التطبيق عند أي تغيير جوهري. استمرارك في الاستخدام يعني قبولك للتعديلات.</p></div>
+    <div data-lang="en"><h2>12. Children’s Privacy and Changes</h2><p>The App is not directed at anyone under 18 and we do not knowingly collect children’s data. We may update this policy and will post the new version here with its update date, and we will notify you in the App of any material change. Continued use means you accept the changes.</p></div>
+  </section>
+
+  <section class="card">
+    <div data-lang="ar"><h2>13. تواصل معنا</h2><p><mark class="ph">[اسم الجهة المطوّرة]</mark><br><mark class="ph">[العنوان / الدولة]</mark><br>للاستفسارات عن الخصوصية: <a href="mailto:privacy@example.com"><mark class="ph">[البريد الإلكتروني]</mark></a></p></div>
+    <div data-lang="en"><h2>13. Contact Us</h2><p><mark class="ph">[Company legal name]</mark><br><mark class="ph">[Address / Country]</mark><br>For any privacy question: <a href="mailto:privacy@example.com"><mark class="ph">[email address]</mark></a></p></div>
+  </section>
+</main>
+<footer>© 2026 <mark class="ph">[Company legal name]</mark> · Prime Daily</footer>
 <script>
   function setLang(l){
     var h=document.documentElement;
