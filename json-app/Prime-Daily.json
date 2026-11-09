@@ -4,13 +4,7 @@
       "companyName": "primedaily-s1-41316034",
       "serverUrl": "https://primedaily-s1-41316034.dev.odoo.com",
       "dbName": "primedaily-s1-39384533",
-      "active": 1,
-      "start_work": "",
-      "end_work": "",
-      "fingerprintActivation": 0,
-      "leaveRequestActivation": 0,
-      "hr_folder": 0,
-      "approvals_activation": 0
+      "active": 1
     }
   ]
 }
