@@ -30,7 +30,7 @@
     },
         {
       "companyName": "sawa_group_buy",
-      "serverUrl": "http://192.168.8.155:8069",
+      "serverUrl": "http://192.168.8.188:8069",
       "dbName": "sawa_group_buy",
       "adminUser": "odoo",
       "adminPass": "odoo",
