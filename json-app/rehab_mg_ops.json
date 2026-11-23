@@ -1,9 +1,9 @@
 {
   "servers": [
     {
-      "companyName": "rehab_mg_ops",
-      "serverUrl": "http://192.168.8.189:8069",
-      "dbName": "rehab_mg_ops",
+      "companyName": "Test",
+      "serverUrl": "http://89.116.38.183:8069",
+      "dbName": "Test",
    
       "active": 1,
       "start_work": "",
